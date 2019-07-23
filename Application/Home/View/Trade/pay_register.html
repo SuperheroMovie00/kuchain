@@ -1,0 +1,233 @@
+{__NOLAYOUT__}
+<div toplayer="1" class="prompt-pop pop-style4" style="z-index:{$zindex};" id="<?php echo $funcid;?>" url="<?php echo U('Trade/index'); ?>">
+
+    <div class="title">
+        <span class="pop-name">收付款登记</span>
+        <a href="javascript:void(0);" onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" class="close iconfont">&#xe60d;</a>
+    </div>
+
+
+    <div class="pop-scroll">
+        <div class="screening ">
+            <form enctype="multipart/form-data" action="<?php echo U('Trade/index?func=check_receive'); ?>" id="<?php echo "$funcid"; ?>-Search" method="post">
+            <input type="hidden" name="<?php echo "$funcid"; ?>-last-url" id="<?php echo "$funcid"; ?>-last-url" value="<?php echo $__last_url; ?>" />
+            <input type="hidden" name="funcid" value="<?php echo "$funcid"; ?>" />
+            <input type="hidden" name="pfuncid" value="<?php echo "$pfuncid"; ?>" />
+            <input type="hidden" name="id" value="<?php echo $search["id"]; ?>" />
+            <input type="hidden" name="_lastchanged" value="<?php echo $search["lastchanged"]; ?>" />
+            <ul class="form form-mod-new form-column2">
+
+                <li class="per100">
+                    <div class="unit-left"><span class="tit"> 款项类型<em class="abe-red mrg_5">*</em></span></div>
+                    <div class="unit-mid">
+                        <div class="pdl_10" id="{$funcid}_type">
+                            <input type="radio"  name="pay_ment"  value="0" class="mrg_5" checked><?php if($search['dignity'] == 1): ?>收款<?php elseif($search['dignity'] == 0): ?>收款(卖家退回)<?php endif; ?>
+                            <input type="radio"  name="pay_ment"  value="1" class="mrg_5 mlg_15" ><?php if($search['dignity'] == 1): ?>付款(退回买家)<?php elseif($search['dignity'] == 0): ?>付款<?php endif; ?>
+                        </div>
+                        <div class="prompt" style="display:none">
+                            <div class="error"><i class="iconfont">&#xe616;</i></div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="per100">
+                    <div class="unit-left"><span class="tit"> 款项金额<em class="abe-red mrg_5">*</em></span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <input type="text" class="pbtxt txt0" placeholder="请输入款项金额" name="money"  value="" >
+                        </div>
+                        <div class="prompt" style="display:none">
+                            <div class="error"><i class="iconfont">&#xe616;</i></div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="per100">
+                    <div class="unit-left"><span class="tit"> 备注信息</span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <input type="text" class="pbtxt txt0" placeholder="请输入备注信息" name="remarks"  value="" >
+                        </div>
+                        <div class="prompt" style="display:none">
+                            <div class="error"><i class="iconfont">&#xe616;</i></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="per100">
+                    <div class="unit-left"><span class="tit"> 手机号码</span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <label class="pbtxt txt0" name="goods_no" value="" verify="" tips="" reglux="">点击右侧发送按钮，验证码将发送至登记手机</label>
+                        </div>
+                        <div class="unit-right">
+                            <input type="button" class="btn btn-blue btn-xs fsyzm abe-ft12" value="发送验证码">
+                        </div>
+                    </div>
+                </li>
+                <li class="per100">
+                    <div class="unit-left"><span class="tit"> 验证码<em class="abe-red mrg_5">*</em></span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <input type="text" class="pbtxt txt0" placeholder="请输入验证码" name="verify"  value="" >
+                        </div>
+                        <div class="prompt" style="display:none">
+                            <div class="error"><i class="iconfont">&#xe616;</i></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            </form>
+        </div>
+    </div>
+    <div class="pop-sub abe-txtc" >
+
+
+        <!--<input type="button" value="提交" id="btn"  class="btn btn-blue mrg_10 " onclick="return _asr.submit('<?php echo "$funcid"; ?>', '<?php echo "$funcid"; ?>-Search', '<?php echo U("/Home/Trade/index?func=check_receive&id=$search[id]") ; ?>',''); " />-->
+
+        <input type="button" value="提交" class="btn btn-blue mrg_10 " onclick="return _asr.confirm('确认操作', '请确认款项类型是否正确?', '', '<?php echo U("/Home/Trade/index?func=check_receive&id=$search[id]") ; ?>','','<?php echo "$funcid"; ?>-Search'); " />
+        <input type="button" value="取消" class="btn btn-org mrg_10 " onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" />
+    </div>
+
+
+
+
+</div>
+
+<script>
+    function <?php echo $funcid; ?>_chooseDate(o) {
+        if($('.date').length>0)
+            pickmeup('.date').destroy();
+        $('.date').removeClass('date')
+        $(o).addClass('date');
+        pickmeup('.date', {
+            format  : 'Y-m-d',
+            date : $(o).val(),
+            hide_on_select : true,
+            locale : 'zh'
+        }).show();
+    }
+
+    // 点击获取验证码操作
+    $('.fsyzm').click(function() {
+        var trade_id = "{$search.id}";
+        var pay_ment = $("input[name='pay_ment']:checked").val();
+        var remarks = $("input[name='remarks']").val();
+        var money = $("input[name='money']").val();
+
+        $.ajax({
+            type:"post",
+            url:"__APP__/Home/Trade/check_verify",
+            data:{"trade_id":trade_id,"pay_ment":pay_ment,"remarks":remarks,"money":money},
+            dataType:"json",
+            success:function(data)
+            {
+                if(data['msg'] == 200){
+
+                    //设置不可变更
+                    $("input[name='money']").attr("readonly","readonly");
+                    $("input[name='remarks']").attr("readonly","readonly");
+                    if(pay_ment == 1){
+                        $("input[name='pay_ment'][value='0']").attr("disabled",true);
+                    }else{
+                        $("input[name='pay_ment'][value='1']").attr("disabled",true);
+                    }
+
+                    let count = 60;
+                    const countDown = setInterval(() => {
+                        if (count === 0) {
+                            $('.fsyzm').val('重新发送').removeAttr('disabled');
+                            clearInterval(countDown);
+                        } else {
+                            $('.fsyzm').attr('disabled', true);
+                            $('.fsyzm').css({
+                                background: '#d8d8d8',
+                                color: '#707070',
+                            });
+                            $('.fsyzm').val(count + '秒后可重新获取');
+                        }
+                        count--;
+                    }, 1000);
+                }else if(data['msg'] == 300)
+                {
+                    _asr.message('提示','款项金额不能为空或负数');
+                } else if(data['msg'] == 301)
+                {
+                    _asr.message('提示','备注信息不能为空');
+                } else if(data['msg'] == 202)
+                {
+                    _asr.message('错误','注册手机号码未找到');
+                } else if(data['msg'] == 204)
+                {
+                    _asr.message('错误','验证码已发送，60秒后才能再次发送');
+                }
+            }
+        })
+
+    });
+
+
+
+    
+    $('.calendar0,.calendar1').on('click',function(){
+    <?php echo $funcid; ?>_chooseDate(this)
+    });
+
+
+    /***************************************************************************************/
+    /* 前台页面初始化                                                                      */
+    /***************************************************************************************/
+    function <?php echo $funcid; ?>_init(_id){
+        return ;
+    }
+
+    /***************************************************************************************/
+    /* 前台页面清除                                                                      */
+    /***************************************************************************************/
+    function <?php echo $funcid; ?>_clearsearch(_frm){
+
+        _asr.setvaluebyname(_frm,"trade_no", "" );
+        _asr.setvaluebyname(_frm,"tx_date", "" );
+        _asr.setvaluebyname(_frm,"tx_type", "" );
+        _asr.setvaluebyname(_frm,"goods_no", "" );
+        _asr.setvaluebyname(_frm,"buyer_id", "" );
+        _asr.setvaluebyname(_frm,"goods_name", "" );
+        _asr.setvaluebyname(_frm,"brand", "" );
+        _asr.setvaluebyname(_frm,"style_info", "" );
+        _asr.setvaluebyname(_frm,"producing_area", "" );
+        _asr.setvaluebyname(_frm,"weight", "" );
+        _asr.setvaluebyname(_frm,"price", "" );
+        _asr.setvaluebyname(_frm,"amount", "" );
+        _asr.setvaluebyname(_frm,"warehouse_code", "" );
+        _asr.setvaluebyname(_frm,"contract_no", "" );
+        _asr.setvaluebyname(_frm,"contract_date", "" );
+        _asr.setvaluebyname(_frm,"delivery_no", "" );
+        _asr.setvaluebyname(_frm,"delivery_company", "" );
+        _asr.setvaluebyname(_frm,"delivery_carno", "" );
+        _asr.setvaluebyname(_frm,"delivery_contact", "" );
+        _asr.setvaluebyname(_frm,"delivery_phone", "" );
+        _asr.setvaluebyname(_frm,"delivery_idcard", "" );
+        _asr.setvaluebyname(_frm,"delivery_type", "" );
+        _asr.setvaluebyname(_frm,"delivery_info", "" );
+        _asr.setvaluebyname(_frm,"customer_msg", "" );
+        _asr.setvaluebyname(_frm,"buyer_msg", "" );
+        _asr.setvaluebyname(_frm,"remarks", "" );
+        _asr.setvaluebyname(_frm,"buyer_name", "" );
+
+
+        $("#{$funcid}").find(".selebtn").each(function(){
+            $(this).find("a:eq(0)").click();
+        });
+
+        $("#{$funcid} .city-tags-new .sele-remove").click();
+    }
+
+    function <?php echo $funcid;?>_callback(param){
+        _asr.closePopup('{$funcid}');
+    }
+
+
+
+    {:W('Summary/javascript',array('Trade'))}
+
+</script>
+

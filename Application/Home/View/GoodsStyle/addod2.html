@@ -1,0 +1,270 @@
+{__NOLAYOUT__}
+<div toplayer="1" class="prompt-pop pop-style4" style="z-index:{$zindex};" id="<?php echo $funcid;?>" url="<?php echo U('Sample/index'); ?>">
+    <div class="title"> <span class="pop-name">定制货品信息</span> <a href=" " class="close iconfont confirm-cancel" onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');"></a> </div>
+    <div class="pop-scroll">
+        <div class="screening">
+            <form enctype="multipart/form-data" action="<?php echo U('Goods/index?func=createsave'); ?>" id="<?php echo "$funcid"; ?>-Search" method="post">
+            <input type="hidden" name="materials" value="<?php echo $search['materials'] ?>">
+            <input  type="hidden" name="user_org_id" value="<?php echo $user['org_id'] ?>">
+            <input  type="hidden" name="style_info_value" value="<?php echo $search['id'] ?>">
+
+            <ul class="form form-mod-new form-column2">
+
+
+
+                <li class="per100">
+                    <div class="unit-left"><span class="tit">  货品分类 </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <input type="hidden" name="full_path_value" value="<?php echo $search['category_code'] ?>">
+                            <label class="pbtxt txt0" name="full_path" value="" verify="" tips="" reglux="">{$search['full_path']}</label>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="per100">
+                    <div class="unit-left"><span class="tit"> 货品名称 </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <!--基础码  <label class="pbtxt txt0" name="goods_no" value="" verify="" tips="" reglux="">{$search['style_code']}</label>&ensp;-->
+                            <input type="hidden" name="style_name_value"  value="<?php echo $search['style_name']; ?>">
+                            <input type="hidden" name="style_code_value"  value="<?php echo $search['style_code']; ?>">
+                            <label class="pbtxt txt0" name="style_name" value="<?php echo $search['style_name']; ?>" verify="" tips="" reglux="">{$search['style_name']} &ensp; 基础码: {$search['style_code']} </label>
+
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="per100">
+                    <div class="unit-left"><span class="tit">  材质 </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+
+                            <label class="pbtxt txt0" name="full_path" value="" verify="" tips="" reglux="">{$search['materials']}</label>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="per100" style="display: none">
+                    <div class="unit-left"><span class="tit"> 助记码 </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <input type="hidden" name="prefix_value" value="<?php echo $search['prefix'] ?>">
+                            <label class="pbtxt txt0" name="prefix" value="" verify="" tips="" reglux="">{$search['prefix']}</label>
+                        </div>
+                    </div>
+                    <div class="unit-right" style="display: none"> 提示信息 </div>
+                </li>
+
+
+                <li class="per100">
+                    <div class="unit-left"><span class="tit"> 数量单位 </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <input type="hidden" name="uom_qty_value" value="<?php echo $search['uom_qty'] ?>">
+                            <label class="pbtxt txt0" name="uom_qty" value="" verify="" tips="" reglux="">{$search['uom_qty']}</label>
+                        </div>
+                    </div>
+                    <div class="unit-right" style="display: none"> 提示信息 </div>
+                </li>
+
+
+                <li class="per100">
+                    <div class="unit-left"><span class="tit"> 重量单位 </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <input type="hidden" name="uom_weight_value" value="<?php echo $search['uom_weight'] ?>">
+                            <label class="pbtxt txt0" name="uom_weight" value="" verify="" tips="" reglux="">{$search['uom_weight']}</label>
+                        </div>
+                    </div>
+                    <div class="unit-right" style="display: none"> 提示信息 </div>
+                </li>
+
+
+                <li class="per100">
+                    <div class="unit-left"><span class="tit"> 散件单位 </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <input type="hidden" name="uom_bulkcargo_value" value="<?php echo $search['uom_bulkcargo'] ?>">
+                            <label class="pbtxt txt0" name="uom_bulkcargo" value="" verify="" tips="" reglux="">{$search['uom_bulkcargo']}</label>
+                        </div>
+                    </div>
+                    <div class="unit-right" style="display: none"> 提示信息 </div>
+                </li>
+
+
+
+                <li class="per100">
+                    <div class="unit-left"><span class="tit"> 配货阈值 </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="assign_threshold" value="<?php echo $search['assign_threshold']; ?>" verify="" tips="" reglux="">
+                        </div>
+                    </div>
+                    <div class="unit-right" style="display: none">
+                        <input type="button" class="btn btn-blue btn-xs abe-ft12" value="确定">
+                    </div>
+                </li>
+
+
+
+
+                <li class="per100" style="display: none">
+                    <div class="unit-left"><span class="tit">  商品编码 <em class="abe-red mrg_5">*</em> </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+
+                            <input type="text" class="pbtxt txt0" name="goods_no" value="" verify="" tips="" reglux="">
+                        </div>
+                    </div>
+                    <div class="unit-right" style="display: none"> 提示信息 </div>
+                </li>
+
+
+
+                <li class="per100">
+                    <div class="unit-left"><span class="tit"> 活跃等级 </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <select name="active" id="active" class="pbsele txt0">
+                                <option>请选择</option>
+                                <?php
+                                $keyvalue = table_Goods_active();
+                                if(is_array($keyvalue)){
+                                    $i = 0; $__LIST__ = $keyvalue;  ?>
+                                <?php foreach($__LIST__ as $key=>$item): ++$i; ?>
+                                <option value="<?php echo $item['id']; ?>" <?php if($item['id'] == $search['active']): ?> selected="selected" <?php endif;?>><?php echo $item['name']; ?></option>
+                                <?php endforeach; ?>
+                                <?php } ?>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="unit-right" style="display: none">
+                        <input type="button" class="btn btn-blue btn-xs abe-ft12" value="确定">
+                    </div>
+                </li>
+
+                <li class="per100">
+                    <div class="unit-left"><span class="tit"> 配货方式 </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <select name="assign_mode" id="assign_mode" class="pbsele txt0">
+                                <option>请选择</option>
+
+                                <?php
+                                $keyvalue = table_Goods_assign_mode();
+                                if(is_array($keyvalue)){
+                                    $i = 0; $__LIST__ = $keyvalue;  ?>
+                                <?php foreach($__LIST__ as $key=>$item): ++$i; ?>
+                                <option value="<?php echo $item['id']; ?>" <?php if($item['id'] == $search['assign_mode']): ?> selected="selected" <?php endif;?>><?php echo $item['name']; ?></option>
+                                <?php endforeach; ?>
+                                <?php } ?>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="unit-right" style="display: none">
+                        <input type="button" class="btn btn-blue btn-xs abe-ft12" value="确定">
+                    </div>
+                </li>
+
+
+                <li class="per100">
+                    <div class="unit-left"><span class="tit"> 机构原始码 </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="org_goods_no" value="<?php echo $search['org_goods_no']; ?>" verify="" tips="" reglux="">
+                        </div>
+                    </div>
+                    <div class="unit-right" style="display: none">
+                        <input type="button" class="btn btn-blue btn-xs abe-ft12" value="确定">
+                    </div>
+                </li>
+
+
+                <li class="per100" style="display: none">
+                    <div class="unit-left"><span class="tit"> 商品编码 </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox"> <span class="pdr_20">
+              <input type="checkbox">
+              参数一</span><span class="pdr_20">
+              <input type="radio">
+              参数一</span> </div>
+                    </div>
+                </li>
+                <li class="per100" style="display: none">
+                    <div class="unit-left"><span class="tit"> 商品编码 </span> </div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <textarea class="textarea0"></textarea>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            </form>
+        </div>
+    </div>
+    <div class="pop-sub abe-txtc">
+        <input type="button" class="btn btn-blue mrg_15" value="确定" onclick="return _asr.submit('<?php echo "$funcid"; ?>', '<?php echo "$funcid"; ?>-Search', '<?php echo U("/Home/Goods/index?func=createsave&id=$search[id]") ; ?>',''); " />
+        <input type="button" class="btn" value="取消" onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');">
+    </div>
+</div>
+
+<script>
+    function <?php echo $funcid; ?>_chooseDate(o) {
+        if($('.date').length>0)
+            pickmeup('.date').destroy();
+        $('.date').removeClass('date')
+        $(o).addClass('date');
+        pickmeup('.date', {
+            format  : 'Y-m-d',
+            date : $(o).val(),
+            hide_on_select : true,
+            locale : 'zh'
+        }).show();
+    }
+
+    $('.calendar0,.calendar1').on('click',function(){
+    <?php echo $funcid; ?>_chooseDate(this)
+    });
+
+
+    /***************************************************************************************/
+    /* 前台页面初始化                                                                      */
+    /***************************************************************************************/
+    function <?php echo $funcid; ?>_init(_id){
+        return ;
+    }
+
+    /***************************************************************************************/
+    /* 前台页面清除                                                                      */
+    /***************************************************************************************/
+    function <?php echo $funcid; ?>_clearsearch(_frm){
+
+        _asr.setvaluebyname(_frm,"type", "" );
+        _asr.setvaluebyname(_frm,"category_code", "" );
+        _asr.setvaluebyname(_frm,"code", "" );
+        _asr.setvaluebyname(_frm,"name", "" );
+        _asr.setvaluebyname(_frm,"remarks", "" );
+
+
+        $("#{$funcid}").find(".selebtn").each(function(){
+            $(this).find("a:eq(0)").click();
+        });
+
+        $("#{$funcid} .city-tags-new .sele-remove").click();
+    }
+
+    function <?php echo $funcid;?>_callback(param){
+        _asr.closePopup('{$funcid}');
+    }
+
+    {:W('Summary/javascript',array('Customer'))}
+
+</script>
+
+

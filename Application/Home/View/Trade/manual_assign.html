@@ -1,0 +1,137 @@
+{__NOLAYOUT__}
+<div toplayer="1" class="prompt-pop pop-style3" style="z-index:{$zindex};width:800px;" id="<?php echo $funcid;?>" url="<?php echo U('Trade/index'); ?>">
+    <div class="title">
+        <span class="pop-name">手工配货</span>
+        <a href="javascript:void(0);" onclick="_asr.closePopup('{$funcid}');" class="close iconfont">&#xe60d;</a>
+    </div>
+    <div class="pop-scroll">
+        <div class="screening ">
+            <form enctype="multipart/form-data" action="<?php echo U('Trade/index?func=save'); ?>" id="<?php echo $funcid; ?>-Search" method="post">
+                <input type="hidden" name="<?php echo $funcid; ?>-last-url" id="<?php echo $funcid; ?>-last-url" value="<?php echo $__last_url; ?>" />
+                <input type="hidden" name="funcid" value="<?php echo $funcid; ?>" />
+                <input type="hidden" name="pfuncid" value="<?php echo $pfuncid; ?>" />
+                <input type="hidden" name="id" value="{$id}; ?>" />
+                <input type="hidden" name="goods_no" value="{$goods['goods_no']}; ?>" />
+                <input type="hidden" name="_lastchanged" value="<?php echo $search['lastchanged']; ?>" />
+
+                <div class="cardbox">
+                    <?php if(empty($storeCardNo)) { ?>
+                    <div class="card-search">
+                        <input type="text" class="pbtxt">
+                        <input type="button" value="搜索实物卡" data-type="r" class="btn btn-blue btn-smx mlg_10">
+                        <input type="button" value="搜索虚拟卡" data-type="v" class="btn btn-blue btn-smx mlg_10">
+                    </div>
+                    <?php } ?>
+                    <ul class="card-tree">
+                        <?php foreach($storeCard as $card) { ?>
+                        <li class="active">
+                            <div class="tlist-info">
+                                <?php if(isset($storeCardPackage) && !empty($storeCardPackage) && isset($storeCardPackage[$card["id"]])) { ?>
+                                <em class="ico" data-id="{$card['id']}" data-type="package"></em>
+                                <?php } else { ?>
+                                <em class="" data-id="{$card['id']}" data-type="package"></em>
+                                <?php } ?>
+                                <?php $checked = ""; ?>
+                                <?php $value = ""; ?>
+                                <?php $defaultValue = $card['weight'] - $card['lock_weight']; ?>
+                                <?php if($id) { ?>
+                                <?php $checked = "checked='checked'"; ?>
+                                <?php $value = $trade_assign[$card['id']]['weight']; ?>
+                                <?php $defaultValue += $trade_assign[$card['id']]['weight']; ?>
+                                <?php } else { ?>
+                                <?php $value = ""; ?>
+                                <?php } ?>
+                                <input type="checkbox" class="abe-fl" data-type="card" data-id="{$card['id']}" name="storageCard[]" value="{$card['id']}" {$checked}>
+                                <div class="item">{$card['storecard_no']}</div>
+                                <div class="item">{$card['goods_name']}</div>
+                                <div class="item">{$card['style_info']}</div>
+                                <div class="item">{$defaultValue}{$card['uom_weight']}</div>
+                                <input type="text" class="txt" data-type="card" data-id="{$card['id']}" name="storageCardWeight[{$card['id']}]" default-weight="{$defaultValue}" value="{$value}">
+                                <a href="#" class="del iconfont">&#xe60d;</a>
+                                <input type="hidden" data-type="card-type" data-id="{$card['id']}" name="storageCardType[{$card['id']}]" value="{$card['storecard_type']}">
+                            </div>
+                            <?php if(isset($storeCardPackage) && !empty($storeCardPackage) && isset($storeCardPackage[$card["id"]])) { ?>
+                            <ul class="">
+                                <?php foreach($storeCardPackage[$card["id"]] as $package) { ?>
+                                <li>
+                                    <?php $checked = ""; ?>
+                                    <?php $value = ""; ?>
+                                    <?php $defaultValue = $package['weight'] - $package['lock_weight']; ?>
+                                    <?php if(isset($trade_assign_buttress[$card['id']][$package['id']])) { ?>
+                                    <?php $checked = "checked='checked'"; ?>
+                                    <?php $value = $trade_assign_package[$card['id']][$package['id']]; ?>
+                                    <?php $defaultValue += $trade_assign_package[$card['id']][$package['id']]; ?>
+                                    <?php } ?>
+                                    <div class="tlist-info">
+                                        <?php if(isset($storeCardButtress) && !empty($storeCardButtress) && isset($storeCardButtress[$card["id"]][$package["id"]])) { ?>
+                                        <em class="ico" data-id="{$package['id']}" data-type="buttress"></em>
+                                        <?php } else { ?>
+                                        <em class="" data-id="{$package['id']}" data-type="buttress"></em>
+                                        <?php } ?>
+                                        <input type="checkbox" class="abe-fl" data-type="package" data-id="{$package['id']}" data-parent-id="{$card['id']}" name="package[{$card['id']}][]" value="{$package['id']}" {$checked}>
+                                        <div class="item">{$package["package_no"]}</div>
+                                        <div class="item">{$package["goods_name"]}</div>
+                                        <div class="item">{$package["style_code"]}</div>
+                                        <div class="item">{$defaultValue}{$package["uom_weight"]}</div>
+                                        <input type="text" class="txt" data-type="package" data-id="{$package['id']}" data-parent-id="{$card['id']}" name="packageWeight[{$package['id']}]" default-weight="{$defaultValue}" value="{$value}">
+                                        <a href="#" class="del iconfont">&#xe60d;</a>
+                                    </div>
+                                    <?php if(isset($storeCardButtress) && !empty($storeCardButtress) && isset($storeCardButtress[$card["id"]][$package["id"]])) { ?>
+                                    <ul class="last-ch">
+                                        <?php foreach($storeCardButtress[$card["id"]][$package["id"]] as $buttress) { ?>
+                                        <li>
+                                            <?php $checked = ""; ?>
+                                            <?php $value = ""; ?>
+                                            <?php $defaultValue = $buttress['weight'] - $buttress['lock_weight']; ?>
+                                            <?php if(isset($trade_assign_buttress[$card['id']][$package['id']][$buttress['id']])) { ?>
+                                            <?php $checked = "checked='checked'"; ?>
+                                            <?php $value = $trade_assign_buttress[$card['id']][$package['id']][$buttress['id']]['weight']; ?>
+                                            <?php $defaultValue += $trade_assign_buttress[$card['id']][$package['id']][$buttress['id']]['weight']; ?>
+                                            <?php } ?>
+                                            <div class="tlist-info">
+                                                <input type="checkbox" class="abe-fl" data-type="buttress" data-id="{$buttress['id']}" data-parent-id="{$package['id']}" name="buttress[{$card['id']}][{$package['id']}][]" value="{$buttress['id']}" {$checked}>
+                                                <div class="item">{$buttress['buttress_no']}</div>
+                                                <div class="item">{$package["goods_name"]}</div>
+                                                <div class="item">{$package["style_code"]}</div>
+                                                <div class="item">{$defaultValue}{$package["uom_weight"]}</div>
+                                                <input type="text" class="txt" data-type="buttress" data-id="{$buttress['id']}" data-parent-id="{$package['id']}" name="buttressWeight[{$buttress['id']}]" default-weight="{$defaultValue}" value="{$value}">
+                                                <a href="#" class="del iconfont">&#xe60d;</a>
+                                            </div>
+                                        </li>
+                                        <?php } ?>
+                                    </ul>
+                                    <?php } ?>
+                                </li>
+                                <?php } ?>
+                            </ul>
+                            <?php } ?>
+                        </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            </form>
+            <form action="" id="<?php echo $funcid; ?>-Card" method="get">
+            </form>
+        </div>
+    </div>
+    <div class="pop-sub abe-txtc" >
+        <input type="button" value="提交" class="btn btn-blue mrg_10 " onclick="return _asr.submit('<?php echo $funcid; ?>', '<?php echo $funcid; ?>-Search', '<?php echo U("/Home/Trade/index?func=manual_assign&id=$search[id]") ; ?>',''); " />
+        <input type="button" value="取消" class="btn btn-org mrg_10 " onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" />
+    </div>
+</div>
+<script>
+    $(function() {
+        console.log("debug");
+        var _funcId = "<?php echo $funcid; ?>";
+
+        _asr.addListener(_funcId, $("#" + _funcId + " div.cardbox em"), "click", trade_add_bind_card);
+        _asr.addListener(_funcId, $("#" + _funcId + " div.cardbox ul.card-tree input[type=checkbox]"), "click", trade_add_check_card);
+        _asr.addListener(_funcId, $("#" + _funcId + " div.cardbox ul.card-tree input[type=text]"), "blur", trade_add_calc);
+        _asr.addListener(_funcId, $("#" + _funcId + " div.cardbox a.del"), "click", trade_add_removeCard);
+        _asr.addListener(_funcId, $("#" + _funcId + " div.cardbox div.card-search input[type=button]"), "click", function(_fid, _target) {
+            let cardNo = _target.parent().find("input[type=text]").val();
+            let t = _target.attr("data-type") == "r" ? 1 : 0;
+            trade_add_search_card(_fid, _target, {storecard_no: cardNo, goods_no: '{$trade['goods_no']}', storecard_type: t});
+        });
+    });
+    </script>

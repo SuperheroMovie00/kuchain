@@ -1,0 +1,46 @@
+{__NOLAYOUT__}
+<!-- 明细表 -->
+<tr  detail="1" id="{$funcid}_assign_{$storecard_id}_table">
+    <td colspan="99" style="padding:0;">
+        <table border="0" cellspacing="0" cellpadding="0" class="pub-table-in" style=" width:100%;">
+            <colgroup>
+                <if condition="$assign_mode eq 1">
+                    <col style="width:40px;">
+                </if>
+                <col style="width:80px;"><!-- <col style="width: auto ;">  -->
+                <col style="width:80px;"><!-- <col style="width: auto ;">  -->
+                <col style="width:40px;">
+                <col style=""><!-- <col style="width: auto ;">  -->
+            </colgroup>
+            <tbody>
+            <tr>
+                <th>序号</th>
+                <if condition="$assign_mode eq 1">
+                    <th></th>
+                </if>
+                <th class="abe-txtl">码单号</th>
+                <th class="abe-txtl">重量</th>
+                <th class="abe-txtl">操作</th>
+            </tr>
+            <?php foreach($list as $detail_key=>$detail): $detail_mod = ($di % 2 );++$di;?>
+            <tr <?php if(($detail_mod) == "1"): ?>class="even"<?php endif; if(($detail_mod) == "0"): ?>class="odd"<?php endif; ?> id="{$funcid}_package_{$detail[package_id]}" data-parent-id="{$funcid}_assign_{$detail['storecard_id']}">
+            <td><?php echo $di; ?></td>
+            <if condition="$assign_mode eq 1">
+                <td><a href="javascript:void(0);" onclick="return _asr.loadData('<?php echo "$funcid"; ?>','<?php echo U("/Home/Trade/index?func=get_buttress_list&id=$trade_id&pid=".$detail[package_id]) ; ?>','{$funcid}_package_{$detail[package_id]}_table'); " class="vi-blue">展开</a></td>
+            </if>
+            <td class="abe-txtl">{$detail[package_no]}</td>
+            <td class="abe-txtl" data-value="{$detail.weight}"  data-type="weight">
+                {$detail.weight|system_format='F5',###,'F5'}
+            </td>
+            <td>
+                <a href="javascript:void(0);" onclick="return _asr.confirm('确认操作', '请确认是否进行 删除码单配货 操作?', '', '<?php echo U("/Home/Trade/index?func=package_del&package_id=$detail[package_id]") ; ?>','','<?php echo "$funcid"; ?>-Search'); " class="abe-red">删除</a>
+            </td>
+            <td></td>
+            </tr>
+            <tr style="display:" id="{$funcid}_package_{$detail[package_id]}_table">
+
+            </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table></td>
+</tr>

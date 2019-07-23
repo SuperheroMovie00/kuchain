@@ -1,0 +1,60 @@
+{__NOLAYOUT__}
+<tr style="display:" detail="1" id="{$funcid}-detail">
+  <td colspan="99" style="padding:0;">
+  <!-- 明细表 -->
+    <table border="0" cellspacing="0" cellpadding="0" class="pub-table-in ta-tr-hover" style=" width:100%;">
+      <colgroup>
+        <col style="width: 40px ;">  <!-- 序号 -->
+        <col style="width: 80px ;"> <!-- 状态 -->
+        <col style="width: 80px ;"> <!-- 库联 -->
+        <col style="width: 80px ;"> <!-- 交易链号 -->
+        <col style="width: 80px ;"> <!-- 次序 -->
+        <col style="width: 80px ;"> <!-- 交易 -->
+        <col style="width: 80px ;"> <!-- 交易单号 -->
+        <col style="width: 80px ;"> <!-- 开单日期 -->
+        <col style="width: 100px ;"> <!-- 卖出客户 -->
+        <col style="width: 100px ;"> <!-- 买入客户 -->
+        <col style="width: 80px ;"> <!-- 接口处理 -->
+        <col style="width: 150px ;"> <!-- 接口时间 -->
+        <col style="width:auto" >
+      </colgroup>
+      <tbody>
+        <tr>
+          <th>序号</th>
+          <th>状态</th>
+          <th>库联</th>
+          <th class=" abe-txtl ">交易链号</th>
+          <th>次序</th>
+          <th>交易</th>
+          <th class=" abe-txtl ">交易单号</th>
+          <th>开单日期</th>
+          <th class=" abe-txtl ">卖出客户</th>
+          <th class=" abe-txtl ">买入客户</th>
+          <th>接口处理</th>
+          <th>接口时间</th>
+          <th/>
+      </tr>
+      <?php foreach($list as $detail_key=>$detail): $detail_mod = ($di % 2 );++$di;?>
+      <tr <?php if(($detail_mod) == "1"): ?>class="even"<?php endif; if(($detail_mod) == "0"): ?>class="odd"<?php endif; ?>>
+        <td class="align=c"><?php echo $di."."; ?></td>
+        <td><?php echo get_table_Trade_status("$detail[status]","name","") ; ?></td>
+        <td><?php echo get_table_Org_byID("$detail[org_id]","name","") ; ?></td>
+        <td class=" abe-txtl "><a href="javascript:void(0);" class="vi-blue"  onclick="return _asr.openLink('<?php echo U("/Home/Chain/index?func=view&no=$detail[chain_no]"); ?>','<?php echo filterFuncId( U("/Home/Chain/index?func=view&no=$detail[chain_no]") ,"");?>', '交易链详情' ,0); " ><?php echo $detail["chain_no"]; ?></a></td>
+        <td><?php echo system_format("N3", $detail["seq"],1); ?></td>
+        <td><?php echo $detail["trade_id"]; ?></td>
+        <td class=" abe-txtl "><a href="javascript:void(0);" class="vi-blue"  onclick="return _asr.openLink('<?php echo U("/Home/Trade/index?func=view&no=$detail[trade_no]"); ?>','<?php echo filterFuncId( U("/Home/Trade/index?func=view&no=$detail[trade_no]") ,"");?>', '<?php echo tabTitle("交易","$detail[trade_no]","RIGHT","8") ; ?>' ,0); " ><?php echo $detail["trade_no"]; ?></a></td>
+        <td><?php echo system_format("D", $detail["tx_date"],1); ?></td>
+        <td class=" abe-txtl "><?php echo $detail["customer_name"]; ?></td>
+        <td class=" abe-txtl "><?php echo $detail["buyer_name"]; ?></td>
+        <td><?php echo get_table_ChainDetail_interface_process("$detail[interface_process]","name","") ; ?></td>
+        <td><?php echo system_format("DT", $detail["interface_time"],1); ?></td>
+        <td/>
+     </tr>
+     <?php endforeach; ?>
+     </tbody>
+     </table>
+
+     </td>
+  </tr>
+
+

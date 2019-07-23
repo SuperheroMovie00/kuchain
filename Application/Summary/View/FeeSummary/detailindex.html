@@ -1,0 +1,81 @@
+{__NOLAYOUT__}
+<tr style="display:" detail="1" id="{$funcid}-detail">
+  <td colspan="99" style="padding:0;">
+  <!-- 明细表 -->
+    <table border="0" cellspacing="0" cellpadding="0" class="pub-table-in ta-tr-hover" style=" width:100%;">
+      <colgroup>
+        <col style="width: 40px ;">  <!-- 序号 -->
+        <col style="width: 100px ;"> <!-- 费用账单 -->
+        <col style="width: 80px ;"> <!-- 库联 -->
+        <col style="width: 100px ;"> <!-- 客户 -->
+        <col style="width: 100px ;"> <!-- 客户名称 -->
+        <col style="width: 80px ;"> <!-- 费用月份 -->
+        <col style="width: 80px ;"> <!-- 仓库编码 -->
+        <col style="width: 100px ;"> <!-- 仓库编码 -->
+        <col style="width: 80px ;"> <!-- 费用日期 -->
+        <col style="width: 80px ;"> <!-- 费用类型 -->
+        <col style="width: 100px ;"> <!-- 费用摘要 -->
+        <col style="width: 80px ;"> <!-- 存储卡 -->
+        <col style="width: 80px ;"> <!-- 存储卡号 -->
+        <col style="width: 80px ;"> <!-- 交易单据 -->
+        <col style="width: 80px ;"> <!-- 货品编码 -->
+        <col style="width: 100px ;"> <!-- 货品名称 -->
+        <col style="width: 80px ;"> <!-- 重量 -->
+        <col style="width: 80px ;"> <!-- 价格(元) -->
+        <col style="width: 80px ;"> <!-- 金额(元) -->
+        <col style="width:auto" >
+      </colgroup>
+      <tbody>
+        <tr>
+          <th>序号</th>
+          <th class=" abe-txtl ">费用账单</th>
+          <th>库联</th>
+          <th class=" abe-txtl ">客户</th>
+          <th class=" abe-txtl ">客户名称</th>
+          <th>费用月份</th>
+          <th class=" abe-txtl ">仓库编码</th>
+          <th class=" abe-txtl ">仓库编码</th>
+          <th>费用日期</th>
+          <th class=" abe-txtl ">费用类型</th>
+          <th class=" abe-txtl ">费用摘要</th>
+          <th>存储卡</th>
+          <th class=" abe-txtl ">存储卡号</th>
+          <th class=" abe-txtl ">交易单据</th>
+          <th class=" abe-txtl ">货品编码</th>
+          <th class=" abe-txtl ">货品名称</th>
+          <th class=" abe-txtr ">重量</th>
+          <th class=" abe-txtr ">价格(元)</th>
+          <th class=" abe-txtr ">金额(元)</th>
+          <th/>
+      </tr>
+      <?php foreach($list as $detail_key=>$detail): $detail_mod = ($di % 2 );++$di;?>
+      <tr <?php if(($detail_mod) == "1"): ?>class="even"<?php endif; if(($detail_mod) == "0"): ?>class="odd"<?php endif; ?>>
+        <td class="align=c"><?php echo $di."."; ?></td>
+        <td class=" abe-txtl "><a href="javascript:void(0);" class="vi-blue"  onclick="return _asr.openLink('<?php echo U("/Home/Fee/index?func=view&no=$detail[fee_no]"); ?>','<?php echo filterFuncId( U("/Home/Fee/index?func=view&no=$detail[fee_no]") ,"");?>', 'fee_id详情' ,0); " ><?php echo $detail["fee_no"]; ?></a></td>
+        <td><?php echo get_table_Org_byID("$detail[org_id]","name","") ; ?></td>
+        <td class=" abe-txtl "><?php echo get_table_Customer("$detail[customer_id_name]","name","") ; ?></td>
+        <td class=" abe-txtl "><a href="javascript:void(0);" class="vi-blue"  onclick="return _asr.openLink('<?php echo U("/Home/Customer/index?func=view&no=$detail[customer_name]"); ?>','<?php echo filterFuncId( U("/Home/Customer/index?func=view&no=$detail[customer_name]") ,"");?>', 'customer_id详情' ,0); " ><?php echo $detail["customer_name"]; ?></a></td>
+        <td><?php echo $detail["tx_month"]; ?></td>
+        <td class=" abe-txtl "><?php echo get_table_Warehouse("$detail[warehouse_code]","name","") ; ?></td>
+        <td class=" abe-txtl "><?php echo get_table_Warehouse("$detail[warehouse_code_name]","name","") ; ?></td>
+        <td><?php echo system_format("D", $detail["tx_date"],1); ?></td>
+        <td class=" abe-txtl "><?php echo $detail["fee_type"]; ?></td>
+        <td class=" abe-txtl "><?php echo $detail["subject"]; ?></td>
+        <td><?php echo $detail["storecard_id"]; ?></td>
+        <td class=" abe-txtl "><?php echo $detail["storecard_no"]; ?></td>
+        <td class=" abe-txtl "><?php echo $detail["order_no"]; ?></td>
+        <td class=" abe-txtl "><?php echo $detail["goods_no"]; ?></td>
+        <td class=" abe-txtl "><?php echo $detail["goods_name"]; ?></td>
+        <td class=" abe-txtr "><?php echo system_format("F33", $detail["weight"],1); ?></td>
+        <td class=" abe-txtr "><?php echo system_format("F33", $detail["price"],1); ?></td>
+        <td class=" abe-txtr "><?php echo system_format("F32", $detail["amount"],1); ?></td>
+        <td/>
+     </tr>
+     <?php endforeach; ?>
+     </tbody>
+     </table>
+
+     </td>
+  </tr>
+
+

@@ -1,0 +1,16 @@
+<ul class="">
+    <?php foreach($storecard_package as $package) { ?>
+    <li>
+        <div class="tlist-info">
+            <em class=""></em>
+            <input type="checkbox" class="abe-fl" data-type="package" data-id="{$package['id']}" data-parent-id="{$package['storecard_id']}" name="package[{$package['storecard_id']}][]" value="{$package['id']}">
+            <div class="item">{$package["package_no"]}</div>
+            <div class="item">{$package["goods_name"]}</div>
+            <div class="item">{$package["style_code"]}</div>
+            <div class="item">{$package["weight"]}{$package["uom_weight"]}</div>
+            <input type="text" class="txt" data-type="package" data-id="{$package['id']}" data-parent-id="{$package['storecard_id']}" default-weight="{$package['weight'] - $package['lock_weight']}" name="packageWeight[{$package['id']}]" value="">
+            <a href="#" class="del iconfont">&#xe60d;</a>
+        </div>
+    </li>
+    <?php } ?>
+</ul>

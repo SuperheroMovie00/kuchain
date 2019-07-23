@@ -1,0 +1,285 @@
+{__NOLAYOUT__}
+<div toplayer="1" class="prompt-pop pop-style3" style="z-index:{$zindex};width:800px;" id="<?php echo $funcid;?>" url="<?php echo U('Customer/index'); ?>">
+
+   <div class="title">
+       <div class="pop-name"><?php echo $search['title'];?>客户注册信息</div>
+       <a href="javascript:void(0);" onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" class="close iconfont">&#xe60d;</a>
+   </div>
+
+
+<div class="pop-scroll">
+   <div class="screening ">
+      <form enctype="multipart/form-data" action="<?php echo U('Customer/index?func=registrationinfo_save'); ?>" id="<?php echo "$funcid"; ?>-Search" method="post">
+          <input type="hidden" name="<?php echo "$funcid"; ?>-last-url" id="<?php echo "$funcid"; ?>-last-url" value="<?php echo $__last_url; ?>" />
+          <input type="hidden" name="funcid" value="<?php echo "$funcid"; ?>" />
+          <input type="hidden" name="pfuncid" value="<?php echo "$pfuncid"; ?>" />
+          <input type="hidden" name="id" value="<?php echo $search["id"]; ?>" />
+          <input type="hidden" name="_lastchanged" value="<?php echo $search["lastchanged"]; ?>" />
+          <ul class="form form-mod-new form-column2">
+              <li class="per100">
+                  <div class="unit-left"><span class="tit">客户名称</span></div>
+                  <div class="unit-mid">
+                      <div class="textbox">
+                          <label class="pbtxt txt0 " name="" value="" verify="" tips="" reglux="">{$search['code']} - {$search['name']}</label>
+                      </div>
+                  </div>
+              </li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 营业执照号<em class="abe-red mrg_5">*</em></span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="corpbusicode" value="<?php echo $search['corpbusicode']; ?>"  >
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 税务登记证<em class="abe-red mrg_5">*</em></span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="corptaxcode"  value="<?php echo $search['corptaxcode']; ?>"  >
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+              <li class="border-line"></li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 法人姓名</span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="legalpername"  value="<?php echo $search['legalpername']; ?>"  >
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 法人证件类型</span></div>
+                  <div class="unit-mid">
+                      <div class="dropdown" id="{$funcid}_legalperidtype">
+                          <select class="pbsele dropdown0" name="legalperidtype">
+                              <option value="" <?php if($search['legalperidtype'] == ''): ?> selected="selected" <?php endif;?> ></option>
+                              <?php
+                                $keyvalue = subcode('IdType');
+                                if(is_array($keyvalue)){
+                                    $i = 0; $__LIST__ = $keyvalue;  ?>
+                              <?php foreach($__LIST__ as $key=>$item): ++$i; ?>
+                              <option value="<?php echo $item['code']; ?>" <?php if($item['code'] == $search['legalperidtype']): ?> selected="selected" <?php endif;?>><?php echo $item['name']; ?></option>
+                              <?php endforeach; ?>
+                              <?php } ?>
+                          </select>
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li></li>
+             <li class="">
+                  <div class="unit-left"><span class="tit"> 法人证件号码</span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="legalperidno"  value="<?php echo $search['legalperidno']; ?>"   onblur="_asr.getPinyin(this, $('#<?php echo $funcid;?>').find('input[name=prefix]'));">
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+              <li class="border-line"></li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 联系人姓名</span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="contactname"  value="<?php echo $search['contactname']; ?>"   onblur="_asr.getPinyin(this, $('#<?php echo $funcid;?>').find('input[name=prefix]'));">
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 联系人证件类型</span></div>
+                  <div class="unit-mid">
+                      <div class="dropdown" id="{$funcid}_contactidtype">
+                          <select class="pbsele dropdown0" name="contactidtype">
+                              <option value="" <?php if($search['contactidtype'] == ''): ?> selected="selected" <?php endif;?> ></option>
+                              <?php
+                                $keyvalue = subcode('IdType');
+                                if(is_array($keyvalue)){
+                                    $i = 0; $__LIST__ = $keyvalue;  ?>
+                              <?php foreach($__LIST__ as $key=>$item): ++$i; ?>
+                              <option value="<?php echo $item['code']; ?>" <?php if($item['code'] == $search['contactidtype']): ?> selected="selected" <?php endif;?>><?php echo $item['name']; ?></option>
+                              <?php endforeach; ?>
+                              <?php } ?>
+                          </select>
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li></li>
+             <li class="">
+                  <div class="unit-left"><span class="tit"> 联系人证件号码</span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="contactidno"  value="<?php echo $search['contactidno']; ?>"   onblur="_asr.getPinyin(this, $('#<?php echo $funcid;?>').find('input[name=prefix]'));">
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+              <li></li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 联系人手机</span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="contactmobile"  value="<?php echo $search['contactmobile']; ?>"   onblur="_asr.getPinyin(this, $('#<?php echo $funcid;?>').find('input[name=prefix]'));">
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+              <li class="border-line"></li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 开户银行</span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="openbank"  value="<?php echo $search['openbank']; ?>"   onblur="_asr.getPinyin(this, $('#<?php echo $funcid;?>').find('input[name=prefix]'));">
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 开户账户号</span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="openacctno"  value="<?php echo $search['openacctno']; ?>"   onblur="_asr.getPinyin(this, $('#<?php echo $funcid;?>').find('input[name=prefix]'));">
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+              <li></li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 开户账户名</span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="openacctname"  value="<?php echo $search['openacctname']; ?>"   onblur="_asr.getPinyin(this, $('#<?php echo $funcid;?>').find('input[name=prefix]'));">
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+          </ul>
+       </form>
+    </div>
+ </div>
+    <div class="pop-sub abe-txtc" >
+
+
+        <input type="button" value="提交" class="btn btn-blue mrg_10 " onclick="return _asr.submit('<?php echo "$funcid"; ?>', '<?php echo "$funcid"; ?>-Search', '<?php echo U("/Home/Customer/index?func=registrationinfo_save") ; ?>',''); " />
+
+        <input type="button" value="取消" class="btn btn-org mrg_10 " onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" />
+    </div>
+
+
+
+
+</div>
+
+<script>
+        function <?php echo $funcid; ?>_chooseDate(o) {
+            if($('.date').length>0)
+                pickmeup('.date').destroy();
+            $('.date').removeClass('date')
+            $(o).addClass('date');
+            pickmeup('.date', {
+                format  : 'Y-m-d',
+                date : $(o).val(),
+                hide_on_select : true,
+                locale : 'zh'
+            }).show();
+        }
+
+        $('.calendar0,.calendar1').on('click',function(){
+            <?php echo $funcid; ?>_chooseDate(this)
+        });
+
+
+        /***************************************************************************************/
+        /* 前台页面初始化                                                                      */
+        /***************************************************************************************/
+        function <?php echo $funcid; ?>_init(_id){
+            return ;
+        }
+
+        /***************************************************************************************/
+        /* 前台页面清除                                                                      */
+        /***************************************************************************************/
+        function <?php echo $funcid; ?>_clearsearch(_frm){
+
+            _asr.setvaluebyname(_frm,"type", "" );
+            _asr.setvaluebyname(_frm,"category_code", "" );
+            _asr.setvaluebyname(_frm,"code", "" );
+            _asr.setvaluebyname(_frm,"name", "" );
+            _asr.setvaluebyname(_frm,"full_name", "" );
+            _asr.setvaluebyname(_frm,"prefix", "" );
+            _asr.setvaluebyname(_frm,"industry_code", "" );
+            _asr.setvaluebyname(_frm,"province", "" );
+            _asr.setvaluebyname(_frm,"address", "" );
+            _asr.setvaluebyname(_frm,"postcode", "" );
+            _asr.setvaluebyname(_frm,"phone", "" );
+            _asr.setvaluebyname(_frm,"mobile", "" );
+            _asr.setvaluebyname(_frm,"linkman", "" );
+            _asr.setvaluebyname(_frm,"invoice_company", "" );
+            _asr.setvaluebyname(_frm,"invoice_address", "" );
+            _asr.setvaluebyname(_frm,"invoice_phone", "" );
+            _asr.setvaluebyname(_frm,"invoice_bank", "" );
+            _asr.setvaluebyname(_frm,"invoice_taxno", "" );
+            _asr.setvaluebyname(_frm,"invoice_account", "" );
+            _asr.setvaluebyname(_frm,"CorpBusiCode", "" );
+            _asr.setvaluebyname(_frm,"CorpTaxCode", "" );
+            _asr.setvaluebyname(_frm,"LegalPerName", "" );
+            _asr.setvaluebyname(_frm,"LegalPerIdType", "" );
+            _asr.setvaluebyname(_frm,"LegalPerIdNo", "" );
+            _asr.setvaluebyname(_frm,"ContactName", "" );
+            _asr.setvaluebyname(_frm,"ContactIdType", "" );
+            _asr.setvaluebyname(_frm,"ContactIdNo", "" );
+            _asr.setvaluebyname(_frm,"ContactMobile", "" );
+            _asr.setvaluebyname(_frm,"OpenBank", "" );
+            _asr.setvaluebyname(_frm,"OpenAcctNo", "" );
+            _asr.setvaluebyname(_frm,"OpenAcctName", "" );
+            _asr.setvaluebyname(_frm,"chinapay_userid", "" );
+            _asr.setvaluebyname(_frm,"customer_level", "" );
+            _asr.setvaluebyname(_frm,"remarks", "" );
+
+
+          $("#{$funcid}").find(".selebtn").each(function(){
+              $(this).find("a:eq(0)").click();
+            });
+
+          $("#{$funcid} .city-tags-new .sele-remove").click();
+        }
+
+   function <?php echo $funcid;?>_callback(param){
+        _asr.closePopup('{$funcid}');
+   }
+
+
+
+    {:W('Summary/javascript',array('Customer'))}
+
+</script>

@@ -1,0 +1,858 @@
+[ 2019-07-23T09:57:20+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003461s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000607s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000671s ]
+NOTIC: [8] Undefined variable: download C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\25520d513124a6369605db6f8fa5dc6c.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035561s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035623s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000940s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001096s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001156s ]
+
+[ 2019-07-23T09:57:21+08:00 ] ::1 /index.php/Home/Auth/verify_captcha.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000957s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+NOTIC: [2] imagettftext(): Could not find/open font C:\xampp\htdocs\project\exploitproject\库链\exploit3\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Could not find/open font C:\xampp\htdocs\project\exploitproject\库链\exploit3\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Could not find/open font C:\xampp\htdocs\project\exploitproject\库链\exploit3\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Could not find/open font C:\xampp\htdocs\project\exploitproject\库链\exploit3\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000985s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001050s ]
+
+[ 2019-07-23T09:57:21+08:00 ] ::1 /index.php/Home/Auth/verify_captcha.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001374s ]
+NOTIC: [2] imagettftext(): Could not find/open font C:\xampp\htdocs\project\exploitproject\库链\exploit3\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Could not find/open font C:\xampp\htdocs\project\exploitproject\库链\exploit3\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Could not find/open font C:\xampp\htdocs\project\exploitproject\库链\exploit3\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Could not find/open font C:\xampp\htdocs\project\exploitproject\库链\exploit3\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001754s ]
+
+[ 2019-07-23T09:57:23+08:00 ] ::1 /index.php/Home/Auth/loginAct
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0138s ]
+SQL: SELECT * FROM `erp_user` WHERE ( code='break' ) LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `erp_customer` WHERE ( id=5 and status=1 ) LIMIT 1   [ RunTime:0.0146s ]
+SQL: UPDATE `erp_user` SET `session_id`='0be3c170cd1014055a70653d1fbe55e5',`errpwd_count`='0' WHERE ( id=2 ) [ RunTime:0.0014s ]
+
+[ 2019-07-23T09:57:23+08:00 ] ::1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000989s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001050s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0054s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `erp_customer` WHERE ( id = 5 and status=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0019s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: select node.id,node.name,node.module from erp_role as role,erp_role_user as user,erp_role_node as access ,erp_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id  and node.status=1 [ RunTime:0.0213s ]
+NOTIC: [8] Undefined index: APP C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\BasicController.class.php 第 193 行.
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0011s ]
+SQL: SELECT DISTINCT title,`name`,`id`,`is_admin`,`model`,`sort`,`ico`,`default_open` FROM erp_node as a WHERE (  a.level='1' AND status='1'  ) ORDER BY sort ASC,id ASC  [ RunTime:0.0016s ]
+SQL: SELECT DISTINCT title,`name`,`pid`,`id`,`is_admin`,`model`,`sort`,`ico`,`default_open` FROM erp_node as a WHERE (  a.level='2' AND status='1'  ) ORDER BY sort ASC,id ASC  [ RunTime:0.0007s ]
+SQL: SELECT DISTINCT title,`name`,`id`,`pid`,a.module,a.btn_name,`is_admin`,`model`,`sort`,`ico`,`default_open` FROM erp_node as a WHERE (  a.level='3' AND status='1'  ) ORDER BY sort ASC,id ASC  [ RunTime:0.0007s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code='notice_open' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code='notice_title' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000584s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000646s ]
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026338s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001152s ]
+
+[ 2019-07-23T09:58:39+08:00 ] ::1 /index.php/Home/Auth/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000808s ]
+
+[ 2019-07-23T09:58:39+08:00 ] ::1 /index.php/Home/Auth/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000846s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+NOTIC: [8] Undefined variable: download C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\25520d513124a6369605db6f8fa5dc6c.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006386s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006467s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000756s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000804s ]
+
+[ 2019-07-23T09:58:39+08:00 ] ::1 /index.php/Home/Auth/verify_captcha.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001481s ]
+NOTIC: [2] imagettftext(): Could not find/open font C:\xampp\htdocs\project\exploitproject\库链\exploit3\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Could not find/open font C:\xampp\htdocs\project\exploitproject\库链\exploit3\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Could not find/open font C:\xampp\htdocs\project\exploitproject\库链\exploit3\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+NOTIC: [2] imagettftext(): Could not find/open font C:\xampp\htdocs\project\exploitproject\库链\exploit3\ThinkPHP\Library\Think\Verify.class.php 第 166 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001093s ]
+
+[ 2019-07-23T09:58:41+08:00 ] ::1 /index.php/Home/Auth/loginAct
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000847s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `erp_user` WHERE ( code='admin' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_org` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `erp_org` WHERE ( id=1 and status=1 ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: UPDATE `erp_user` SET `session_id`='6cad84ac96c24650516de76887b474fe',`errpwd_count`='0' WHERE ( id=1 ) [ RunTime:0.0005s ]
+
+[ 2019-07-23T09:58:42+08:00 ] ::1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000915s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0016s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `erp_org` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `erp_org` WHERE ( id = 1 and status=1 ) LIMIT 1   [ RunTime:0.0085s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0017s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: select node.id,node.name,node.module from erp_role as role,erp_role_user as user,erp_role_node as access ,erp_node as node where user.user_id='1' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id  and node.status=1 [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: APP C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\BasicController.class.php 第 193 行.
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0012s ]
+SQL: SELECT DISTINCT title,`name`,`id`,`is_admin`,`model`,`sort`,`ico`,`default_open` FROM erp_node as a WHERE (  a.level='1' AND status='1'  ) ORDER BY sort ASC,id ASC  [ RunTime:0.0008s ]
+SQL: SELECT DISTINCT title,`name`,`pid`,`id`,`is_admin`,`model`,`sort`,`ico`,`default_open` FROM erp_node as a WHERE (  a.level='2' AND status='1'  ) ORDER BY sort ASC,id ASC  [ RunTime:0.0009s ]
+SQL: SELECT DISTINCT title,`name`,`id`,`pid`,a.module,a.btn_name,`is_admin`,`model`,`sort`,`ico`,`default_open` FROM erp_node as a WHERE (  a.level='3' AND status='1'  ) ORDER BY sort ASC,id ASC  [ RunTime:0.0010s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code='notice_open' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code='notice_title' ) LIMIT 1   [ RunTime:0.0073s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014926s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000922s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001232s ]
+
+[ 2019-07-23T09:58:46+08:00 ] ::1 /index.php/Home/Trade/index/func/view/id/7.html?funcid=f_d3e12728fa6ab091549df7f500e31904&__ajax=1&pfuncid=X200510
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0025s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_org` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `erp_org` WHERE ( id = 1 and status=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0014s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0011s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0004s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='admin' AND summary='Trade' ) ORDER BY sort  [ RunTime:0.0005s ]
+SQL: select erp_trade.* from erp_trade   Where erp_trade.id=7   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: stock_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2930 行.
+NOTIC: [8] Undefined index: complete_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2932 行.
+NOTIC: [8] Undefined index: cancel_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2934 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 937 行.
+SQL: SHOW COLUMNS FROM `erp_trade_assign` [ RunTime:0.0023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM erp_trade_assign as t WHERE `trade_id` = 7 LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT t.*,s.goods_name,s.style_info,s.brand,s.producing_area,s.style_code FROM erp_trade_assign as t  left join erp_storecard as s on t.storecard_id=s.id  WHERE `trade_id` = '7' LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_payment` [ RunTime:0.0017s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 1 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 0 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+NOTIC: [2] Use of undefined constant payment_expire - assumed 'payment_expire' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 27 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 41 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 55 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: warehouse_name C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 65 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 81 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 92 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 95 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: remark C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 165 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 331 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 338 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017952s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000844s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000915s ]
+
+[ 2019-07-23T09:58:50+08:00 ] ::1 /index.php/Home/Trade/index/func/exportTradeAssign/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0012s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_org` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `erp_org` WHERE ( id = 1 and status=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0010s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0012s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0008s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='admin' AND summary='Trade' ) ORDER BY sort  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_trade` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `erp_trade` WHERE ( id = 7 AND customer_id = 1 AND org_id = 1 AND status < 3 ) LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2019-07-23T09:58:53+08:00 ] ::1 /index.php/Home/Trade/index.html?func=view&id=7&funcid=f_d3e12728fa6ab091549df7f500e31904&__ajax=1&pfuncid=X200510&__refresh=1&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001165s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001270s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0012s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_org` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `erp_org` WHERE ( id = 1 and status=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0020s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0018s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0004s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='admin' AND summary='Trade' ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: select erp_trade.* from erp_trade   Where erp_trade.id=7   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: stock_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2930 行.
+NOTIC: [8] Undefined index: complete_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2932 行.
+NOTIC: [8] Undefined index: cancel_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2934 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 937 行.
+SQL: SHOW COLUMNS FROM `erp_trade_assign` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM erp_trade_assign as t WHERE `trade_id` = 7 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT t.*,s.goods_name,s.style_info,s.brand,s.producing_area,s.style_code FROM erp_trade_assign as t  left join erp_storecard as s on t.storecard_id=s.id  WHERE `trade_id` = '7' LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_payment` [ RunTime:0.0013s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 1 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 0 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+NOTIC: [2] Use of undefined constant payment_expire - assumed 'payment_expire' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 27 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 41 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 55 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: warehouse_name C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 65 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 81 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 92 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 95 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: remark C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 165 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 331 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 338 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018437s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000979s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001169s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001225s ]
+
+[ 2019-07-23T09:58:54+08:00 ] ::1 /index.php/Home/Trade/index.html?func=view&id=7&funcid=f_d3e12728fa6ab091549df7f500e31904&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904&__refresh=1&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000811s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0016s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_org` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `erp_org` WHERE ( id = 1 and status=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0010s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0011s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0004s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='admin' AND summary='Trade' ) ORDER BY sort  [ RunTime:0.0004s ]
+SQL: select erp_trade.* from erp_trade   Where erp_trade.id=7   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: stock_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2930 行.
+NOTIC: [8] Undefined index: complete_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2932 行.
+NOTIC: [8] Undefined index: cancel_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2934 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 937 行.
+SQL: SHOW COLUMNS FROM `erp_trade_assign` [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM erp_trade_assign as t WHERE `trade_id` = 7 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT t.*,s.goods_name,s.style_info,s.brand,s.producing_area,s.style_code FROM erp_trade_assign as t  left join erp_storecard as s on t.storecard_id=s.id  WHERE `trade_id` = '7' LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_payment` [ RunTime:0.0012s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 1 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 0 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+NOTIC: [2] Use of undefined constant payment_expire - assumed 'payment_expire' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 27 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 41 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 55 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: warehouse_name C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 65 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 81 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 92 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 95 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: remark C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 165 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 331 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 338 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016971s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000777s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001156s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001271s ]
+
+[ 2019-07-23T09:58:54+08:00 ] ::1 /index.php/Home/Trade/index.html?func=view&id=7&funcid=f_d3e12728fa6ab091549df7f500e31904&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904&__refresh=1&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0014s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `erp_org` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `erp_org` WHERE ( id = 1 and status=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0110s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0014s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0005s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='admin' AND summary='Trade' ) ORDER BY sort  [ RunTime:0.0004s ]
+SQL: select erp_trade.* from erp_trade   Where erp_trade.id=7   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: stock_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2930 行.
+NOTIC: [8] Undefined index: complete_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2932 行.
+NOTIC: [8] Undefined index: cancel_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2934 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 937 行.
+SQL: SHOW COLUMNS FROM `erp_trade_assign` [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM erp_trade_assign as t WHERE `trade_id` = 7 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT t.*,s.goods_name,s.style_info,s.brand,s.producing_area,s.style_code FROM erp_trade_assign as t  left join erp_storecard as s on t.storecard_id=s.id  WHERE `trade_id` = '7' LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_payment` [ RunTime:0.0011s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 1 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 0 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [2] Use of undefined constant payment_expire - assumed 'payment_expire' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 27 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 41 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 55 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: warehouse_name C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 65 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 81 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 92 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 95 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: remark C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 165 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 331 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 338 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021833s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021917s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001165s ]
+
+[ 2019-07-23T09:58:54+08:00 ] ::1 /index.php/Home/Trade/index.html?func=view&id=7&funcid=f_d3e12728fa6ab091549df7f500e31904&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904&__refresh=1&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001396s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0015s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `erp_org` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `erp_org` WHERE ( id = 1 and status=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0012s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0015s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0007s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='admin' AND summary='Trade' ) ORDER BY sort  [ RunTime:0.0004s ]
+SQL: select erp_trade.* from erp_trade   Where erp_trade.id=7   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: stock_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2930 行.
+NOTIC: [8] Undefined index: complete_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2932 行.
+NOTIC: [8] Undefined index: cancel_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2934 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 937 行.
+SQL: SHOW COLUMNS FROM `erp_trade_assign` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM erp_trade_assign as t WHERE `trade_id` = 7 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT t.*,s.goods_name,s.style_info,s.brand,s.producing_area,s.style_code FROM erp_trade_assign as t  left join erp_storecard as s on t.storecard_id=s.id  WHERE `trade_id` = '7' LIMIT 0,10   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `erp_payment` [ RunTime:0.0012s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 1 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 0 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+NOTIC: [2] Use of undefined constant payment_expire - assumed 'payment_expire' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 27 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 41 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 55 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: warehouse_name C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 65 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 81 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 92 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 95 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: remark C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 165 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 331 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 338 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017074s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001139s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001240s ]
+
+[ 2019-07-23T09:58:55+08:00 ] ::1 /index.php/Home/Trade/index.html?func=view&id=7&funcid=f_d3e12728fa6ab091549df7f500e31904&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904&__refresh=1&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0017s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_org` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `erp_org` WHERE ( id = 1 and status=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0129s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0017s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0005s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='admin' AND summary='Trade' ) ORDER BY sort  [ RunTime:0.0004s ]
+SQL: select erp_trade.* from erp_trade   Where erp_trade.id=7   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: stock_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2930 行.
+NOTIC: [8] Undefined index: complete_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2932 行.
+NOTIC: [8] Undefined index: cancel_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2934 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 937 行.
+SQL: SHOW COLUMNS FROM `erp_trade_assign` [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM erp_trade_assign as t WHERE `trade_id` = 7 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT t.*,s.goods_name,s.style_info,s.brand,s.producing_area,s.style_code FROM erp_trade_assign as t  left join erp_storecard as s on t.storecard_id=s.id  WHERE `trade_id` = '7' LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_payment` [ RunTime:0.0016s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 1 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 0 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+NOTIC: [2] Use of undefined constant payment_expire - assumed 'payment_expire' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 27 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 41 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 55 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: warehouse_name C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 65 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 81 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 92 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 95 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: remark C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 165 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 331 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 338 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020123s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001194s ]
+
+[ 2019-07-23T09:58:55+08:00 ] ::1 /index.php/Home/Trade/index.html?func=view&id=7&funcid=f_d3e12728fa6ab091549df7f500e31904&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904&__refresh=1&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001137s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0017s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_org` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `erp_org` WHERE ( id = 1 and status=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0009s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0011s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0005s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='admin' AND summary='Trade' ) ORDER BY sort  [ RunTime:0.0005s ]
+SQL: select erp_trade.* from erp_trade   Where erp_trade.id=7   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: stock_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2930 行.
+NOTIC: [8] Undefined index: complete_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2932 行.
+NOTIC: [8] Undefined index: cancel_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2934 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 937 行.
+SQL: SHOW COLUMNS FROM `erp_trade_assign` [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM erp_trade_assign as t WHERE `trade_id` = 7 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT t.*,s.goods_name,s.style_info,s.brand,s.producing_area,s.style_code FROM erp_trade_assign as t  left join erp_storecard as s on t.storecard_id=s.id  WHERE `trade_id` = '7' LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_payment` [ RunTime:0.0011s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 1 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 0 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+NOTIC: [2] Use of undefined constant payment_expire - assumed 'payment_expire' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 27 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 41 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 55 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: warehouse_name C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 65 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 81 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 92 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 95 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: remark C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 165 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 331 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 338 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018749s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000899s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000994s ]
+
+[ 2019-07-23T09:58:55+08:00 ] ::1 /index.php/Home/Trade/index.html?func=view&id=7&funcid=f_d3e12728fa6ab091549df7f500e31904&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904&__refresh=1&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001268s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0013s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `erp_org` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `erp_org` WHERE ( id = 1 and status=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0015s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0013s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0004s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='admin' AND summary='Trade' ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: select erp_trade.* from erp_trade   Where erp_trade.id=7   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: stock_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2930 行.
+NOTIC: [8] Undefined index: complete_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2932 行.
+NOTIC: [8] Undefined index: cancel_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2934 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 937 行.
+SQL: SHOW COLUMNS FROM `erp_trade_assign` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM erp_trade_assign as t WHERE `trade_id` = 7 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT t.*,s.goods_name,s.style_info,s.brand,s.producing_area,s.style_code FROM erp_trade_assign as t  left join erp_storecard as s on t.storecard_id=s.id  WHERE `trade_id` = '7' LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_payment` [ RunTime:0.0016s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 1 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 0 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+NOTIC: [2] Use of undefined constant payment_expire - assumed 'payment_expire' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 27 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 41 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 55 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: warehouse_name C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 65 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 81 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 92 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 95 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: remark C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 165 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 331 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 338 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019463s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019554s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000959s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001432s ]
+
+[ 2019-07-23T09:58:56+08:00 ] ::1 /index.php/Home/Trade/index.html?func=view&id=7&funcid=f_d3e12728fa6ab091549df7f500e31904&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904&__refresh=1&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001146s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0012s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_org` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `erp_org` WHERE ( id = 1 and status=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0016s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0011s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0003s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='admin' AND summary='Trade' ) ORDER BY sort  [ RunTime:0.0003s ]
+SQL: select erp_trade.* from erp_trade   Where erp_trade.id=7   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: stock_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2930 行.
+NOTIC: [8] Undefined index: complete_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2932 行.
+NOTIC: [8] Undefined index: cancel_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2934 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 937 行.
+SQL: SHOW COLUMNS FROM `erp_trade_assign` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM erp_trade_assign as t WHERE `trade_id` = 7 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT t.*,s.goods_name,s.style_info,s.brand,s.producing_area,s.style_code FROM erp_trade_assign as t  left join erp_storecard as s on t.storecard_id=s.id  WHERE `trade_id` = '7' LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_payment` [ RunTime:0.0020s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 1 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 0 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+NOTIC: [2] Use of undefined constant payment_expire - assumed 'payment_expire' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 27 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 41 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 55 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: warehouse_name C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 65 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 81 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 92 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 95 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: remark C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 165 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 331 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 338 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019950s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000734s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000911s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000964s ]
+
+[ 2019-07-23T09:58:56+08:00 ] ::1 /index.php/Home/Trade/index.html?func=view&id=7&funcid=f_d3e12728fa6ab091549df7f500e31904&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904&__refresh=1&__ajax=1&pfuncid=f_d3e12728fa6ab091549df7f500e31904
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000084s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001196s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0012s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_org` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `erp_org` WHERE ( id = 1 and status=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0010s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0016s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0004s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Home/Trade' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='admin' AND summary='Trade' ) ORDER BY sort  [ RunTime:0.0004s ]
+SQL: select erp_trade.* from erp_trade   Where erp_trade.id=7   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: stock_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2930 行.
+NOTIC: [8] Undefined index: complete_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2932 行.
+NOTIC: [8] Undefined index: cancel_time C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Home\Controller\TradeController.class.php 第 2934 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 937 行.
+SQL: SHOW COLUMNS FROM `erp_trade_assign` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM erp_trade_assign as t WHERE `trade_id` = 7 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT t.*,s.goods_name,s.style_info,s.brand,s.producing_area,s.style_code FROM erp_trade_assign as t  left join erp_storecard as s on t.storecard_id=s.id  WHERE `trade_id` = '7' LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_payment` [ RunTime:0.0013s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 1 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `confirm_time`,`confirm_user` FROM `erp_payment` WHERE `order_id` = 7 AND `customer_id` = 0 ORDER BY confirm_time desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+NOTIC: [2] Use of undefined constant payment_expire - assumed 'payment_expire' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 27 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 41 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 55 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: warehouse_name C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 65 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [8] Undefined variable: customer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 80 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 81 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [8] Undefined variable: buyer_payment_info C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 91 行.
+NOTIC: [2] Division by zero C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 92 行.
+NOTIC: [2] Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 95 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: remark C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 165 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 331 行.
+NOTIC: [8] Undefined index: lastchanged C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Home\320e5e4a5ab42eeff2c506f1d19c7e90.php 第 338 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019831s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019910s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000753s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001311s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001419s ]
+

@@ -1,0 +1,176 @@
+{__NOLAYOUT__}
+<div toplayer="1" class="prompt-pop pop-style4" style="z-index:{$zindex};" id="<?php echo $funcid;?>" url="<?php echo U('CustomerDelivery/index'); ?>">
+
+   <div class="title">
+       <span class="pop-name"><?php echo $search[id]?'编辑':'新增'; ?>客户提货信息信息</span>
+       <a href="javascript:void(0);" onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" class="close iconfont">&#xe60d;</a>
+   </div>
+
+
+
+
+
+<div class="pop-scroll">
+   <div class="screening ">
+      <form enctype="multipart/form-data" action="<?php echo U('CustomerDelivery/index?func=save'); ?>" id="<?php echo "$funcid"; ?>-Search" method="post">
+          <input type="hidden" name="<?php echo "$funcid"; ?>-last-url" id="<?php echo "$funcid"; ?>-last-url" value="<?php echo $__last_url; ?>" />
+          <input type="hidden" name="funcid" value="<?php echo "$funcid"; ?>" />
+          <input type="hidden" name="pfuncid" value="<?php echo "$pfuncid"; ?>" />
+          <input type="hidden" name="id" value="<?php echo $search["id"]; ?>" />
+          <input type="hidden" name="_lastchanged" value="<?php echo $search["lastchanged"]; ?>" />
+          <ul class="form form-mod-new form-column2">
+
+             <li class="per100">
+                  <div class="unit-left"><span class="tit"> 选择客户</span></div>
+                  <div class="unit-mid">
+                       <div class="popup">
+                            <input  type="text" class="pbtxt txt0" name="customer_id_name" readonly="readonly" value="<?php echo $search['customer_id_name']; ?>">
+                            <button type="submit" class="txt-search" onclick="return _asr.popup('Customer','<?php echo "$funcid"; ?>','<?php echo "$funcid"; ?>-Search','Single','customer_id','customer_id_name'); " <?php if($search["customer_id_name"]): ?> style="display:none"<?php endif; ?> ><i class="iconfont">&#xe60e;</i></button>
+                            <button type="submit" class="txt-clear" onclick="_asr.setvaluebyname('<?php echo "$funcid"; ?>-Search','customer_id','');_asr.setvaluebyname('<?php echo "$funcid"; ?>-Search','customer_id_name','');return false;" <?php if(!$search["customer_id_name"]): ?> style="display:none"<?php endif; ?> ><i class="iconfont">&#xe616;</i></button>
+                       </div>
+                      <input type="hidden" name="customer_id" value="<?php echo $search['customer_id']; ?>">
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+             <li class="per100">
+                  <div class="unit-left"><span class="tit"> 车牌号</span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="carno"  value="<?php echo $search['carno']; ?>"  >
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+             <li class="per100">
+                  <div class="unit-left"><span class="tit"> 驾驶员</span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="contact"  value="<?php echo $search['contact']; ?>"  >
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+             <li class="per100">
+                  <div class="unit-left"><span class="tit"> 身份证</span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="idcard"  value="<?php echo $search['idcard']; ?>"  >
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+             <li class="per100">
+                  <div class="unit-left"><span class="tit"> 联系电话</span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="phone"  value="<?php echo $search['phone']; ?>"  >
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+             <li class="per100">
+                  <div class="unit-left"><span class="tit"> 承运单位</span></div>
+                  <div class="unit-mid">
+                       <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="company"  value="<?php echo $search['company']; ?>"  >
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+             <li class="per100">
+                  <div class="unit-left"><span class="tit"> 备注</span></div>
+                  <div class="unit-mid">
+                       <textarea class="textarea0" name="remarks"   ><?php echo $search['remarks']; ?></textarea>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+
+          </ul>
+       </form>
+    </div>
+ </div>
+    <div class="pop-sub abe-txtc" >
+
+
+               <input type="button" value="提交" class="btn btn-blue mrg_10 " onclick="return _asr.submit('<?php echo "$funcid"; ?>', '<?php echo "$funcid"; ?>-Search', '<?php echo U("/Home/CustomerDelivery/index?func=save&id=$search[id]") ; ?>',''); " />
+
+               <input type="button" value="取消" class="btn btn-org mrg_10 " onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" />
+    </div>
+
+
+
+
+</div>
+
+<script>
+        function <?php echo $funcid; ?>_chooseDate(o) {
+            if($('.date').length>0)
+                pickmeup('.date').destroy();
+            $('.date').removeClass('date')
+            $(o).addClass('date');
+            pickmeup('.date', {
+                format  : 'Y-m-d',
+                date : $(o).val(),
+                hide_on_select : true,
+                locale : 'zh'
+            }).show();
+        }
+
+        $('.calendar0,.calendar1').on('click',function(){
+            <?php echo $funcid; ?>_chooseDate(this)
+        });
+
+
+        /***************************************************************************************/
+        /* 前台页面初始化                                                                      */
+        /***************************************************************************************/
+        function <?php echo $funcid; ?>_init(_id){
+            return ;
+        }
+
+        /***************************************************************************************/
+        /* 前台页面清除                                                                      */
+        /***************************************************************************************/
+        function <?php echo $funcid; ?>_clearsearch(_frm){
+
+            _asr.setvaluebyname(_frm,"customer_id_name", "" );
+            _asr.setvaluebyname(_frm,"customer_id", "" );
+            _asr.setvaluebyname(_frm,"carno", "" );
+            _asr.setvaluebyname(_frm,"contact", "" );
+            _asr.setvaluebyname(_frm,"idcard", "" );
+            _asr.setvaluebyname(_frm,"phone", "" );
+            _asr.setvaluebyname(_frm,"company", "" );
+            _asr.setvaluebyname(_frm,"remarks", "" );
+
+
+          $("#{$funcid}").find(".selebtn").each(function(){
+              $(this).find("a:eq(0)").click();
+            });
+
+          $("#{$funcid} .city-tags-new .sele-remove").click();
+        }
+
+   function <?php echo $funcid;?>_callback(param){
+        _asr.closePopup('{$funcid}');
+   }
+
+
+
+    {:W('Summary/javascript',array('CustomerDelivery'))}
+
+</script>
+

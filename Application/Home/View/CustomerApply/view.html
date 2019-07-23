@@ -1,0 +1,209 @@
+{__NOLAYOUT__}
+<div toplayer="1" class="wrap-box wrap-pb2 " id="<?php echo $funcid;?>" summaryid="CustomerApply" baseurl="<?php echo U('CustomerApply/index'); ?>">
+
+   <div class="wrap-box-info ">
+      <div class="wrap-title abe-ofl">
+         <div class="tit abe-fl">客户申请信息</div>
+         <div class="abe-fr">
+
+
+               <a href="javascript:void(0);"  class=" vi-blue " onclick="return _asr.openLink('','<?php echo "$funcid"; ?>','刷新',1); "><i class="iconfont ">&#xe611;</i> 刷新</a>
+
+         </div>
+      </div>
+
+      <div class="order-step">
+         <dl>
+            <?php if(is_array($step)):
+                 $i = 0;
+                 $__LIST__ = $step;
+                 if( count($__LIST__) == 0) :
+                     echo "";
+                 else:
+                     foreach($__LIST__ as $key=>$item):
+                        if($key>0): ?>
+                        <dd <?php if($item['type']=='after') echo "class='after'"; elseif ($item['type']=='current') echo "class='current'"; elseif ($item['type']=='cancel') echo "class='cancel-faq'"; ?>><i class="iconfont">&#xe619;</i></dd>
+                        <?php endif; ?>
+                        <dt <?php if($item['type']=='after') echo "class='after'"; elseif ($item['type']=='current') echo "class='current'"; elseif ($item['type']=='cancel') echo "class='cancel-faq'"; ?>>
+                           <div <?php if($item['type']=='cancel') echo "class='iconfont'"; ?> ><?php echo $item['no'];?></div>
+                           <span><?php echo $item['desc'];?></span>
+                           <time><?php echo $item['time'];?></time>
+                        </dt>
+                    <?php endforeach;
+                 endif;
+               endif; ?>
+           </dl>
+      </div>
+
+      <div class="table-box">
+         <div class="table-in">
+            <div class="pub-par-title ppt-ico-box">
+               <span class="abe-fl vi-blue abe-ft14">基本信息</span>
+               <div class="faq-ico-box abe-fl">
+                  <!-- icon 图标样例 -->
+<!--
+                  <?php if($search["is_manual"]==1): ?><div class="faq-ico"><img src="/Public/images/Home/faq-shou.png" alt=""></div><?php endif; ?>
+                  <?php if($search["is_split"]==1): ?><div class="faq-ico"><img src="/Public/images/Home/faq-chai.png" alt=""></div><?php endif; ?>
+                  <?php if($search["is_copy"]==1): ?><div class="faq-ico"><img src="/Public/images/Home/faq-copy.png" alt=""></div><?php endif; ?>
+                  <?php if($search["status"]==0): ?><div class="faq-ico"><img src="/Public/images/Home/faq-gua.png" alt=""></div><?php endif; ?>
+                  <?php if($search["lock_status"]==1): ?><div class="faq-ico"><img src="/Public/images/Home/faq-suo.png" alt=""></div><?php endif; ?>
+                  <?php if($search["confirm_order"]==1 && $search["confirm_status"]==1): ?><div class="faq-ico"><img src="/Public/images/Home/faq-shen.png" alt=""></div><?php endif; ?>
+                  <?php if($search["confirm_order"]==1 && $search["confirm_status"]==0): ?><div class="faq-ico"><img src="/Public/images/Home/faq-wen.png" alt=""></div><?php endif; ?>
+                  <?php if($search["cancel_status"]==1): ?><div class="faq-ico"><img src="/Public/images/Home/faq-zuofei.png" alt=""></div><?php endif; ?>
+                  <?php if($search["assign_result"]==2 || $search["assign_result"]==3): ?><div class="faq-ico"><img src="/Public/images/Home/faq-que.png" alt=""></div><?php endif; ?>
+                  <?php if($search["payment_status"]==0): ?><div class="faq-ico faq-ico-wfk"><img src="/Public/images/Home/wfk.png" alt=""></div><?php endif; ?> -->
+               </div>
+               <div class="abe-fr">
+
+
+          <?php if (isset($rights['edit_base']) && $rights['edit_base']): ?>
+          <?php if ($search['status']==0): ?>
+               <a href="javascript:void(0);"  class=" vi-blue vi-blue mlg_10 " onclick="return _asr.popupFun('<?php echo U("/Home/CustomerApply/index?func=edit_base&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/CustomerApply/index?func=edit_base&id=$search[id]","");?>'); "> 编辑</a>
+          <?php endif; ?>
+          <?php endif; ?>
+
+               </div>
+            </div>
+
+     <table border="0" cellspacing="0" cellpadding="0" class="pub-table-par">
+        <colgroup>
+           <col style="width:8%;"/>
+           <col style="width:17%;"/>
+           <col style="width:8%;"/>
+           <col style="width:17%;"/>
+           <col style="width:8%;"/>
+           <col style="width:17%;"/>
+           <col style="width:8%;"/>
+           <col style="width:16%;"/>
+        </colgroup>
+        <tbody>
+
+           <tr class= "even">
+             <th>申请类型</th>
+             <td><?php echo get_table_CustomerApply_type("$search[type]","name","") ; ?></td>
+             <th>申请时间</th>
+             <td><?php echo system_format("DT", $search["apply_time"],1); ?></td>
+             <th>回复内容</th>
+             <td title="<?php echo $search["reply_content"]; ?>"><?php echo OverView($search["reply_content"],150,"..."); ?></td>
+             <th>状态</th>
+             <td><?php echo get_table_CustomerApply_status("$search[status]","name","") ; ?></td>
+           </tr>
+           <tr class= "odd">
+             <th>客户代码</th>
+             <td><a href="javascript:void(0);" class="vi-blue"  onclick="return _asr.openLink('<?php echo U("/Home/Customer/index?func=view&no=$search[code]"); ?>','<?php echo filterFuncId( U("/Home/Customer/index?func=view&no=$search[code]") ,"");?>', '<?php echo tabTitle("客户","$search[code]") ; ?>' ,0); " ><?php echo $search["code"]; ?></a></td>
+             <th>申请人员</th>
+             <td><?php echo $search["apply_user"]; ?></td>
+             <th>回复状态</th>
+             <td><?php echo get_table_CustomerApply_reply_status("$search[reply_status]","name","") ; ?><em class="abe-space-sm"></em><?php echo system_format("DT", $search["reply_time"],1); ?></td>
+             <th></th>
+             <td></td>
+           </tr>
+           <tr class= "even">
+             <th>客户简称</th>
+             <td><?php echo $search["name"]; ?></td>
+             <th>申请内容</th>
+             <td title="<?php echo $search["apply_content"]; ?>"><?php echo OverView($search["apply_content"],150,"..."); ?></td>
+             <th>创建时间</th>
+             <td><?php echo system_format("DT", $search["create_time"],1); ?><em class="abe-space-sm"></em><?php echo $search["create_user"]; ?></td>
+             <th></th>
+             <td></td>
+           </tr>
+           <tr class= "odd">
+             <th>申请摘要</th>
+             <td><?php echo $search["subject"]; ?></td>
+             <th>回复人员</th>
+             <td><?php echo $search["reply_user"]; ?></td>
+             <th>修改时间</th>
+             <td><?php echo system_format("DT", $search["modify_time"],1); ?><em class="abe-space-sm"></em><?php echo $search["modify_user"]; ?></td>
+             <th></th>
+             <td></td>
+           </tr>
+
+        </tbody>
+     </table>
+         </div>
+      </div>
+
+
+
+      <input type="hidden" name="<?php echo "$funcid"; ?>-last-url" id="<?php echo "$funcid"; ?>-last-url" value="<?php echo $__last_url; ?>" />
+      <input type="hidden" name="funcid" value="<?php echo "$funcid"; ?>" />
+      <input type="hidden" name="pfuncid" value="<?php echo "$pfuncid"; ?>" />
+      <input type="hidden" name="id" value="<?php echo $search["id"]; ?>" />
+      <input type="hidden" name="_lastchanged" value="<?php echo $search["lastchanged"]; ?>" />
+
+   </div>
+
+   <div class="data-oper" >
+      <div class="data-oper-in " >
+
+
+          <?php if (isset($rights['order_edit']) && $rights['order_edit']): ?>
+          <?php if (!$search['status']): ?>
+               <input type="button" value="信息编辑" class="btn btn-blue mlg_10 " default-status="1" onclick="return _asr.popupFun('<?php echo U("/Home/CustomerApply/index?func=edit_base&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/CustomerApply/index?func=edit_base&id=$search[id]","");?>'); " />
+          <?php endif; ?>
+          <?php endif; ?>
+
+
+
+          <?php if (isset($rights['status_on']) && $rights['status_on']): ?>
+          <?php if (!$search['status']): ?>
+               <input type="button" value="转已处理" class="btn btn-blue mlg_10 " default-status="1" onclick="return _asr.popupFun('<?php echo U("/Home/CustomerApply/index?func=status_on&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/CustomerApply/index?func=status_on&id=$search[id]","");?>'); " />
+          <?php endif; ?>
+          <?php endif; ?>
+
+
+
+          <?php if (isset($rights['status_off']) && $rights['status_off']): ?>
+          <?php if ($search['status']=='1'): ?>
+               <input type="button" value="转待处理" class="btn btn-org mlg_10 " default-status="1" onclick="return _asr.popupFun('<?php echo U("/Home/CustomerApply/index?func=status_off&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/CustomerApply/index?func=status_off&id=$search[id]","");?>'); " />
+          <?php endif; ?>
+          <?php endif; ?>
+
+          <div class="abe-fr">
+
+
+          <?php if (isset($rights['order_delete']) && $rights['order_delete']): ?>
+          <?php if (!$search['status']): ?>
+               <input type="button" value="记录删除" class="btn btn-org mrg_10 " default-status="1" onclick="return _asr.confirm('确认操作', '请确认是否进行 信息删除 操作?', '', '<?php echo U("/Home/CustomerApply/index?func=delete&id=$search[id]") ; ?>','','<?php echo "$funcid"; ?>-Result'); " />
+          <?php endif; ?>
+          <?php endif; ?>
+
+          </div>
+      </div>
+   </div>
+
+   <div class="blank30"></div>
+</div>
+    <script>
+        function <?php echo $funcid; ?>_chooseDate(o) {
+            if($('.date').length>0)
+                pickmeup('.date').destroy();
+            $('.date').removeClass('date')
+            $(o).addClass('date');
+            pickmeup('.date', {
+                format  : 'Y-m-d',
+                date : $(o).val(),
+                hide_on_select : true,
+                locale : 'zh'
+            }).show();
+        }
+
+        $('.calendar0,.calendar1').on('click',function(){
+            <?php echo $funcid; ?>_chooseDate(this)
+        });
+
+        /***************************************************************************************/
+        /* 前台页面初始化                                                                      */
+        /***************************************************************************************/
+        function <?php echo $funcid; ?>_init(_id){
+            return ;
+        }
+
+
+    {:W('Summary/javascript',array('CustomerApply'))}
+
+
+    </script>
+
+

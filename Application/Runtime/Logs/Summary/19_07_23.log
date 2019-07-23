@@ -1,0 +1,776 @@
+[ 2019-07-23T09:57:26+08:00 ] ::1 /index.php/Summary/TradeSummary/index/func/search.html?funcid=X200510&__ajax=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000946s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0033s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `erp_customer` WHERE ( id = 5 and status=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0010s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0016s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0007s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='break' AND summary='TradeSummary' ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: select count(*) as cnt from erp_trade    where 1=1  AND  erp_trade.customer_id='5'   [ RunTime:0.0016s ]
+SQL: select  erp_trade.status , erp_trade.id , erp_trade.org_id , erp_trade.warehouse_code , erp_trade.customer_name , erp_trade.buyer_id , erp_trade.buyer_name , erp_trade.trade_no , erp_trade.tx_type , erp_trade.tx_date , erp_trade.contract_no , erp_trade.contract_date , erp_trade.is_real , erp_trade.chain_id , erp_trade.goods_no , erp_trade.goods_name , erp_trade.style_info , erp_trade.materials , erp_trade.brand , erp_trade.producing_area , erp_trade.weight , erp_trade.price , erp_trade.amount , erp_trade.uom_weight , erp_trade.uom_qty , erp_trade.cust_confirm_status , erp_trade.cust_confirm_time , erp_trade.cust_confirm_user , erp_trade.buyer_confirm_status , erp_trade.buyer_confirm_time , erp_trade.buyer_confirm_user , erp_trade.cust_send_type , erp_trade.cust_send_time , erp_trade.cust_send_user , erp_trade.storefee_bears , erp_trade.storefee_require , erp_trade.storefee_start , erp_trade.payment_require , erp_trade.payment_expire , erp_trade.confirm_status , erp_trade.confirm_payment , erp_trade.confirm_receive , erp_trade.delivery_no , erp_trade.delivery_date , erp_trade.delivery_expired , erp_trade.delivery_company , erp_trade.delivery_type , erp_trade.assign_status , erp_trade.assign_time , erp_trade.assign_user , erp_trade.assign_weight , erp_trade.assign_qty , erp_trade.buyer_storecard_id , erp_trade.buyer_storecard_no , erp_trade.buyer_storecard_allow , erp_trade.act_weight , erp_trade.act_qty , erp_trade.act_time , erp_trade.act_order , erp_trade.diff_weight , erp_trade.diff_amount , erp_trade.interface_status , erp_trade.interface_send_status , erp_trade.interface_send_time , erp_trade.interface_send_count , erp_trade.interface_receive , erp_trade.create_time  from erp_trade   Where 1=1  AND  erp_trade.customer_id='5'    LIMIT 0, 10 [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000488s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000557s ]
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 73 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 92 行.
+SQL: SHOW COLUMNS FROM `erp_subcode` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_WEIGHT' ) ORDER BY sort  [ RunTime:0.0187s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_QTY' ) ORDER BY sort  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060961s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061019s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001280s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001351s ]
+
+[ 2019-07-23T09:57:28+08:00 ] ::1 /index.php/Summary/TradeSummary/index/func/search.html?X200510-last-url=%252Findex.php%252FSummary%252FTradeSummary%252Findex.html%253Ffunc%253Dsearch%2526funcid%253DX200510%2526__ajax%253D1&funcid=X200510&pfuncid=&_searchexpand=&_showsearch=hide&_issearch=1&_keyword=&_tab=daimaijiaqueren&status=&org_id=&warehouse_code=&customer_id_name=&customer_id=&customer_name=&buyer_id=&buyer_name=&trade_no=&tx_type=&tx_date=&tx_date2=&contract_no=&contract_date=&contract_date2=&is_real=&chain_id=&goods_no=&goods_name=&style_info=&materials=&brand=&producing_area=&weight=&weight2=&price=&price2=&amount=&amount2=&uom_weight=&uom_qty=&cust_confirm_status=&cust_confirm_time=&cust_confirm_time2=&cust_confirm_user=&buyer_confirm_status=&buyer_confirm_time=&buyer_confirm_time2=&buyer_confirm_user=&cust_send_type=&cust_send_time=&cust_send_time2=&cust_send_user=&storefee_bears=&storefee_require=&storefee_require2=&storefee_start=&storefee_start2=&payment_require=&payment_expire=&payment_expire2=&confirm_status=&confirm_payment=&confirm_payment2=&confirm_receive=&confirm_receive2=&delivery_no=&delivery_date=&delivery_date2=&delivery_expired=&delivery_expired2=&delivery_company=&delivery_type=&assign_status=&assign_time=&assign_time2=&assign_user=&assign_weight=&assign_weight2=&assign_qty=&assign_qty2=&buyer_storecard_id=&buyer_storecard_no=&buyer_storecard_allow=&act_weight=&act_weight2=&act_qty=&act_qty2=&act_time=&act_time2=&act_order=&diff_weight=&diff_weight2=&diff_amount=&diff_amount2=&interface_status=&interface_send_status=&interface_send_time=&interface_send_time2=&interface_send_count=&interface_send_count2=&interface_receive=&interface_receive2=&create_time=&create_time2=&__ajax=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001022s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001090s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0031s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `erp_customer` WHERE ( id = 5 and status=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0015s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0012s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0006s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='break' AND summary='TradeSummary' ) ORDER BY sort  [ RunTime:0.0005s ]
+SQL: select count(*) as cnt from erp_trade    where 1=1  AND (erp_trade.status='0') AND  erp_trade.customer_id='5'   [ RunTime:0.0007s ]
+SQL: select  erp_trade.status , erp_trade.id , erp_trade.org_id , erp_trade.warehouse_code , erp_trade.customer_name , erp_trade.buyer_id , erp_trade.buyer_name , erp_trade.trade_no , erp_trade.tx_type , erp_trade.tx_date , erp_trade.contract_no , erp_trade.contract_date , erp_trade.is_real , erp_trade.chain_id , erp_trade.goods_no , erp_trade.goods_name , erp_trade.style_info , erp_trade.materials , erp_trade.brand , erp_trade.producing_area , erp_trade.weight , erp_trade.price , erp_trade.amount , erp_trade.uom_weight , erp_trade.uom_qty , erp_trade.cust_confirm_status , erp_trade.cust_confirm_time , erp_trade.cust_confirm_user , erp_trade.buyer_confirm_status , erp_trade.buyer_confirm_time , erp_trade.buyer_confirm_user , erp_trade.cust_send_type , erp_trade.cust_send_time , erp_trade.cust_send_user , erp_trade.storefee_bears , erp_trade.storefee_require , erp_trade.storefee_start , erp_trade.payment_require , erp_trade.payment_expire , erp_trade.confirm_status , erp_trade.confirm_payment , erp_trade.confirm_receive , erp_trade.delivery_no , erp_trade.delivery_date , erp_trade.delivery_expired , erp_trade.delivery_company , erp_trade.delivery_type , erp_trade.assign_status , erp_trade.assign_time , erp_trade.assign_user , erp_trade.assign_weight , erp_trade.assign_qty , erp_trade.buyer_storecard_id , erp_trade.buyer_storecard_no , erp_trade.buyer_storecard_allow , erp_trade.act_weight , erp_trade.act_qty , erp_trade.act_time , erp_trade.act_order , erp_trade.diff_weight , erp_trade.diff_amount , erp_trade.interface_status , erp_trade.interface_send_status , erp_trade.interface_send_time , erp_trade.interface_send_count , erp_trade.interface_receive , erp_trade.create_time  from erp_trade   Where 1=1  AND (erp_trade.status='0') AND  erp_trade.customer_id='5'    LIMIT 0, 10 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000480s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000623s ]
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 73 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 92 行.
+SQL: SHOW COLUMNS FROM `erp_subcode` [ RunTime:0.0013s ]
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_WEIGHT' ) ORDER BY sort  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_QTY' ) ORDER BY sort  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044050s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044196s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001412s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001513s ]
+
+[ 2019-07-23T09:57:29+08:00 ] ::1 /index.php/Summary/TradeSummary/index/func/search.html?X200510-last-url=%252Findex.php%252FSummary%252FTradeSummary%252Findex.html%253Ffunc%253Dsearch%2526funcid%253DX200510%2526pfuncid%253D%2526_searchexpand%253D%2526_showsearch%253Dhide%2526_issearch%253D1%2526_keyword%253D%2526_tab%253Ddaimaijiaqueren%2526status%253D%2526org_id%253D%2526warehouse_code%253D%2526customer_id_name%253D%2526customer_id%253D%2526customer_name%253D%2526buyer_id%253D%2526buyer_name%253D%2526trade_no%253D%2526tx_type%253D%2526tx_date%253D%2526tx_date2%253D%2526contract_no%253D%2526contract_date%253D%2526contract_date2%253D%2526is_real%253D%2526chain_id%253D%2526goods_no%253D%2526goods_name%253D%2526style_info%253D%2526materials%253D%2526brand%253D%2526producing_area%253D%2526weight%253D%2526weight2%253D%2526price%253D%2526price2%253D%2526amount%253D%2526amount2%253D%2526uom_weight%253D%2526uom_qty%253D%2526cust_confirm_status%253D%2526cust_confirm_time%253D%2526cust_confirm_time2%253D%2526cust_confirm_user%253D%2526buyer_confirm_status%253D%2526buyer_confirm_time%253D%2526buyer_confirm_time2%253D%2526buyer_confirm_user%253D%2526cust_send_type%253D%2526cust_send_time%253D%2526cust_send_time2%253D%2526cust_send_user%253D%2526storefee_bears%253D%2526storefee_require%253D%2526storefee_require2%253D%2526storefee_start%253D%2526storefee_start2%253D%2526payment_require%253D%2526payment_expire%253D%2526payment_expire2%253D%2526confirm_status%253D%2526confirm_payment%253D%2526confirm_payment2%253D%2526confirm_receive%253D%2526confirm_receive2%253D%2526delivery_no%253D%2526delivery_date%253D%2526delivery_date2%253D%2526delivery_expired%253D%2526delivery_expired2%253D%2526delivery_company%253D%2526delivery_type%253D%2526assign_status%253D%2526assign_time%253D%2526assign_time2%253D%2526assign_user%253D%2526assign_weight%253D%2526assign_weight2%253D%2526assign_qty%253D%2526assign_qty2%253D%2526buyer_storecard_id%253D%2526buyer_storecard_no%253D%2526buyer_storecard_allow%253D%2526act_weight%253D%2526act_weight2%253D%2526act_qty%253D%2526act_qty2%253D%2526act_time%253D%2526act_time2%253D%2526act_order%253D%2526diff_weight%253D%2526diff_weight2%253D%2526diff_amount%253D%2526diff_amount2%253D%2526interface_status%253D%2526interface_send_status%253D%2526interface_send_time%253D%2526interface_send_time2%253D%2526interface_send_count%253D%2526interface_send_count2%253D%2526interface_receive%253D%2526interface_receive2%253D%2526create_time%253D%2526create_time2%253D%2526__ajax%253D1&funcid=X200510&pfuncid=&_searchexpand=&_showsearch=hide&_issearch=1&_keyword=&_tab=all&status=&org_id=&warehouse_code=&customer_id_name=&customer_id=&customer_name=&buyer_id=&buyer_name=&trade_no=&tx_type=&tx_date=&tx_date2=&contract_no=&contract_date=&contract_date2=&is_real=&chain_id=&goods_no=&goods_name=&style_info=&materials=&brand=&producing_area=&weight=&weight2=&price=&price2=&amount=&amount2=&uom_weight=&uom_qty=&cust_confirm_status=&cust_confirm_time=&cust_confirm_time2=&cust_confirm_user=&buyer_confirm_status=&buyer_confirm_time=&buyer_confirm_time2=&buyer_confirm_user=&cust_send_type=&cust_send_time=&cust_send_time2=&cust_send_user=&storefee_bears=&storefee_require=&storefee_require2=&storefee_start=&storefee_start2=&payment_require=&payment_expire=&payment_expire2=&confirm_status=&confirm_payment=&confirm_payment2=&confirm_receive=&confirm_receive2=&delivery_no=&delivery_date=&delivery_date2=&delivery_expired=&delivery_expired2=&delivery_company=&delivery_type=&assign_status=&assign_time=&assign_time2=&assign_user=&assign_weight=&assign_weight2=&assign_qty=&assign_qty2=&buyer_storecard_id=&buyer_storecard_no=&buyer_storecard_allow=&act_weight=&act_weight2=&act_qty=&act_qty2=&act_time=&act_time2=&act_order=&diff_weight=&diff_weight2=&diff_amount=&diff_amount2=&interface_status=&interface_send_status=&interface_send_time=&interface_send_time2=&interface_send_count=&interface_send_count2=&interface_receive=&interface_receive2=&create_time=&create_time2=&__ajax=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000940s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `erp_customer` WHERE ( id = 5 and status=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0009s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0016s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0009s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='break' AND summary='TradeSummary' ) ORDER BY sort  [ RunTime:0.0004s ]
+SQL: select count(*) as cnt from erp_trade    where 1=1  AND  erp_trade.customer_id='5'   [ RunTime:0.0005s ]
+SQL: select  erp_trade.status , erp_trade.id , erp_trade.org_id , erp_trade.warehouse_code , erp_trade.customer_name , erp_trade.buyer_id , erp_trade.buyer_name , erp_trade.trade_no , erp_trade.tx_type , erp_trade.tx_date , erp_trade.contract_no , erp_trade.contract_date , erp_trade.is_real , erp_trade.chain_id , erp_trade.goods_no , erp_trade.goods_name , erp_trade.style_info , erp_trade.materials , erp_trade.brand , erp_trade.producing_area , erp_trade.weight , erp_trade.price , erp_trade.amount , erp_trade.uom_weight , erp_trade.uom_qty , erp_trade.cust_confirm_status , erp_trade.cust_confirm_time , erp_trade.cust_confirm_user , erp_trade.buyer_confirm_status , erp_trade.buyer_confirm_time , erp_trade.buyer_confirm_user , erp_trade.cust_send_type , erp_trade.cust_send_time , erp_trade.cust_send_user , erp_trade.storefee_bears , erp_trade.storefee_require , erp_trade.storefee_start , erp_trade.payment_require , erp_trade.payment_expire , erp_trade.confirm_status , erp_trade.confirm_payment , erp_trade.confirm_receive , erp_trade.delivery_no , erp_trade.delivery_date , erp_trade.delivery_expired , erp_trade.delivery_company , erp_trade.delivery_type , erp_trade.assign_status , erp_trade.assign_time , erp_trade.assign_user , erp_trade.assign_weight , erp_trade.assign_qty , erp_trade.buyer_storecard_id , erp_trade.buyer_storecard_no , erp_trade.buyer_storecard_allow , erp_trade.act_weight , erp_trade.act_qty , erp_trade.act_time , erp_trade.act_order , erp_trade.diff_weight , erp_trade.diff_amount , erp_trade.interface_status , erp_trade.interface_send_status , erp_trade.interface_send_time , erp_trade.interface_send_count , erp_trade.interface_receive , erp_trade.create_time  from erp_trade   Where 1=1  AND  erp_trade.customer_id='5'    LIMIT 0, 10 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000453s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000522s ]
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 73 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 92 行.
+SQL: SHOW COLUMNS FROM `erp_subcode` [ RunTime:0.0012s ]
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_WEIGHT' ) ORDER BY sort  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_QTY' ) ORDER BY sort  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038379s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038486s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001791s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001905s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001303s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001387s ]
+
+[ 2019-07-23T09:57:52+08:00 ] ::1 /index.php/Summary/TradeSummary/index/func/search.html?X200510-last-url=%252Findex.php%252FSummary%252FTradeSummary%252Findex.html%253Ffunc%253Dsearch%2526funcid%253DX200510%2526pfuncid%253D%2526_searchexpand%253D%2526_showsearch%253Dhide%2526_issearch%253D1%2526_keyword%253D%2526_tab%253Dall%2526status%253D%2526org_id%253D%2526warehouse_code%253D%2526customer_id_name%253D%2526customer_id%253D%2526customer_name%253D%2526buyer_id%253D%2526buyer_name%253D%2526trade_no%253D%2526tx_type%253D%2526tx_date%253D%2526tx_date2%253D%2526contract_no%253D%2526contract_date%253D%2526contract_date2%253D%2526is_real%253D%2526chain_id%253D%2526goods_no%253D%2526goods_name%253D%2526style_info%253D%2526materials%253D%2526brand%253D%2526producing_area%253D%2526weight%253D%2526weight2%253D%2526price%253D%2526price2%253D%2526amount%253D%2526amount2%253D%2526uom_weight%253D%2526uom_qty%253D%2526cust_confirm_status%253D%2526cust_confirm_time%253D%2526cust_confirm_time2%253D%2526cust_confirm_user%253D%2526buyer_confirm_status%253D%2526buyer_confirm_time%253D%2526buyer_confirm_time2%253D%2526buyer_confirm_user%253D%2526cust_send_type%253D%2526cust_send_time%253D%2526cust_send_time2%253D%2526cust_send_user%253D%2526storefee_bears%253D%2526storefee_require%253D%2526storefee_require2%253D%2526storefee_start%253D%2526storefee_start2%253D%2526payment_require%253D%2526payment_expire%253D%2526payment_expire2%253D%2526confirm_status%253D%2526confirm_payment%253D%2526confirm_payment2%253D%2526confirm_receive%253D%2526confirm_receive2%253D%2526delivery_no%253D%2526delivery_date%253D%2526delivery_date2%253D%2526delivery_expired%253D%2526delivery_expired2%253D%2526delivery_company%253D%2526delivery_type%253D%2526assign_status%253D%2526assign_time%253D%2526assign_time2%253D%2526assign_user%253D%2526assign_weight%253D%2526assign_weight2%253D%2526assign_qty%253D%2526assign_qty2%253D%2526buyer_storecard_id%253D%2526buyer_storecard_no%253D%2526buyer_storecard_allow%253D%2526act_weight%253D%2526act_weight2%253D%2526act_qty%253D%2526act_qty2%253D%2526act_time%253D%2526act_time2%253D%2526act_order%253D%2526diff_weight%253D%2526diff_weight2%253D%2526diff_amount%253D%2526diff_amount2%253D%2526interface_status%253D%2526interface_send_status%253D%2526interface_send_time%253D%2526interface_send_time2%253D%2526interface_send_count%253D%2526interface_send_count2%253D%2526interface_receive%253D%2526interface_receive2%253D%2526create_time%253D%2526create_time2%253D%2526__ajax%253D1&funcid=X200510&pfuncid=&_searchexpand=&_showsearch=hide&_issearch=1&_keyword=&_tab=daimaijiaqueren&status=&org_id=&warehouse_code=&customer_id_name=&customer_id=&customer_name=&buyer_id=&buyer_name=&trade_no=&tx_type=&tx_date=&tx_date2=&contract_no=&contract_date=&contract_date2=&is_real=&chain_id=&goods_no=&goods_name=&style_info=&materials=&brand=&producing_area=&weight=&weight2=&price=&price2=&amount=&amount2=&uom_weight=&uom_qty=&cust_confirm_status=&cust_confirm_time=&cust_confirm_time2=&cust_confirm_user=&buyer_confirm_status=&buyer_confirm_time=&buyer_confirm_time2=&buyer_confirm_user=&cust_send_type=&cust_send_time=&cust_send_time2=&cust_send_user=&storefee_bears=&storefee_require=&storefee_require2=&storefee_start=&storefee_start2=&payment_require=&payment_expire=&payment_expire2=&confirm_status=&confirm_payment=&confirm_payment2=&confirm_receive=&confirm_receive2=&delivery_no=&delivery_date=&delivery_date2=&delivery_expired=&delivery_expired2=&delivery_company=&delivery_type=&assign_status=&assign_time=&assign_time2=&assign_user=&assign_weight=&assign_weight2=&assign_qty=&assign_qty2=&buyer_storecard_id=&buyer_storecard_no=&buyer_storecard_allow=&act_weight=&act_weight2=&act_qty=&act_qty2=&act_time=&act_time2=&act_order=&diff_weight=&diff_weight2=&diff_amount=&diff_amount2=&interface_status=&interface_send_status=&interface_send_time=&interface_send_time2=&interface_send_count=&interface_send_count2=&interface_receive=&interface_receive2=&create_time=&create_time2=&__ajax=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001405s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0023s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `erp_customer` WHERE ( id = 5 and status=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0013s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0018s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0007s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='break' AND summary='TradeSummary' ) ORDER BY sort  [ RunTime:0.0005s ]
+SQL: select count(*) as cnt from erp_trade    where 1=1  AND (erp_trade.status='0') AND  erp_trade.customer_id='5'   [ RunTime:0.0005s ]
+SQL: select  erp_trade.status , erp_trade.id , erp_trade.org_id , erp_trade.warehouse_code , erp_trade.customer_name , erp_trade.buyer_id , erp_trade.buyer_name , erp_trade.trade_no , erp_trade.tx_type , erp_trade.tx_date , erp_trade.contract_no , erp_trade.contract_date , erp_trade.is_real , erp_trade.chain_id , erp_trade.goods_no , erp_trade.goods_name , erp_trade.style_info , erp_trade.materials , erp_trade.brand , erp_trade.producing_area , erp_trade.weight , erp_trade.price , erp_trade.amount , erp_trade.uom_weight , erp_trade.uom_qty , erp_trade.cust_confirm_status , erp_trade.cust_confirm_time , erp_trade.cust_confirm_user , erp_trade.buyer_confirm_status , erp_trade.buyer_confirm_time , erp_trade.buyer_confirm_user , erp_trade.cust_send_type , erp_trade.cust_send_time , erp_trade.cust_send_user , erp_trade.storefee_bears , erp_trade.storefee_require , erp_trade.storefee_start , erp_trade.payment_require , erp_trade.payment_expire , erp_trade.confirm_status , erp_trade.confirm_payment , erp_trade.confirm_receive , erp_trade.delivery_no , erp_trade.delivery_date , erp_trade.delivery_expired , erp_trade.delivery_company , erp_trade.delivery_type , erp_trade.assign_status , erp_trade.assign_time , erp_trade.assign_user , erp_trade.assign_weight , erp_trade.assign_qty , erp_trade.buyer_storecard_id , erp_trade.buyer_storecard_no , erp_trade.buyer_storecard_allow , erp_trade.act_weight , erp_trade.act_qty , erp_trade.act_time , erp_trade.act_order , erp_trade.diff_weight , erp_trade.diff_amount , erp_trade.interface_status , erp_trade.interface_send_status , erp_trade.interface_send_time , erp_trade.interface_send_count , erp_trade.interface_receive , erp_trade.create_time  from erp_trade   Where 1=1  AND (erp_trade.status='0') AND  erp_trade.customer_id='5'    LIMIT 0, 10 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000392s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000467s ]
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 73 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 92 行.
+SQL: SHOW COLUMNS FROM `erp_subcode` [ RunTime:0.0012s ]
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_WEIGHT' ) ORDER BY sort  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_QTY' ) ORDER BY sort  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037840s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037984s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001400s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001417s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001522s ]
+
+[ 2019-07-23T09:57:53+08:00 ] ::1 /index.php/Summary/TradeSummary/index/func/search.html?X200510-last-url=%252Findex.php%252FSummary%252FTradeSummary%252Findex.html%253Ffunc%253Dsearch%2526funcid%253DX200510%2526pfuncid%253D%2526_searchexpand%253D%2526_showsearch%253Dhide%2526_issearch%253D1%2526_keyword%253D%2526_tab%253Ddaimaijiaqueren%2526status%253D%2526org_id%253D%2526warehouse_code%253D%2526customer_id_name%253D%2526customer_id%253D%2526customer_name%253D%2526buyer_id%253D%2526buyer_name%253D%2526trade_no%253D%2526tx_type%253D%2526tx_date%253D%2526tx_date2%253D%2526contract_no%253D%2526contract_date%253D%2526contract_date2%253D%2526is_real%253D%2526chain_id%253D%2526goods_no%253D%2526goods_name%253D%2526style_info%253D%2526materials%253D%2526brand%253D%2526producing_area%253D%2526weight%253D%2526weight2%253D%2526price%253D%2526price2%253D%2526amount%253D%2526amount2%253D%2526uom_weight%253D%2526uom_qty%253D%2526cust_confirm_status%253D%2526cust_confirm_time%253D%2526cust_confirm_time2%253D%2526cust_confirm_user%253D%2526buyer_confirm_status%253D%2526buyer_confirm_time%253D%2526buyer_confirm_time2%253D%2526buyer_confirm_user%253D%2526cust_send_type%253D%2526cust_send_time%253D%2526cust_send_time2%253D%2526cust_send_user%253D%2526storefee_bears%253D%2526storefee_require%253D%2526storefee_require2%253D%2526storefee_start%253D%2526storefee_start2%253D%2526payment_require%253D%2526payment_expire%253D%2526payment_expire2%253D%2526confirm_status%253D%2526confirm_payment%253D%2526confirm_payment2%253D%2526confirm_receive%253D%2526confirm_receive2%253D%2526delivery_no%253D%2526delivery_date%253D%2526delivery_date2%253D%2526delivery_expired%253D%2526delivery_expired2%253D%2526delivery_company%253D%2526delivery_type%253D%2526assign_status%253D%2526assign_time%253D%2526assign_time2%253D%2526assign_user%253D%2526assign_weight%253D%2526assign_weight2%253D%2526assign_qty%253D%2526assign_qty2%253D%2526buyer_storecard_id%253D%2526buyer_storecard_no%253D%2526buyer_storecard_allow%253D%2526act_weight%253D%2526act_weight2%253D%2526act_qty%253D%2526act_qty2%253D%2526act_time%253D%2526act_time2%253D%2526act_order%253D%2526diff_weight%253D%2526diff_weight2%253D%2526diff_amount%253D%2526diff_amount2%253D%2526interface_status%253D%2526interface_send_status%253D%2526interface_send_time%253D%2526interface_send_time2%253D%2526interface_send_count%253D%2526interface_send_count2%253D%2526interface_receive%253D%2526interface_receive2%253D%2526create_time%253D%2526create_time2%253D%2526__ajax%253D1&funcid=X200510&pfuncid=&_searchexpand=&_showsearch=hide&_issearch=1&_keyword=&_tab=all&status=&org_id=&warehouse_code=&customer_id_name=&customer_id=&customer_name=&buyer_id=&buyer_name=&trade_no=&tx_type=&tx_date=&tx_date2=&contract_no=&contract_date=&contract_date2=&is_real=&chain_id=&goods_no=&goods_name=&style_info=&materials=&brand=&producing_area=&weight=&weight2=&price=&price2=&amount=&amount2=&uom_weight=&uom_qty=&cust_confirm_status=&cust_confirm_time=&cust_confirm_time2=&cust_confirm_user=&buyer_confirm_status=&buyer_confirm_time=&buyer_confirm_time2=&buyer_confirm_user=&cust_send_type=&cust_send_time=&cust_send_time2=&cust_send_user=&storefee_bears=&storefee_require=&storefee_require2=&storefee_start=&storefee_start2=&payment_require=&payment_expire=&payment_expire2=&confirm_status=&confirm_payment=&confirm_payment2=&confirm_receive=&confirm_receive2=&delivery_no=&delivery_date=&delivery_date2=&delivery_expired=&delivery_expired2=&delivery_company=&delivery_type=&assign_status=&assign_time=&assign_time2=&assign_user=&assign_weight=&assign_weight2=&assign_qty=&assign_qty2=&buyer_storecard_id=&buyer_storecard_no=&buyer_storecard_allow=&act_weight=&act_weight2=&act_qty=&act_qty2=&act_time=&act_time2=&act_order=&diff_weight=&diff_weight2=&diff_amount=&diff_amount2=&interface_status=&interface_send_status=&interface_send_time=&interface_send_time2=&interface_send_count=&interface_send_count2=&interface_receive=&interface_receive2=&create_time=&create_time2=&__ajax=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000941s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0023s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `erp_customer` WHERE ( id = 5 and status=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0016s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0013s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0006s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='break' AND summary='TradeSummary' ) ORDER BY sort  [ RunTime:0.0005s ]
+SQL: select count(*) as cnt from erp_trade    where 1=1  AND  erp_trade.customer_id='5'   [ RunTime:0.0009s ]
+SQL: select  erp_trade.status , erp_trade.id , erp_trade.org_id , erp_trade.warehouse_code , erp_trade.customer_name , erp_trade.buyer_id , erp_trade.buyer_name , erp_trade.trade_no , erp_trade.tx_type , erp_trade.tx_date , erp_trade.contract_no , erp_trade.contract_date , erp_trade.is_real , erp_trade.chain_id , erp_trade.goods_no , erp_trade.goods_name , erp_trade.style_info , erp_trade.materials , erp_trade.brand , erp_trade.producing_area , erp_trade.weight , erp_trade.price , erp_trade.amount , erp_trade.uom_weight , erp_trade.uom_qty , erp_trade.cust_confirm_status , erp_trade.cust_confirm_time , erp_trade.cust_confirm_user , erp_trade.buyer_confirm_status , erp_trade.buyer_confirm_time , erp_trade.buyer_confirm_user , erp_trade.cust_send_type , erp_trade.cust_send_time , erp_trade.cust_send_user , erp_trade.storefee_bears , erp_trade.storefee_require , erp_trade.storefee_start , erp_trade.payment_require , erp_trade.payment_expire , erp_trade.confirm_status , erp_trade.confirm_payment , erp_trade.confirm_receive , erp_trade.delivery_no , erp_trade.delivery_date , erp_trade.delivery_expired , erp_trade.delivery_company , erp_trade.delivery_type , erp_trade.assign_status , erp_trade.assign_time , erp_trade.assign_user , erp_trade.assign_weight , erp_trade.assign_qty , erp_trade.buyer_storecard_id , erp_trade.buyer_storecard_no , erp_trade.buyer_storecard_allow , erp_trade.act_weight , erp_trade.act_qty , erp_trade.act_time , erp_trade.act_order , erp_trade.diff_weight , erp_trade.diff_amount , erp_trade.interface_status , erp_trade.interface_send_status , erp_trade.interface_send_time , erp_trade.interface_send_count , erp_trade.interface_receive , erp_trade.create_time  from erp_trade   Where 1=1  AND  erp_trade.customer_id='5'    LIMIT 0, 10 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000448s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000550s ]
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 73 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 92 行.
+SQL: SHOW COLUMNS FROM `erp_subcode` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_WEIGHT' ) ORDER BY sort  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_QTY' ) ORDER BY sort  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039702s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001163s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001269s ]
+
+[ 2019-07-23T09:57:57+08:00 ] ::1 /index.php/Summary/TradeSummary/index/func/search.html?funcid=X200510&__ajax=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001692s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `erp_customer` WHERE ( id = 5 and status=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0010s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0013s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0005s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='break' AND summary='TradeSummary' ) ORDER BY sort  [ RunTime:0.0010s ]
+SQL: select count(*) as cnt from erp_trade    where 1=1  AND  erp_trade.customer_id='5'   [ RunTime:0.0008s ]
+SQL: select  erp_trade.status , erp_trade.id , erp_trade.org_id , erp_trade.warehouse_code , erp_trade.customer_name , erp_trade.buyer_id , erp_trade.buyer_name , erp_trade.trade_no , erp_trade.tx_type , erp_trade.tx_date , erp_trade.contract_no , erp_trade.contract_date , erp_trade.is_real , erp_trade.chain_id , erp_trade.goods_no , erp_trade.goods_name , erp_trade.style_info , erp_trade.materials , erp_trade.brand , erp_trade.producing_area , erp_trade.weight , erp_trade.price , erp_trade.amount , erp_trade.uom_weight , erp_trade.uom_qty , erp_trade.cust_confirm_status , erp_trade.cust_confirm_time , erp_trade.cust_confirm_user , erp_trade.buyer_confirm_status , erp_trade.buyer_confirm_time , erp_trade.buyer_confirm_user , erp_trade.cust_send_type , erp_trade.cust_send_time , erp_trade.cust_send_user , erp_trade.storefee_bears , erp_trade.storefee_require , erp_trade.storefee_start , erp_trade.payment_require , erp_trade.payment_expire , erp_trade.confirm_status , erp_trade.confirm_payment , erp_trade.confirm_receive , erp_trade.delivery_no , erp_trade.delivery_date , erp_trade.delivery_expired , erp_trade.delivery_company , erp_trade.delivery_type , erp_trade.assign_status , erp_trade.assign_time , erp_trade.assign_user , erp_trade.assign_weight , erp_trade.assign_qty , erp_trade.buyer_storecard_id , erp_trade.buyer_storecard_no , erp_trade.buyer_storecard_allow , erp_trade.act_weight , erp_trade.act_qty , erp_trade.act_time , erp_trade.act_order , erp_trade.diff_weight , erp_trade.diff_amount , erp_trade.interface_status , erp_trade.interface_send_status , erp_trade.interface_send_time , erp_trade.interface_send_count , erp_trade.interface_receive , erp_trade.create_time  from erp_trade   Where 1=1  AND  erp_trade.customer_id='5'    LIMIT 0, 10 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000439s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000513s ]
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 73 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 92 行.
+SQL: SHOW COLUMNS FROM `erp_subcode` [ RunTime:0.0012s ]
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_WEIGHT' ) ORDER BY sort  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_QTY' ) ORDER BY sort  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035156s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035231s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001229s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001305s ]
+
+[ 2019-07-23T09:57:58+08:00 ] ::1 /index.php/Summary/TradeSummary/index/func/search.html?funcid=X200510&__ajax=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000900s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001286s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0023s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `erp_customer` WHERE ( id = 5 and status=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0012s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0013s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0007s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='break' AND summary='TradeSummary' ) ORDER BY sort  [ RunTime:0.0007s ]
+SQL: select count(*) as cnt from erp_trade    where 1=1  AND  erp_trade.customer_id='5'   [ RunTime:0.0007s ]
+SQL: select  erp_trade.status , erp_trade.id , erp_trade.org_id , erp_trade.warehouse_code , erp_trade.customer_name , erp_trade.buyer_id , erp_trade.buyer_name , erp_trade.trade_no , erp_trade.tx_type , erp_trade.tx_date , erp_trade.contract_no , erp_trade.contract_date , erp_trade.is_real , erp_trade.chain_id , erp_trade.goods_no , erp_trade.goods_name , erp_trade.style_info , erp_trade.materials , erp_trade.brand , erp_trade.producing_area , erp_trade.weight , erp_trade.price , erp_trade.amount , erp_trade.uom_weight , erp_trade.uom_qty , erp_trade.cust_confirm_status , erp_trade.cust_confirm_time , erp_trade.cust_confirm_user , erp_trade.buyer_confirm_status , erp_trade.buyer_confirm_time , erp_trade.buyer_confirm_user , erp_trade.cust_send_type , erp_trade.cust_send_time , erp_trade.cust_send_user , erp_trade.storefee_bears , erp_trade.storefee_require , erp_trade.storefee_start , erp_trade.payment_require , erp_trade.payment_expire , erp_trade.confirm_status , erp_trade.confirm_payment , erp_trade.confirm_receive , erp_trade.delivery_no , erp_trade.delivery_date , erp_trade.delivery_expired , erp_trade.delivery_company , erp_trade.delivery_type , erp_trade.assign_status , erp_trade.assign_time , erp_trade.assign_user , erp_trade.assign_weight , erp_trade.assign_qty , erp_trade.buyer_storecard_id , erp_trade.buyer_storecard_no , erp_trade.buyer_storecard_allow , erp_trade.act_weight , erp_trade.act_qty , erp_trade.act_time , erp_trade.act_order , erp_trade.diff_weight , erp_trade.diff_amount , erp_trade.interface_status , erp_trade.interface_send_status , erp_trade.interface_send_time , erp_trade.interface_send_count , erp_trade.interface_receive , erp_trade.create_time  from erp_trade   Where 1=1  AND  erp_trade.customer_id='5'    LIMIT 0, 10 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000320s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000375s ]
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 73 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 92 行.
+SQL: SHOW COLUMNS FROM `erp_subcode` [ RunTime:0.0014s ]
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_WEIGHT' ) ORDER BY sort  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_QTY' ) ORDER BY sort  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038540s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038656s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001186s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001279s ]
+
+[ 2019-07-23T09:57:58+08:00 ] ::1 /index.php/Summary/CustomerSummary/index/func/search.html?funcid=X200505&__ajax=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001121s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0029s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `erp_customer` WHERE ( id = 5 and status=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0020s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0017s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/CustomerSummary' )  [ RunTime:0.0008s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/CustomerSummary' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='break' AND summary='CustomerSummary' ) ORDER BY sort  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: condition_a C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Summary\Controller\CustomerSummaryController.class.php 第 448 行.
+SQL: select count(*) as cnt from erp_customer LEFT JOIN erp_customer a ON a.id=erp_customer.parent_id    where 1=1  AND  erp_customer.id='5'   [ RunTime:0.0010s ]
+ERR: 1054:Unknown column 'erp_customer.lock_status' in 'field list'
+ [ SQL语句 ] : select  erp_customer.status , erp_customer.id , erp_customer.category_code , erp_customer.industry_code , erp_customer.code , erp_customer.name , erp_customer.full_name , erp_customer.prefix , erp_customer.abbr , a.name customer_name , erp_customer.customer_level , erp_customer.province , erp_customer.address , erp_customer.postcode , erp_customer.phone , erp_customer.linkman , erp_customer.mobile , erp_customer.corpbusicode , erp_customer.corptaxcode , erp_customer.legalpername , erp_customer.legalperidtype , erp_customer.legalperidno , erp_customer.contactname , erp_customer.contactidtype , erp_customer.contactidno , erp_customer.contactmobile , erp_customer.openbank , erp_customer.openacctno , erp_customer.openacctname , erp_customer.chinapay_userid , erp_customer.invoice_flag , erp_customer.invoice_company , erp_customer.invoice_address , erp_customer.invoice_phone , erp_customer.invoice_bank , erp_customer.invoice_account , erp_customer.invoice_taxno , erp_customer.invoice_email , erp_customer.invoice_mobile , erp_customer.contract_linkman , erp_customer.contract_phone , erp_customer.contract_fax , erp_customer.contract_address , erp_customer.feesett_linkman , erp_customer.feesett_phone , erp_customer.feesett_fax , erp_customer.feesett_address , erp_customer.sms_open , erp_customer.sms_transfer_out , erp_customer.sms_transfer_in , erp_customer.sms_delivery , erp_customer.sms_phone , erp_customer.sms_appellation , erp_customer.apply_time , erp_customer.apply_user , erp_customer.apply_times , erp_customer.reply_time , erp_customer.reply_user , erp_customer.reply_status , erp_customer.lock_status , erp_customer.create_time  from erp_customer LEFT JOIN erp_customer a ON a.id=erp_customer.parent_id   Where 1=1  AND  erp_customer.id='5'    order by erp_customer.customer_level,erp_customer.parent_id,erp_customer.id LIMIT 0, 10
+
+[ 2019-07-23T09:58:00+08:00 ] ::1 /index.php/Summary/TradeSummary/index/func/search.html?funcid=X200510&__ajax=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `erp_customer` WHERE ( id = 5 and status=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0022s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0012s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0005s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='break' AND summary='TradeSummary' ) ORDER BY sort  [ RunTime:0.0006s ]
+SQL: select count(*) as cnt from erp_trade    where 1=1  AND  erp_trade.customer_id='5'   [ RunTime:0.0006s ]
+SQL: select  erp_trade.status , erp_trade.id , erp_trade.org_id , erp_trade.warehouse_code , erp_trade.customer_name , erp_trade.buyer_id , erp_trade.buyer_name , erp_trade.trade_no , erp_trade.tx_type , erp_trade.tx_date , erp_trade.contract_no , erp_trade.contract_date , erp_trade.is_real , erp_trade.chain_id , erp_trade.goods_no , erp_trade.goods_name , erp_trade.style_info , erp_trade.materials , erp_trade.brand , erp_trade.producing_area , erp_trade.weight , erp_trade.price , erp_trade.amount , erp_trade.uom_weight , erp_trade.uom_qty , erp_trade.cust_confirm_status , erp_trade.cust_confirm_time , erp_trade.cust_confirm_user , erp_trade.buyer_confirm_status , erp_trade.buyer_confirm_time , erp_trade.buyer_confirm_user , erp_trade.cust_send_type , erp_trade.cust_send_time , erp_trade.cust_send_user , erp_trade.storefee_bears , erp_trade.storefee_require , erp_trade.storefee_start , erp_trade.payment_require , erp_trade.payment_expire , erp_trade.confirm_status , erp_trade.confirm_payment , erp_trade.confirm_receive , erp_trade.delivery_no , erp_trade.delivery_date , erp_trade.delivery_expired , erp_trade.delivery_company , erp_trade.delivery_type , erp_trade.assign_status , erp_trade.assign_time , erp_trade.assign_user , erp_trade.assign_weight , erp_trade.assign_qty , erp_trade.buyer_storecard_id , erp_trade.buyer_storecard_no , erp_trade.buyer_storecard_allow , erp_trade.act_weight , erp_trade.act_qty , erp_trade.act_time , erp_trade.act_order , erp_trade.diff_weight , erp_trade.diff_amount , erp_trade.interface_status , erp_trade.interface_send_status , erp_trade.interface_send_time , erp_trade.interface_send_count , erp_trade.interface_receive , erp_trade.create_time  from erp_trade   Where 1=1  AND  erp_trade.customer_id='5'    LIMIT 0, 10 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000552s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000689s ]
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 73 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 92 行.
+SQL: SHOW COLUMNS FROM `erp_subcode` [ RunTime:0.0014s ]
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_WEIGHT' ) ORDER BY sort  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_QTY' ) ORDER BY sort  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039532s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039623s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001226s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001386s ]
+
+[ 2019-07-23T09:58:44+08:00 ] ::1 /index.php/Summary/TradeSummary/index/func/search.html?funcid=X200510&__ajax=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+SQL: SHOW COLUMNS FROM `erp_user` [ RunTime:0.0011s ]
+SQL: SELECT `id`,`side`,`code`,`name`,`customer_id`,`org_id`,`session_id` FROM `erp_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `erp_customer` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `erp_customer` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_org` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `erp_org` WHERE ( id = 1 and status=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `erp_system_parameter` [ RunTime:0.0011s ]
+SQL: SELECT `value` FROM `erp_system_parameter` WHERE ( code = 'notice_open' AND status = 1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `erp_node` [ RunTime:0.0020s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0006s ]
+SQL: SELECT name as `key` FROM `erp_node` WHERE ( level = 3 AND module = '/Summary/TradeSummary' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `erp_user_summary_column` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `erp_user_summary_column` WHERE ( user_code='admin' AND summary='TradeSummary' ) ORDER BY sort  [ RunTime:0.0012s ]
+SQL: select count(*) as cnt from erp_trade    where 1=1  AND  erp_trade.org_id='1'   [ RunTime:0.0008s ]
+SQL: select  erp_trade.status , erp_trade.id , erp_trade.org_id , erp_trade.warehouse_code , erp_trade.customer_name , erp_trade.buyer_id , erp_trade.buyer_name , erp_trade.trade_no , erp_trade.tx_type , erp_trade.tx_date , erp_trade.contract_no , erp_trade.contract_date , erp_trade.is_real , erp_trade.chain_id , erp_trade.goods_no , erp_trade.goods_name , erp_trade.style_info , erp_trade.materials , erp_trade.brand , erp_trade.producing_area , erp_trade.weight , erp_trade.price , erp_trade.amount , erp_trade.uom_weight , erp_trade.uom_qty , erp_trade.cust_confirm_status , erp_trade.cust_confirm_time , erp_trade.cust_confirm_user , erp_trade.buyer_confirm_status , erp_trade.buyer_confirm_time , erp_trade.buyer_confirm_user , erp_trade.cust_send_type , erp_trade.cust_send_time , erp_trade.cust_send_user , erp_trade.storefee_bears , erp_trade.storefee_require , erp_trade.storefee_start , erp_trade.payment_require , erp_trade.payment_expire , erp_trade.confirm_status , erp_trade.confirm_payment , erp_trade.confirm_receive , erp_trade.delivery_no , erp_trade.delivery_date , erp_trade.delivery_expired , erp_trade.delivery_company , erp_trade.delivery_type , erp_trade.assign_status , erp_trade.assign_time , erp_trade.assign_user , erp_trade.assign_weight , erp_trade.assign_qty , erp_trade.buyer_storecard_id , erp_trade.buyer_storecard_no , erp_trade.buyer_storecard_allow , erp_trade.act_weight , erp_trade.act_qty , erp_trade.act_time , erp_trade.act_order , erp_trade.diff_weight , erp_trade.diff_amount , erp_trade.interface_status , erp_trade.interface_send_status , erp_trade.interface_send_time , erp_trade.interface_send_count , erp_trade.interface_receive , erp_trade.create_time  from erp_trade   Where 1=1  AND  erp_trade.org_id='1'    LIMIT 0, 10 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000319s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000385s ]
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 54 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 73 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 92 行.
+SQL: SHOW COLUMNS FROM `erp_subcode` [ RunTime:0.0013s ]
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_WEIGHT' ) ORDER BY sort  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 364 行.
+SQL: SELECT `id`,`code`,`name` FROM `erp_subcode` WHERE ( status=1 and type='UOM_QTY' ) ORDER BY sort  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 383 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 580 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 612 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 705 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 724 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 911 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined index: level C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Runtime\Cache\Summary\9e91a4afe4c9ce545b1bfe99f90d8a98.php 第 930 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+NOTIC: [8] Undefined offset: 1 C:\xampp\htdocs\project\exploitproject\库链\exploit3\Application\Common\Common\function.php 第 516 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001167s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001277s ]
+

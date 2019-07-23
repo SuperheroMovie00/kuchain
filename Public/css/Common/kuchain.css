@@ -1,0 +1,30 @@
+/*0611下单页面*/
+.cardbox{padding: 30px;}
+.cardbox label{display: block; overflow: hidden;}
+.card-tree{border: 1px #ccc solid; border-radius: 5px; margin: 0px auto; overflow: hidden; padding:10px 0 10px 10px; width:600px; }
+.card-tree li{overflow: hidden; position: relative; line-height:36px; border: 1px #ccc solid; border-right: 0;  margin-bottom: 8px; border-radius: 5px 0 0 5px; background: #e8f6fb; }
+.card-tree li .item{float: left; min-width: 100px;}
+.card-tree li:last-child{margin-bottom: 0;}
+.card-tree li .tlist-info{overflow: hidden; position: relative; padding-left: 40px; padding-left: 50px; line-height:36px; background: #84d7f6;}
+.card-tree li .tlist-info em{display: block; width: 12px; height: 12px; position: absolute; left: 10px; top: 50%; margin-top: -6px;}
+.card-tree li .tlist-info em:before{content: ''; display: block; width: 12px; height: 2px; background: #000; position: absolute; left: 0; top: 50%; margin-top: -1px;}
+.card-tree li .tlist-info em:after{content: ''; display: block; width: 2px; height: 12px; background: #000; position: absolute; left: 50%; top: 0; margin-left: -1px;}
+.card-tree li .tlist-info input[type="checkbox"]{ width: 16px; height: 16px; position: absolute; left: 30px; top: 50%; margin-top: -8px;}
+.card-tree li .tlist-info .txt{ width: 60px; height: 24px; position: absolute; right: 40px; top: 50%; margin-top: -14px;}
+.card-tree li .tlist-info .del{display: block; width: 20px; height: 20px; text-align: center; line-height: 20px; font-size: 20px; position: absolute; right: 10px; top: 50%; margin-top: -10px; color:red;}
+.card-tree li.active .ico:after{display: none;}
+.card-tree li.active .tlist-info{border-bottom: 1px #ccc solid;}
+.card-tree li.active ul li .tlist-info{border-bottom: 0;}
+.card-tree li.active ul li.active .tlist-info{ border-bottom: 1px #ccc solid;}
+.card-tree li.active ul li.active ul li .tlist-info{border-bottom: 0;}
+.card-tree li ul{padding:10px 0 10px 10px;   }
+.card-tree li ul li{background: none; background: #f8fee9;}
+.card-tree li ul li .tlist-info{background: #d2f0fc;}
+.card-tree li ul li ul li .tlist-info{background: #f1fcd7;}
+.card-search{width: 600px; margin: 0px auto; padding: 10px 0;}
+.card-search .btn{ vertical-align: middle; position: relative; top: -1px;}
+
+/*2019年7月3日 20点45分*/
+.screening .form-mod-new li .textarea1 { width: 100%; padding: 8px 6px; border: 1px solid #ccc; height: 50px; box-sizing: border-box; line-height: 14px; }
+.screening .form-mod-new li.ulpd0 { padding-left: 0; }
+.screening .form-mod-new li.urpd0 { padding-right: 0; }

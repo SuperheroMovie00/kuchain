@@ -1,0 +1,310 @@
+{__NOLAYOUT__}
+<div toplayer="1" class="wrap-box wrap-pb2" id="<?php echo $funcid;?>" summaryid="Customer" baseurl="<?php echo U('Customer/index'); ?>">
+    <div class="wrap-box-info">
+        <div class="wrap-title abe-ofl">
+            <div class="tit abe-fl"> 客户资料 </div>
+            <div class="abe-fr">
+
+                <a href="javascript:void(0);" class="vi-blue " default-status="1" onclick="return _asr.openLink('','<?php echo "$funcid"; ?>','刷新',1); "><i class="iconfont">&#xe611;</i> 刷新</a>
+            </div>
+        </div>
+
+        <div class="order-step order-step-new abe-ofl" style="display:;  ">
+                <dl>
+                    <div class="abe-fl odzt">
+                        <div class="abe-ft24 vi-red pdt_10"><i class="iconfont abe-ft28 mrg_10">&#xe625;</i><strong><?php echo get_table_Customer_reply_status("$search[reply_status]","name","")?></strong></div>
+                        <div class="abe-ft20">{$search['code']}</div>
+                    </div>
+                    <?php if(is_array($step)):
+                         $i = 0;
+                         $__LIST__ = $step;
+                         if( count($__LIST__) == 0) :
+                             echo "";
+                         else:
+                             foreach($__LIST__ as $key=>$item):
+                                if($key>0): ?>
+                                <dd <?php if($item['type']=='after') echo "class='after'"; elseif ($item['type']=='current') echo "class='current'"; elseif ($item['type']=='cancel') echo "class='cancel-faq'"; ?>><i class="iconfont">&#xe619;</i></dd>
+                                <?php endif; ?>
+                                <dt <?php if($item['type']=='after') echo "class='after'"; elseif ($item['type']=='current') echo "class='current'"; elseif ($item['type']=='cancel') echo "class='cancel-faq'"; ?>>
+                                    <div <?php if($item['type']=='cancel') echo "class='iconfont'"; ?> ><?php echo $item['no'];?></div>
+                                    <span><?php echo $item['desc'];?></span>
+                                    <time><?php echo $item['time'];?></time>
+                                </dt>
+                    <?php endforeach;
+                 endif;
+               endif; ?>
+            </dl>
+            </div>
+            <?php if($search['reply_status'] == 0 || $search['reply_status'] == 2) :?>
+            <div class="order-detpage">
+                <div class="order-info">
+                    <div class="abe-gray3 abe-fl"> 审核提示：<b class="abe-red">{$search['reply_content']}</b></div>
+                </div>
+            </div>
+            <?php endif;?>
+            <div class="order-detpage mtg_10">
+                <!--          <div class="odtit abe-fb pdb_10 "> 客户基本信息 </div>-->
+                <div class="order-info">
+                    <ul class="order-det-list2 order30 lipdl100 pb-bd0" style="display: ">
+                        <li class="pdn0">
+                            <div class="unit-right">
+                                <b>客户基本信息</b>
+                            </div>
+                        </li>
+                        <li><span class="tit">客户类型：</span><?php echo get_table_Customer_type("$search[type]","name",""); ?></li>
+                        <li><span class="tit">客户分类：</span><?php echo $search['customer_category_name']; ?></li>
+                        <li><span class="tit">行业分类：</span><?php echo subcode_view('customer:industry',$search['industry_code']); ?></li>
+                        <li><span class="tit">客户编号：</span><?php echo $search['code']; ?></li>
+                        <li><span class="tit">客户简称：</span><?php echo $search['name']; ?></li>
+                        <li><span class="tit">客户全称：</span><?php echo $search['full_name']; ?></li>
+                        <li><span class="tit">助记码：</span><?php echo $search['prefix']; ?></li>
+                    </ul>
+
+                    <ul class="order-det-list2 order30 lipdl100 " style="display: ">
+                        <li class="pdn0">
+                            <div class="unit-right">
+                                <input type="button" class="btn btn-blue btn-xs abe-ft12" value="变更" onclick="return _asr.popupFun('<?php echo U("/Home/Customer/index?func=add&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/Customer/index?func=add&id=$search[id]","");?>'); ">
+                            </div>
+                        </li>
+                        <li><span class="tit">省市区：</span>{$search["province"]} {$search['city']} {$search['area']}</li>
+                        <li><span class="tit">联系地址：</span><?php echo OverView($search["address"],150,"..."); ?></li>
+                        <li><span class="tit">邮政编码：</span><?php echo $search['postcode']; ?></li>
+                        <li><span class="tit">联系电话：</span><?php echo $search['phone']; ?></li>
+                        <li><span class="tit">联系人员：</span><?php echo $search['linkman']; ?></li>
+                        <li><span class="tit">联系手机：</span><?php echo $search['mobile']; ?></li>
+                    </ul>
+                    <ul class="order-det-list2 order30 lipdl100" style="display: ">
+                        <li class="pdn0">
+                            <div class="unit-right">
+                                <b>客户注册信息</b>
+                                <?php if ($search['corpbusicode'] || $search['corptaxcode'] || $search['legalpername']): ?>
+                                <input type="button" class="btn btn-blue btn-xs abe-ft12" value="变更" onclick="return _asr.popupFun('<?php echo U("/Home/Customer/index?func=registrationinfo_change&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/Customer/index?func=registrationinfo_change&id=$search[id]","");?>'); ">
+                                <?php else: ?>
+                                <input type="button" class="btn btn-blue btn-xs abe-ft12" value="登记" onclick="return _asr.popupFun('<?php echo U("/Home/Customer/index?func=registrationinfo_change&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/Customer/index?func=registrationinfo_change&id=$search[id]","");?>'); ">
+                                <?php endif; ?>
+                            </div>
+                        </li>
+                        <li><span class="tit">营业执照号：</span><?php echo $search['corpbusicode']; ?></li>
+                        <li><span class="tit">税务登记证：</span><?php echo $search['corptaxcode']; ?></li>
+                        <li><span class="tit">法人姓名：</span><?php echo $search['legalpername']; ?></li>
+                        <li><span class="tit">法人证件：</span><?php echo subcode_view('IdType',$search['legalperidtype'])."&nbsp".$search['legalperidno'] ; ?></li>
+                        <li><span class="tit">联系人姓名：</span><?php echo $search['contactname']; ?></li>
+                        <li><span class="tit">联系人证件	：</span><?php echo subcode_view('IdType',$search['contactidtype'])."&nbsp".$search['contactidno']; ?></li>
+                        <li><span class="tit">联系人手机	：</span><?php echo $search['contactmobile']; ?></li>
+                        <li><span class="tit">开户账号	：</span><?php echo $search['openbank']; ?> <?php echo $search['openacctno']; ?></li>
+                        <li><span class="tit">开户账户名  :</span><?php echo $search['openacctname']; ?></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="order-detpage mtg_10">
+                <div class="order-info">
+                    <ul class="order-det-list2 order30 lipdl100" style="display: ">
+                        <li class="pdn0">
+                            <div class="unit-right">
+                                <b>客户开票信息</b>
+                                <?php if ($search['invoice_company'] || $search['invoice_bank'] || $search['invoice_taxno']): ?>
+                                <input type="button" class="btn btn-blue btn-xs abe-ft12" value="变更" onclick="return _asr.popupFun('<?php echo U("/Home/Customer/index?func=invoiceinfo_change&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/Customer/index?func=invoiceinfo_change&id=$search[id]","");?>'); ">
+                                <?php else: ?>
+                                <input type="button" class="btn btn-blue btn-xs abe-ft12" value="登记" onclick="return _asr.popupFun('<?php echo U("/Home/Customer/index?func=invoiceinfo_change&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/Customer/index?func=invoiceinfo_change&id=$search[id]","");?>'); ">
+                                <?php endif; ?>
+                            </div>
+                        </li>
+                        <li><span class="tit">发票要求：</span><?php echo get_table_Customer_invoice_flag("$search[invoice_flag]","name",""); ?></li>
+                        <li><span class="tit">开票单位：</span><?php echo $search['invoice_company']; ?></li>
+                        <li><span class="tit">开票地址：</span><?php echo $search['invoice_address']; ?></li>
+                        <li><span class="tit">开票电话：</span><?php echo $search['invoice_phone']; ?></li>
+                        <li><span class="tit">开票银行：</span><?php echo $search['invoice_bank']; ?></li>
+                        <li><span class="tit">开票账户：</span><?php echo $search['invoice_account']; ?></li>
+                        <li><span class="tit">开票税号：</span><?php echo $search['invoice_taxno']; ?></li>
+                        <li><span class="tit">电子票邮箱：</span><?php echo $search['invoice_email']; ?></li>
+                        <li><span class="tit">电子票手机：</span><?php echo $search['invoice_mobile']; ?></li>
+                    </ul>
+                    <ul class="order-det-list2 order30 lipdl100" style="display: ">
+                        <li class="pdn0">
+                            <div class="unit-right">
+                                <b>客户短信服务</b>
+                                <?php if ($search['sms_phone'] || $search['sms_appellation']): ?>
+                                <input type="button" class="btn btn-blue btn-xs abe-ft12" value="变更" onclick="return _asr.popupFun('<?php echo U("/Home/Customer/index?func=message_change&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/Customer/index?func=message_change&id=$search[id]","");?>'); ">
+                                <?php else: ?>
+                                <input type="button" class="btn btn-blue btn-xs abe-ft12" value="登记" onclick="return _asr.popupFun('<?php echo U("/Home/Customer/index?func=message_change&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/Customer/index?func=message_change&id=$search[id]","");?>'); ">
+                                <?php endif; ?>
+                            </div>
+                        </li>
+                        <li><span class="tit">短信服务：</span><?php echo get_table_Customer_sms_open("$search[sms_open]","name",""); ?></li>
+                        <li><span class="tit">货权转出通知：</span><?php echo get_table_Customer_sms_transfer_out("$search[sms_transfer_out]","name",""); ?></li>
+                        <li><span class="tit">货权转入通知：</span><?php echo get_table_Customer_sms_transfer_in("$search[sms_transfer_in]","name",""); ?></li>
+                        <li><span class="tit">提货时通知：</span><?php echo get_table_Customer_sms_delivery("$search[sms_delivery]","name",""); ?></li>
+                        <li><span class="tit">接收手机号：</span><?php echo $search['sms_phone']; ?></li>
+                        <li><span class="tit">接收者称呼：</span><?php echo $search['sms_appellation']; ?></li>
+                    </ul>
+                    <ul class="order-det-list2 order30 lipdl100" style="display: ">
+                        <li class="pdn0">
+                            <div class="unit-right">
+                                <b>客户合同结算</b>
+                                <?php if ($search['contract_linkman'] || $search['contract_address'] || $search['feesett_linkman']): ?>
+                                <input type="button" class="btn btn-blue btn-xs abe-ft12" value="变更" onclick="return _asr.popupFun('<?php echo U("/Home/Customer/index?func=contract_change&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/Customer/index?func=contract_change&id=$search[id]","");?>'); ">
+                                <?php else: ?>
+                                <input type="button" class="btn btn-blue btn-xs abe-ft12" value="登记" onclick="return _asr.popupFun('<?php echo U("/Home/Customer/index?func=contract_change&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/Customer/index?func=contract_change&id=$search[id]","");?>'); ">
+                                <?php endif; ?>
+                            </div>
+                        </li>
+                        <li><span class="tit">合同联系人员：</span><?php echo $search['contract_linkman']; ?></li>
+                        <li><span class="tit">合同联系电话：</span><?php echo $search['contract_phone']; ?></li>
+                        <li><span class="tit">合同联系传真：</span><?php echo $search['contract_fax']; ?></li>
+                        <li><span class="tit">合同邮寄地址：</span><?php echo $search['contract_address']; ?></li>
+                        <li><span class="tit">结算联系人员：</span><?php echo $search['feesett_linkman']; ?></li>
+                        <li><span class="tit">结算联系电话：</span><?php echo $search['feesett_phone']; ?></li>
+                        <li><span class="tit">结算联系传真：</span><?php echo $search['feesett_fax']; ?></li>
+                        <li><span class="tit">结算对账单地址：</span><?php echo $search['feesett_address']; ?></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="order-detpage abe-ofl">
+                <div class="odtit abe-fb pdb_10 pdt_15 abe-ofl">
+                    <div class="abe-fl">客户提货信息 </div>
+                    <div class="abe-fr pdl_20">
+                        <input type="button" value="新增提货信息" class="btn btn-blue btn-sm abe-ft12 mlg_10" onclick="return _asr.popupFun('<?php echo U("/Home/CustomerDelivery/index?func=new_add&customer_id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/CustomerDelivery/index?func=new_add&customer_id=$search[id]","");?>'); ">
+                    </div>
+                </div>
+                <div class="order-info">
+                    <div class="table-box">
+                        <div class="table-in pdn0">
+                            <form action="<?php echo U('Goods/index?func=view'); ?>" id="<?php echo "$funcid"; ?>-Search" method="get">
+                                <input type="hidden" name="<?php echo "$funcid"; ?>-last-url" id="<?php echo "$funcid"; ?>-last-url" value="<?php echo $__last_url; ?>" />
+                                <input type="hidden" name="funcid" value="<?php echo "$funcid"; ?>" />
+                                <input type="hidden" name="pfuncid" value="<?php echo "$pfuncid"; ?>" />
+                                <input type="hidden" name="id" value="<?php echo $search["id"]; ?>" />
+                                <input type="hidden" name="_lastchanged" value="<?php echo $search["lastchanged"]; ?>" />
+
+
+                                <input type="hidden" name="_tab" value="<?php echo $search["_tab"]; ?>" />
+
+                                <table border="0" cellspacing="0" cellpadding="0" class="pub-table ta-tr-hover" >
+                                    <tbody>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>状态</th>
+                                        <th>客户</th>
+                                        <th>车牌号</th>
+                                        <th>驾驶员</th>
+                                        <th>身份证</th>
+                                        <th>联系电话</th>
+                                        <th>承运单位</th>
+                                        <th>备注</th>
+                                        <th>创建时间</th>
+                                        <th>修改时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    <volist name="delivery" id="item" mod="2" >
+                                    <tr class="<if condition="$mod eq 0">even<else />odd</if>">
+                                        <td>
+                                            <a href="javascript:void(0);"  class=" vi-blue vi-blue " onclick="return _asr.popupFun('<?php echo U("/Home/CustomerDelivery/index?func=view&id=$item[id]") ; ?>', '<?php echo filterFuncId("/Home/CustomerDelivery/index?func=view&id=$item[id]","");?>'); "><i class="iconfont abe-ft18">&#xe62e;</i></a>
+                                        </td>
+                                        <td>{$item.status|get_table_CustomerDelivery_status=###,"name",""}</td>
+                                        <td>{$item.name}</td>
+                                        <td>{$item.carno}</td>
+                                        <td>{$item.contact}</td>
+                                        <td>{$item.idcard}</td>
+                                        <td>{$item.phone}</td>
+                                        <td>{$item.company}</td>
+                                        <td>{$item.remarks}</td>
+                                        <td>{$item.create_time} {$item.create_user}</td>
+                                        <td>{$item.modify_time} {$item.modify_user}</td>
+                                        <td>
+                                            <?php if($item['status'] == 0): ?>
+                                            <a href="javascript:void(0);"  class=" vi-blue vi-blue " onclick="return _asr.popupFun('<?php echo U("/Home/CustomerDelivery/index?func=new_add&id=$item[id]&customer_id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/CustomerDelivery/index?func=new_add&id=$item[id]&customer_id=$search[id]","");?>'); "><i class="iconfont abe-ft15">&#xe63f;</i></a>
+                                            <a href="javascript:void(0);"  class=" vi-blue vi-blue " onclick="return _asr.confirm('确认操作', '请确认是否删除此条提货信息?', '', '<?php echo U("/Home/CustomerDelivery/index?func=delete&type=1&id=$item[id]") ; ?>','',''); "><i class="iconfont vi-red">&#xe61d;</i></a>
+                                            <?php endif;?>
+                                        </td>
+                                    </tr>
+                                    </volist>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-detpage">
+                <div class="odtit abe-fb pdb_10 "> 备注信息
+                    <div class="abe-fr pdl_20">
+                        <?php if ($search['remarks']): ?>
+                        <input type="button" value="变更" class="btn btn-blue btn-sm abe-ft12 mlg_10" onclick="return _asr.popupFun('<?php echo U("/Home/Customer/index?func=remarks_change&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/Customer/index?func=remarks_change&id=$search[id]","");?>'); ">
+                        <?php else: ?>
+                        <input type="button" value="登记" class="btn btn-blue btn-sm abe-ft12 mlg_10" onclick="return _asr.popupFun('<?php echo U("/Home/Customer/index?func=remarks_change&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/Customer/index?func=remarks_change&id=$search[id]","");?>'); ">
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <div class="order-info">
+                    <p><?php echo OverView($search["remarks"],150,"..."); ?></p>
+                </div>
+            </div>
+        </div>
+        <div class="data-oper" >
+            <?php echo $page; ?>
+            <div class="data-oper-in " >
+
+                <?php if (isset($rights['audit_on']) && $rights['audit_on']): ?>
+                <?php if ($search['reply_status'] != 3 && $search['reply_status'] != 1): ?>
+                <input type="button" value="申请审核" class="btn btn-blue mlg_10 " default-status="1" onclick="return _asr.popupFun('<?php echo U("/Home/Customer/index?func=audit_on&id=$search[id]") ; ?>', '<?php echo filterFuncId("/Home/Customer/index?func=audit_on&id=$search[id]","");?>'); " />
+                <?php endif; ?>
+                <?php endif; ?>
+
+                <div class="abe-fr">
+
+
+                    <?php if (isset($rights['order_delete']) && $rights['order_delete']): ?>
+                    <?php if (!$search['status']): ?>
+                    <input type="button" value="记录删除" class="btn btn-org mrg_10 " default-status="1" onclick="return _asr.confirm('确认操作', '请确认是否进行 信息删除 操作?', '', '<?php echo U("/Home/Customer/index?func=delete&id=$search[id]") ; ?>','','<?php echo "$funcid"; ?>-Result'); " />
+                    <?php endif; ?>
+                    <?php endif; ?>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        /***************************************************************************************/
+        /* 前台页面初始化                                                                      */
+        /***************************************************************************************/
+        function <?php echo $funcid; ?>_init(_id){
+            return ;
+        }
+
+        function <?php echo "$funcid"; ?>_dealAlert(l){
+            var node=$('#'+l.getAlertId());
+
+            _asr.openLink('','<?php echo "$funcid"; ?>','刷新',1);
+
+            node.on('click','input[type="button"]',function(){
+                $('#'+l.getFormId()).parent().show();
+                l.close(2);
+            });
+
+            node.on('click','input[type="submit"]',function(){
+                $('#'+l.getFormId()).parent().show();
+                l.close(2);
+                if(!l.isErr){
+                    $('#'+l.getFormId()).parent().find('a.close').click()
+                }
+            });
+
+            node.on('click','a.close ',function(){
+                $('#'+l.getFormId()).parent().show();
+                l.close(2);
+            });
+        }
+
+    </script>
+<script>
+    $(function(){
+        $(".order-info").each(function(){
+            var odih = $(this).height();
+            $(this).children(".order-det-list2").height(odih)
+        });
+    });
+</script>
+

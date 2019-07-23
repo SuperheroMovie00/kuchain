@@ -1,0 +1,107 @@
+{__NOLAYOUT__}
+<div class="prompt-pop" data-type="detail_add" id="<?php echo $funcid ?>" style="z-index: {$zindex}" funcid="{$funcid}" >
+    <div class="title">
+        <span class="pop-name">选择存储卡</span>
+        <a href="javascript:void(0);" onclick="_asr.closePopup('{$funcid}');" class="close iconfont">&#xe60d;</a>
+    </div>
+    <div class="trees-box">
+        <div> <!-- class="trees-info" -->
+            <div class="screening treesorder">
+                <form id="<?php echo "$funcid"; ?>-selectStoreCard-Search" action="{:U('/Home/Trade/index?func=selectStoreCard')}" method="get">
+                <input type="hidden" name="id" value="{$orderid}" />
+                <input type="hidden" name="funcid" value="{$funcid}" />
+                <input type="hidden" name="zindex" value="{$zindex}" />
+                <input type="hidden" name="p" value="{$p}" />
+                <ul class="form form-style1">
+                    <li> <span class="tit">存储卡号</span>
+                        <div class="item">
+                            <div class="txt-box">
+                                <input type="text" name="storecard_no" value="{$search['storecard_no']}" class="txt">
+                            </div>
+                        </div>
+                    </li>
+                    <li><span class="tit">商品名称</span>
+                        <div class="item">
+                            <div class="txt-box">
+                                <input type="text" name="goods_name" value="{$search['goods_name']}" class="txt">
+                            </div>
+                        </div>
+                    </li>
+                    <li> <span class="tit">材质</span>
+                        <div class="item">
+                            <div class="txt-box">
+                                <input type="text" name="materials" value="{$search['materials']}" class="txt">
+                            </div>
+                        </div>
+                    </li>
+                    <li> <span class="tit">品牌</span>
+                        <div class="item">
+                            <div class="txt-box">
+                                <input type="text" name="brand" value="{$search['brand']}" class="txt">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!--筛选表单-->
+                <div class="tress-sub abe-txtc">
+                    <input type="submit" value="搜索" class="btn btn-org btn-sm mrg_10" onclick="return _asr.submit('<?php echo $funcid;?>', this, '')">
+                    <input type="button" value="清除"  class="btn btn-blue btn-sm mrg_10" onclick="return <?php echo "$funcid"; ?>_clearsearch('<?php echo "$funcid"; ?>-selectStoreCard-Search');">
+                </div>
+                </form>
+            </div>
+            <div class="table-box">
+                <div class="table-in" style="height: 300px;">
+                    <table border="0" cellspacing="0" cellpadding="0" class="pub-table">
+                        <colgroup>
+                            <col style="width:10px;">
+                            <col style="width:80px;">
+                            <col style="width:100px;">
+                            <col style="width:100px;">
+                            <col style="width:80px;">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>存储卡号</th>
+                            <th>商品名称</th>
+                            <th>材质</th>
+                            <th>剩余重量</th>
+                        </tr>
+                        <volist name="storeCard"  id="item" mod="2">
+                            <tr class="<eq name="mod" value="1">even<else/>odd</eq>">
+                            <td><input j='<?php echo json_encode($item); ?>' type="checkbox" name="id[]" value="{$item['id']}" /></td>
+                            <td>{$item["storecard_no"]}</td>
+                            <td>{$item["goods_name"]}</td>
+                            <td>{$item["materials"]}</td>
+                            <td>{$item['weight'] - $item['lock_weight']}</td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="blank15"></div>
+                <?php echo $page; ?>
+                <div class="blank15"></div>
+            </div>
+        </div>
+    </div>
+    <div class="pop-sub abe-txtc">
+        <input type="submit" value="选择" class="btn btn-org mrg_10" onclick="_asr.returnPopup('{$funcid}');">
+        <input type="submit" value="取消" class="btn" onclick="_asr.closePopup('{$funcid}');">
+    </div>
+</div>
+<script>
+    function <?php echo $funcid ?>_init() {
+        var _this = $("#<?php echo $funcid ?>");
+        var ppw = _this.width()/2;
+        _this.css({'margin-left':-ppw});
+    }
+    function <?php echo $funcid; ?>_clearsearch(_frm){
+        _asr.setvaluebyname(_frm,"storecard_no", "" );
+        _asr.setvaluebyname(_frm,"goods_name", "" );
+        _asr.setvaluebyname(_frm,"materials", "" );
+    }
+    function <?php echo $funcid ?>_refresh() {
+        _asr.submit('<?php echo $funcid;?>', $("#<?php echo $funcid ?>").find("form").eq(1), '');
+    }
+</script>

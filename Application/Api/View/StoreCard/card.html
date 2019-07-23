@@ -1,0 +1,15 @@
+<?php foreach($storeCard as $card) { ?>
+<li>
+    <div class="tlist-info">
+        <em class="" data-id="{$card['id']}" data-type="package"></em>
+        <input type="checkbox" class="abe-fl" data-type="card" data-id="{$card['id']}" name="storageCard[]" value="{$card['id']}">
+        <div class="item">{$card['storecard_no']}</div>
+        <div class="item">{$card['goods_name']}</div>
+        <div class="item">{$card['materials']}</div>
+        <div class="item">{$card['weight'] - $card['lock_weight']}{$card['uom_weight']}</div>
+        <input type="text" class="txt" data-type="card" data-id="{$card['id']}" name="storageCardWeight[{$card['id']}]" default-weight="{$card['weight'] - $card['lock_weight']}" value="">
+        <a href="#" class="del iconfont">&#xe60d;</a>
+        <input type="hidden" data-type="card-type" data-id="{$card['id']}" name="storageCardType[{$card['id']}]" value="{$card['storecard_type']}">
+    </div>
+</li>
+<?php } ?>

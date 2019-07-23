@@ -1,0 +1,205 @@
+{__NOLAYOUT__}
+<div toplayer="1" class="prompt-pop pop-style3" style="z-index:{$zindex};width:800px;" id="<?php echo $funcid;?>" url="<?php echo U('Goods/index'); ?>">
+
+    <div class="title">
+        <span class="pop-name"><?php echo $search[id]?'编辑':'新增'; ?>仓库货品别名信息</span>
+        <a href="javascript:void(0);" onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" class="close iconfont">&#xe60d;</a>
+    </div>
+
+
+
+
+    <div class="pop-scroll">
+        <div class="screening ">
+            <form enctype="multipart/form-data" action="<?php echo U('Goods/index?func=rela_save'); ?>" id="<?php echo "$funcid"; ?>-Search" method="post">
+            <input type="hidden" name="<?php echo "$funcid"; ?>-last-url" id="<?php echo "$funcid"; ?>-last-url" value="<?php echo $__last_url; ?>" />
+            <input type="hidden" name="funcid" value="<?php echo "$funcid"; ?>" />
+            <input type="hidden" name="pfuncid" value="<?php echo "$pfuncid"; ?>" />
+            <input type="hidden" name="id" value="<?php echo $search["id"]; ?>" />
+            <input type="hidden" name="_lastchanged" value="<?php echo $search["lastchanged"]; ?>" />
+            <ul class="form form-mod-new form-column2">
+
+                <li class="per100">
+                    <div class="unit-left">货品名称 <em class="abe-red"></em></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <label class="pbtxt txt0" readonly name="goods_id" value="" verify="" tips="" reglux=""><?php echo $search['goods_name']; ?></label>
+                        </div>
+                        <div class="prompt" style="display:none">
+                            <div class="error"><i class="iconfont">&#xe616;</i></div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="unit-left"><span class="tit"> 原规格</span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <label class="pbtxt txt0" readonly name="old_style_info" value="" verify="" tips="" reglux=""><?php echo $search['old_style_info']; ?></label>
+                        </div>
+                        <div class="prompt" style="display:none">
+                            <div class="error"><i class="iconfont">&#xe616;</i></div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="unit-left"><span class="tit"> 规格</span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="style_info"  value="<?php echo $search['style_info']; ?>"  >
+                        </div>
+                        <div class="prompt" style="display:none">
+                            <div class="error"><i class="iconfont">&#xe616;</i></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="unit-left"><span class="tit"> 原材质</span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <label class="pbtxt txt0" readonly name="old_materials" value="" verify="" tips="" reglux=""><?php echo $search['old_materials']; ?></label>
+                        </div>
+                        <div class="prompt" style="display:none">
+                            <div class="error"><i class="iconfont">&#xe616;</i></div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="unit-left"><span class="tit"> 材质</span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <input type="text" class="pbtxt txt0"  name="materials"  value="<?php echo $search['materials']; ?>"  >
+                        </div>
+                        <div class="prompt" style="display:none">
+                            <div class="error"><i class="iconfont">&#xe616;</i></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="unit-left"><span class="tit"> 原商标</span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <label class="pbtxt txt0" readonly name="old_brand" value="" verify="" tips="" reglux=""><?php echo $search['old_brand']; ?></label>
+                        </div>
+                        <div class="prompt" style="display:none">
+                            <div class="error"><i class="iconfont">&#xe616;</i></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="unit-left"><span class="tit"> 商标</span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <input type="text" class="pbtxt txt0" name="brand"  value="<?php echo $search['brand']; ?>"  >
+                        </div>
+                        <div class="prompt" style="display:none">
+                            <div class="error"><i class="iconfont">&#xe616;</i></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            </form>
+        </div>
+    </div>
+    <div class="pop-sub abe-txtc" >
+
+
+        <input type="button" value="提交" class="btn btn-blue mrg_10 " onclick="return _asr.submit('<?php echo "$funcid"; ?>', '<?php echo "$funcid"; ?>-Search', '<?php echo U("/Home/Goods/index?func=rela_save&id=$search[id]") ; ?>',''); " />
+
+        <input type="button" value="取消" class="btn btn-org mrg_10 " onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" />
+    </div>
+
+
+
+
+</div>
+
+<script>
+    function <?php echo $funcid; ?>_chooseDate(o) {
+        if($('.date').length>0)
+            pickmeup('.date').destroy();
+        $('.date').removeClass('date')
+        $(o).addClass('date');
+        pickmeup('.date', {
+            format  : 'Y-m-d',
+            date : $(o).val(),
+            hide_on_select : true,
+            locale : 'zh'
+        }).show();
+    }
+
+    $('.calendar0,.calendar1').on('click',function(){
+    <?php echo $funcid; ?>_chooseDate(this)
+    });
+
+
+    /***************************************************************************************/
+    /* 前台页面初始化                                                                      */
+    /***************************************************************************************/
+    function <?php echo $funcid; ?>_init(_id){
+        return ;
+    }
+
+    /***************************************************************************************/
+    /* 前台页面清除                                                                      */
+    /***************************************************************************************/
+    function <?php echo $funcid; ?>_clearsearch(_frm){
+
+        _asr.setvaluebyname(_frm,"type", "" );
+        _asr.setvaluebyname(_frm,"category_code", "" );
+        _asr.setvaluebyname(_frm,"code", "" );
+        _asr.setvaluebyname(_frm,"name", "" );
+        _asr.setvaluebyname(_frm,"full_name", "" );
+        _asr.setvaluebyname(_frm,"prefix", "" );
+        _asr.setvaluebyname(_frm,"industry_code", "" );
+        _asr.setvaluebyname(_frm,"province", "" );
+        _asr.setvaluebyname(_frm,"address", "" );
+        _asr.setvaluebyname(_frm,"postcode", "" );
+        _asr.setvaluebyname(_frm,"phone", "" );
+        _asr.setvaluebyname(_frm,"mobile", "" );
+        _asr.setvaluebyname(_frm,"linkman", "" );
+        _asr.setvaluebyname(_frm,"invoice_company", "" );
+        _asr.setvaluebyname(_frm,"invoice_address", "" );
+        _asr.setvaluebyname(_frm,"invoice_phone", "" );
+        _asr.setvaluebyname(_frm,"invoice_bank", "" );
+        _asr.setvaluebyname(_frm,"invoice_taxno", "" );
+        _asr.setvaluebyname(_frm,"invoice_account", "" );
+        _asr.setvaluebyname(_frm,"CorpBusiCode", "" );
+        _asr.setvaluebyname(_frm,"CorpTaxCode", "" );
+        _asr.setvaluebyname(_frm,"LegalPerName", "" );
+        _asr.setvaluebyname(_frm,"LegalPerIdType", "" );
+        _asr.setvaluebyname(_frm,"LegalPerIdNo", "" );
+        _asr.setvaluebyname(_frm,"ContactName", "" );
+        _asr.setvaluebyname(_frm,"ContactIdType", "" );
+        _asr.setvaluebyname(_frm,"ContactIdNo", "" );
+        _asr.setvaluebyname(_frm,"ContactMobile", "" );
+        _asr.setvaluebyname(_frm,"OpenBank", "" );
+        _asr.setvaluebyname(_frm,"OpenAcctNo", "" );
+        _asr.setvaluebyname(_frm,"OpenAcctName", "" );
+        _asr.setvaluebyname(_frm,"chinapay_userid", "" );
+        _asr.setvaluebyname(_frm,"customer_level", "" );
+        _asr.setvaluebyname(_frm,"remarks", "" );
+
+
+        $("#{$funcid}").find(".selebtn").each(function(){
+            $(this).find("a:eq(0)").click();
+        });
+
+        $("#{$funcid} .city-tags-new .sele-remove").click();
+    }
+
+    function <?php echo $funcid;?>_callback(param){
+        _asr.closePopup('{$funcid}');
+    }
+
+    function <?php echo $funcid;?>_choose(){
+        $('#<?php echo $funcid;?>_import').val($('#<?php echo $funcid;?>_import_file').val())
+    }
+
+
+    {:W('Summary/javascript',array('Goods'))}
+
+</script>
+

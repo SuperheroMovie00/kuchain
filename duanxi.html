@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+
+    <script>
+        $(function () {
+            $.ajax({
+                type: "post",
+                url: "http://127.0.0.1:6060/duanxi.php", //后台代码文件名
+                data: {
+                    // mobile:$('#phone').val()//获取输入的手机号
+                    mobile:"15638590102",
+                },
+                // dataType: "json",
+                success:function(data){
+                    alert("成功");
+                    console.log(data);
+                    layer.msg('验证码发送成功，请注意查收！');
+                    localStorage.setItem('code', JSON.stringify(data))
+                },
+                error:function(err){
+                    alert("失败");
+                    console.log(err);
+                }
+
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

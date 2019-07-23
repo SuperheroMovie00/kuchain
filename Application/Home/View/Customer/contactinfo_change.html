@@ -1,0 +1,456 @@
+{__NOLAYOUT__}
+<div toplayer="1" class="prompt-pop pop-style3" style="z-index:{$zindex};max-height: 85%;width:800px;height:600px" id="<?php echo $funcid;?>" url="<?php echo U('Customer/index'); ?>">
+
+   <div class="title">
+       <div class="pop-name"><?php echo $search['title'];?>客户联系信息</div>
+       <a href="javascript:void(0);" onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" class="close iconfont">&#xe60d;</a>
+   </div>
+
+
+<div class="pop-scroll">
+   <div class="screening ">
+      <form enctype="multipart/form-data" action="<?php echo U('Customer/index?func=contactinfo_save'); ?>" id="<?php echo "$funcid"; ?>-Search" method="post">
+          <input type="hidden" name="<?php echo "$funcid"; ?>-last-url" id="<?php echo "$funcid"; ?>-last-url" value="<?php echo $__last_url; ?>" />
+          <input type="hidden" name="funcid" value="<?php echo "$funcid"; ?>" />
+          <input type="hidden" name="pfuncid" value="<?php echo "$pfuncid"; ?>" />
+          <input type="hidden" name="id" value="<?php echo $search["id"]; ?>" />
+          <input type="hidden" name="_lastchanged" value="<?php echo $search["lastchanged"]; ?>" />
+          <ul class="form form-mod-new form-column2">
+              <li>
+                  <div class="unit-left"><span class="tit"> 客户类型<em class="abe-red mrg_5">*</em></span></div>
+                  <div class="unit-mid">
+                      <div class="dropdown" id="{$funcid}_type">
+                          <select class="pbsele dropdown0" name="type">
+                              <option value="" <?php if($search['type'] == ''): ?> selected="selected" <?php endif;?> ></option>
+                              <?php
+                                $keyvalue = table_Customer_type();
+                                if(is_array($keyvalue)){
+                                    $i = 0; $__LIST__ = $keyvalue;  ?>
+                              <?php foreach($__LIST__ as $key=>$item): ++$i; ?>
+                              <option value="<?php echo $item['id']; ?>" <?php if($item['id'] == $search['type']): ?> selected="selected" <?php endif;?>><?php echo $item['name']; ?></option>
+                              <?php endforeach; ?>
+                              <?php } ?>
+                          </select>
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 客户分类</span></div>
+                  <div class="unit-mid">
+                      <div class="popup">
+                          <input  type="text" class="pbtxt txt0" name="category_code_name" readonly="readonly" value="<?php echo $search['category_code_name']; ?>">
+                          <button type="submit" class="txt-search" onclick="return _asr.popup('CustomerCategory','<?php echo "$funcid"; ?>','<?php echo "$funcid"; ?>-Search','Single','category_code','category_code_name'); " <?php if($search["category_code_name"]): ?> style="display:none"<?php endif; ?> ><i class="iconfont">&#xe60e;</i></button>
+                          <button type="submit" class="txt-clear" onclick="_asr.setvaluebyname('<?php echo "$funcid"; ?>-Search','category_code','');_asr.setvaluebyname('<?php echo "$funcid"; ?>-Search','category_code_name','');return false;" <?php if(!$search["category_code_name"]): ?> style="display:none"<?php endif; ?> ><i class="iconfont">&#xe616;</i></button>
+                      </div>
+                      <input type="hidden" name="category_code" value="<?php echo $search['category_code']; ?>">
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 客户代码<em class="abe-red mrg_5">*</em></span></div>
+                  <div class="unit-mid">
+                      <div class="textbox">
+                          <input type="text" class="pbtxt txt0" name="code" <?php if($search['id']): ?>readonly<?php endif;?> value="<?php echo $search['code']; ?>"  >
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 客户简称<em class="abe-red mrg_5">*</em></span></div>
+                  <div class="unit-mid">
+                      <div class="textbox">
+                          <input type="text" class="pbtxt txt0" name="name"  value="<?php echo $search['name']; ?>"  >
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li class="per100">
+                  <div class="unit-left"><span class="tit"> 客户全称<em class="abe-red mrg_5">*</em></span></div>
+                  <div class="unit-mid">
+                      <div class="textbox">
+                          <input type="text" class="pbtxt txt0" name="full_name"  value="<?php echo $search['full_name']; ?>"   onblur="_asr.getPinyin(this, $('#<?php echo $funcid;?>').find('input[name=prefix]'));">
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 助记码</span></div>
+                  <div class="unit-mid">
+                      <div class="textbox">
+                          <input type="text" class="pbtxt txt0" name="prefix"  value="<?php echo $search['prefix']; ?>"  >
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 行业分类</span></div>
+                  <div class="unit-mid">
+                      <div class="dropdown" id="{$funcid}_industry_code">
+                          <select class="pbsele dropdown0" name="industry_code">
+                              <option value="" <?php if($search['industry_code'] == ''): ?> selected="selected" <?php endif;?> ></option>
+                              <?php
+                                $keyvalue = subcode('customer:industry');
+                                if(is_array($keyvalue)){
+                                    $i = 0; $__LIST__ = $keyvalue;  ?>
+                              <?php foreach($__LIST__ as $key=>$item): ++$i; ?>
+                              <option value="<?php echo $item['code']; ?>" <?php if($item['code'] == $search['industry_code']): ?> selected="selected" <?php endif;?>><?php echo $item['name']; ?></option>
+                              <?php endforeach; ?>
+                              <?php } ?>
+                          </select>
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li class="per100">
+                  <div class="unit-left">省市区</div>
+                  <div class="abe-fl">
+                      <div class="city-tags"   style=" position:relative;">
+                          <input type="hidden" name="country" value="<?php echo $search['country']; ?>">
+                          <input type="hidden" name="province" value="<?php echo $search['province']; ?>">
+                          <input type="hidden" name="city" value="<?php echo $search['city']; ?>">
+                          <input type="hidden" name="area" value="<?php echo $search['area']; ?>">
+                          <input type="hidden" name="street" value="<?php echo $search['street']; ?>">
+
+
+                          <select class="pbsele abe-fl"  name="country" style="display:none;min-width:100px;width:100px" >
+                              <?php
+                            $keyvalue = table_Country();
+                            if(is_array($keyvalue)):
+                                $i = 0;
+                                $__LIST__ = $keyvalue;
+                                if( count($__LIST__)==0 ) :
+                                    echo "" ;
+                                else:?>
+                              <option value="" <?php if($search['country'] == ''): ?> selected="selected" <?php endif;?> ></option>
+                              <?php foreach($__LIST__ as $key=>$item): ++$i; ?>
+                              <option attr-id="<?php echo $item['id']; ?>" value="<?php echo $item['name']; ?>" <?php if($item['name'] == $search['country']): ?> selected="selected" <?php endif;?>><?php echo $item['name']; ?></option>
+                              <?php endforeach;
+                                endif;
+                            else:
+                                echo "";
+                            endif;
+                        ?>
+                          </select>
+                          <input type="text" class="pbtxt abe-fl " value="{$search['area']}"  style="width:521px;"  name="areas" readonly />
+                          <div class="sele-address" style="display:none;">
+                              <div class="add-tab">
+                                  <a href="javascript:" rel="city_sel_province" class="active">省份</a>
+                                  <a href="javascript:" rel="city_sel_city">城市</a>
+                                  <a href="javascript:" rel="city_sel_area">县区</a>
+                                  <a href="javascript:" rel="" onclick="$(this).parent().parent().hide();">关闭</a>
+                              </div>
+                              <dl rel="city_sel_province"  t="city">
+                                  <dd class="tags-dd">
+                                      <em>A-G</em>
+                                  </dd>
+                              </dl>
+                              <dl rel="city_sel_city"   t="area"  style="display:none">
+                                  <dd class="tags-dd"></dd>
+                              </dl>
+                              <dl rel="city_sel_area"    style="display:none">
+                                  <dd class="tags-dd"></dd>
+                              </dl>
+
+                          </div>
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li class="per100">
+                  <div class="unit-left"><span class="tit"> 联系地址</span></div>
+                  <div class="unit-mid">
+                      <div class="textbox">
+                          <input type="text" class="pbtxt txt0" name="address"  value="<?php echo $search['address']; ?>"  >
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 邮政编码</span></div>
+                  <div class="unit-mid">
+                      <div class="textbox">
+                          <input type="text" class="pbtxt txt0" name="postcode"  value="<?php echo $search['postcode']; ?>"  >
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 联系电话</span></div>
+                  <div class="unit-mid">
+                      <div class="textbox">
+                          <input type="text" class="pbtxt txt0" name="phone"  value="<?php echo $search['phone']; ?>"  >
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 联系人员<em class="abe-red mrg_5">*</em></span></div>
+                  <div class="unit-mid">
+                      <div class="textbox">
+                          <input type="text" class="pbtxt txt0" name="linkman"  value="<?php echo $search['linkman']; ?>"  >
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 联系手机<em class="abe-red mrg_5">*</em></span></div>
+                  <div class="unit-mid">
+                      <div class="textbox">
+                          <input type="text" class="pbtxt txt0" name="mobile" value="<?php echo $search['mobile']; ?>"  >
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+          </ul>
+       </form>
+    </div>
+ </div>
+    <div class="pop-sub abe-txtc" >
+
+
+        <input type="button" value="提交" class="btn btn-blue mrg_10 " onclick="return _asr.submit('<?php echo "$funcid"; ?>', '<?php echo "$funcid"; ?>-Search', '<?php echo U("/Home/Customer/index?func=contactinfo_save") ; ?>',''); " />
+
+        <input type="button" value="取消" class="btn btn-org mrg_10 " onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" />
+    </div>
+
+
+
+
+</div>
+
+<script>
+
+        /***************************************************************************************/
+        /* 前台页面初始化                                                                      */
+        /***************************************************************************************/
+        function <?php echo $funcid; ?>_init(_id){
+            el=$("#{$funcid}");
+            $(el).find("select[name='country']").change();
+            return ;
+        }
+
+        /***************************************************************************************/
+        /* 前台页面清除                                                                      */
+        /***************************************************************************************/
+        function <?php echo $funcid; ?>_clearsearch(_frm){
+
+            _asr.setvaluebyname(_frm,"type", "" );
+            _asr.setvaluebyname(_frm,"category_code", "" );
+            _asr.setvaluebyname(_frm,"code", "" );
+            _asr.setvaluebyname(_frm,"name", "" );
+            _asr.setvaluebyname(_frm,"full_name", "" );
+            _asr.setvaluebyname(_frm,"prefix", "" );
+            _asr.setvaluebyname(_frm,"industry_code", "" );
+            _asr.setvaluebyname(_frm,"province", "" );
+            _asr.setvaluebyname(_frm,"address", "" );
+            _asr.setvaluebyname(_frm,"postcode", "" );
+            _asr.setvaluebyname(_frm,"phone", "" );
+            _asr.setvaluebyname(_frm,"mobile", "" );
+            _asr.setvaluebyname(_frm,"linkman", "" );
+            _asr.setvaluebyname(_frm,"invoice_company", "" );
+            _asr.setvaluebyname(_frm,"invoice_address", "" );
+            _asr.setvaluebyname(_frm,"invoice_phone", "" );
+            _asr.setvaluebyname(_frm,"invoice_bank", "" );
+            _asr.setvaluebyname(_frm,"invoice_taxno", "" );
+            _asr.setvaluebyname(_frm,"invoice_account", "" );
+            _asr.setvaluebyname(_frm,"CorpBusiCode", "" );
+            _asr.setvaluebyname(_frm,"CorpTaxCode", "" );
+            _asr.setvaluebyname(_frm,"LegalPerName", "" );
+            _asr.setvaluebyname(_frm,"LegalPerIdType", "" );
+            _asr.setvaluebyname(_frm,"LegalPerIdNo", "" );
+            _asr.setvaluebyname(_frm,"ContactName", "" );
+            _asr.setvaluebyname(_frm,"ContactIdType", "" );
+            _asr.setvaluebyname(_frm,"ContactIdNo", "" );
+            _asr.setvaluebyname(_frm,"ContactMobile", "" );
+            _asr.setvaluebyname(_frm,"OpenBank", "" );
+            _asr.setvaluebyname(_frm,"OpenAcctNo", "" );
+            _asr.setvaluebyname(_frm,"OpenAcctName", "" );
+            _asr.setvaluebyname(_frm,"chinapay_userid", "" );
+            _asr.setvaluebyname(_frm,"customer_level", "" );
+            _asr.setvaluebyname(_frm,"remarks", "" );
+
+
+          $("#{$funcid}").find(".selebtn").each(function(){
+              $(this).find("a:eq(0)").click();
+            });
+
+          $("#{$funcid} .city-tags-new .sele-remove").click();
+        }
+
+   function <?php echo $funcid;?>_callback(param){
+        _asr.closePopup('{$funcid}');
+   }
+
+    $("#{$funcid} .city-tags select").bind("change",function(){
+        id=$(this).find("option:selected").attr("attr-id");
+        $(this).parent().find(".sele-address").hide();
+        $(this).parent().find("input[name='areas']").val("");
+        if(id=="" || id==undefined)
+        {
+            $(this).parent().find("input[name='areas']").hide();
+        }else
+        {
+            $(this).parent().find("input[name='areas']").show();
+        }
+
+        $(this).parent().find(".sele-address dl dd").each(function(){
+            $(this).html("");
+        });
+
+        if(id!=undefined && id!="")
+        {
+            el=$(this).parent();
+            $.getJSON("{:U("Customer/getareas")}", {"id": id }, function(json){
+            curdl=$(el).find(".sele-address dl[rel='city_sel_province'] dd");
+            $(curdl).html("");
+            for(var k=0;k<json.length;k++)
+            {
+                $(curdl).append('<a href="javascript:" attr-value="'+json[k].name+'" attr-id="'+ json[k].id +'">'+json[k].name+'</a>')
+            }
+            $(el).find(".sele-address dl[rel='city_sel_province'] a").bind("click",function(){
+                area_sel(this,"province",'city');
+            });
+            var province=$(el).find("input[name='province']").val();
+            if(province!=undefined && province!="")
+            {
+                $(el).find(".sele-address dl[rel='city_sel_province'] a[attr-value='"+ province +"']").click();
+                $(el).find("input[name='province']").val("");
+            }else
+            {
+                if($(curdl).find("a").length==1)
+                {
+                    $(curdl).find("a:eq(0)").click();
+                }
+            }
+        })
+        }
+    });
+    $("#{$funcid} .city-tags input").bind("click",function(){
+        if($(this).parent().find(".sele-address").is(":hidden"))
+        {
+            $(this).parent().find(".sele-address").show();
+        }
+    })
+    $("#{$funcid} .sele-address .add-tab a"). bind("click",function(){
+        el=$(this).parent().parent();
+        i=$(el).find(".add-tab a").index($(this));
+        $(this).addClass("active").siblings(".active").removeClass("active");
+        $(el).find("dl:eq("+i+")").show().siblings("dl").hide();
+    });
+
+    function area_sel(obj,s,t){
+        el=$(obj).parent().parent().parent();
+        cur_p= $(el).find("dl[rel='city_sel_"+t+"']");
+        if(!$(obj).hasClass("active"))
+        {
+            cur_a=$(obj);
+            var id=$(obj).attr("attr-id");
+            $.getJSON("{:U("Customer/getareas")}", {"id": id }, function(json){
+            cur_index=$(el).find("dl").index($(cur_a).parent().parent());
+            $(el).find("dl:gt("+cur_index+")").each(function(){
+                $(this).find("dd").each(function(){
+                    $(this).html("");
+                });
+            });
+            curdl=$(el).find("dl[rel='city_sel_"+t+"'] dd");
+            $(curdl).html("");
+            for(var k=0;k<json.length;k++)
+            {
+                $(curdl).append('<a href="javascript:"  attr-value="'+json[k].name+'" attr-id="'+ json[k].id +'">'+json[k].name+'</a>')
+            }
+
+            $(cur_a).addClass("active").siblings("a").removeClass("active");
+            $(el).parent().find("input[name='areas']").val("");
+            $(el).find("dl .active").each(function(){
+                var curval=$(el).parent().find("input[name='areas']").val();
+                if(curval!="")
+                {
+                    curval+="/";
+                }
+                curval+=$(this).html();
+                $(el).parent().find("input[name='areas']").val(curval);
+            });
+
+            //cur_p= $(el).find("dl[rel='city_sel_"+t+"']");
+            if(cur_p.length>0)
+            {
+                cur_t=$(cur_p).attr("t");
+                if(cur_t!="undifine" && cur_t!="")
+                {
+                    $(el).find("dl[rel='city_sel_"+t+"'] a").bind("click",function(){
+                        var el_p=$(this).closest("dl").parent().find("dl[rel='city_sel_"+t+"']");
+                        if(el_p.length>0) {
+                            el_t = $(el_p).attr("t");
+                            if (el_t != "undifine" && el_t != "") {
+                                area_sel(this, t, el_t);
+                            }
+                        }
+                    });
+                }
+            }else
+            {
+                $(el).hide()
+            }
+            $(el).parent().find(".add-tab a[rel='city_sel_"+s+"']").click();
+            var cur_v=$(el).parent().find("input[name='"+t+"']").val();
+            if(cur_v!="")
+            {
+                $(el).find("dl[rel='city_sel_"+t+"'] a[attr-value='"+ cur_v +"']").click();
+                $(el).parent().find("input[name='"+t+"']").val("");
+            }
+            else
+            {
+                if($(curdl).find("a").length==1)
+                {
+                    $(curdl).find("a").eq(0).click();
+                }
+                else
+                {
+                    $(el).parent().find(".add-tab a[rel='city_sel_"+t+"']").click();
+                }
+            }
+        });
+
+        }else
+        {
+            if(cur_p.length<=0)
+            {
+                $(el).hide();
+            }
+        }
+    }
+    var _sl = $("#{$funcid} .city-tags select").find("option[attr-id=1]");//.attr("attr-id");
+    if(_sl.attr("selected") == undefined || _sl.attr("selected") == "") {
+        _sl.attr("selected", "selected");
+        $("#{$funcid} .city-tags select").val(_sl.val());
+    }
+
+    <?php echo $funcid; ?>_init();
+</script>

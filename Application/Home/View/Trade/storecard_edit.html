@@ -1,0 +1,120 @@
+{__NOLAYOUT__}
+<div toplayer="1" class="prompt-pop pop-style4" style="z-index:{$zindex};" id="<?php echo $funcid;?>"
+     url="<?php echo U('Sample/index'); ?>" xmlns="http://www.w3.org/1999/html">
+    <div class="title"> <span class="pop-name">{$pop_title}</span> <a href="javascript:void(0);" class="close iconfont confirm-cancel" onclick="_asr.closePopup('{$funcid}');"></a> </div>
+    <div class="pop-scroll">
+        <div class="screening">
+            <form enctype="multipart/form-data" action="<?php echo U('Trade/index?func=storecard_edit_save'); ?>" id="<?php echo "$funcid"; ?>-Search" method="post" verify="1">
+            <input type="hidden" name="<?php echo "$funcid"; ?>-last-url" id="<?php echo "$funcid"; ?>-last-url" value="<?php echo $__last_url; ?>" />
+            <input type="hidden" name="funcid" value="<?php echo "$funcid"; ?>" />
+            <input type="hidden" name="pfuncid" value="<?php echo "$pfuncid"; ?>" />
+            <input type="hidden" name="id" value="<?php echo $trade["id"]; ?>" />
+            <input type="hidden" name="_lastchanged" value="<?php echo $trade["modify_time"]; ?>" />
+
+            <ul class="form form-mod-new form-column2">
+                <li class="per100">
+                    <div class="unit-left"><span class="tit"> 存储卡前缀 </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+                            <input type="hidden" name="storecard_perfix" value="{$storecard_prefix}"/>
+                            <label class="pbtxt txt0" >{$storecard_prefix}</label>
+                        </div>
+                    </div>
+                    <div class="unit-right">  </div>
+                </li>
+                <li class="per100">
+                    <div class="unit-left"><span class="tit">存储卡序号 <em class="abe-red mrg_5">*</em> </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox">
+
+                            <input type="text" class="pbtxt txt0" name="storecard_no"  value="{$storecard_no}"  >
+
+                        </div>
+                    </div>
+                    <div class="unit-right">  </div>
+                </li>
+                <li class="per100">
+                    <div class="unit-left"><span class="tit">   </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox"> <span class="pdr_20">
+                        <input type="checkbox" name="add_allow" value="1">
+                         允许追加存入未使用的存储卡</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="per100">
+                    <div class="unit-left"><span class="tit">   </span></div>
+                    <div class="unit-mid">
+                        <div class="textbox"> <span class="pdr_20">
+                        <input type="checkbox" name="create_virtual" value="1">
+                         开通虚拟存储卡</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            </form>
+        </div>
+    </div>
+    <div class="pop-sub abe-txtc">
+        <input type="button" class="btn btn-blue mrg_15" value="确定" onclick="return _asr.submit('<?php echo "$funcid"; ?>', '<?php echo "$funcid"; ?>-Search', '<?php echo U("/Home/Trade/index?func=storecard_edit_save&id=$search[id]") ; ?>',''); ">
+        <input type="button" class="btn" value="取消" onclick="_asr.closePopup('{$funcid}');">
+    </div>
+</div>
+
+<script>
+    function <?php echo $funcid; ?>_chooseDate(o) {
+        if($('.date').length>0)
+            pickmeup('.date').destroy();
+        $('.date').removeClass('date')
+        $(o).addClass('date');
+        pickmeup('.date', {
+            format  : 'Y-m-d',
+            date : $(o).val(),
+            hide_on_select : true,
+            locale : 'zh'
+        }).show();
+    }
+
+    $('.calendar0,.calendar1').on('click',function(){
+    <?php echo $funcid; ?>_chooseDate(this)
+    });
+
+
+    /***************************************************************************************/
+    /* 前台页面初始化                                                                      */
+    /***************************************************************************************/
+    function <?php echo $funcid; ?>_init(_id){
+        return ;
+    }
+
+    /***************************************************************************************/
+    /* 前台页面清除                                                                      */
+    /***************************************************************************************/
+    function <?php echo $funcid; ?>_clearsearch(_frm){
+
+        _asr.setvaluebyname(_frm,"type", "" );
+        _asr.setvaluebyname(_frm,"category_code", "" );
+        _asr.setvaluebyname(_frm,"code", "" );
+        _asr.setvaluebyname(_frm,"name", "" );
+        _asr.setvaluebyname(_frm,"remarks", "" );
+
+
+        $("#{$funcid}").find(".selebtn").each(function(){
+            $(this).find("a:eq(0)").click();
+        });
+
+        $("#{$funcid} .city-tags-new .sele-remove").click();
+    }
+
+    function <?php echo $funcid;?>_callback(param){
+        _asr.closePopup('{$funcid}');
+    }
+
+    {:W('Summary/javascript',array('Customer'))}
+
+</script>
+
+
+
+
+

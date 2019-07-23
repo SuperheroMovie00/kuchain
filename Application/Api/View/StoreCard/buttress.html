@@ -1,0 +1,15 @@
+<ul class="last-ch">
+    <?php foreach($storecard_buttress as $buttress) { ?>
+    <li>
+        <div class="tlist-info">
+            <input type="checkbox" class="abe-fl" data-type="buttress" data-id="{$buttress['id']}" data-parent-id="{$buttress['package_id']}" name="buttress[{$buttress['storecard_id']}][{$buttress['package_id']}][]" value="{$buttress['id']}" >
+            <div class="item">{$buttress['buttress_no']}</div>
+            <div class="item">{$package["goods_name"]}</div>
+            <div class="item">{$package["style_code"]}</div>
+            <div class="item">{$buttress['weight']}{$package["uom_weight"]}</div>
+            <input type="text" class="txt" data-type="buttress" data-id="{$buttress['id']}" data-parent-id="{$buttress['package_id']}" default-weight="{$buttress['weight'] - $buttress['lock_weight']}" name="buttressWeight[{$buttress['id']}]" value="">
+            <a href="#" class="del iconfont">&#xe60d;</a>
+        </div>
+    </li>
+    <?php } ?>
+</ul>

@@ -1,0 +1,236 @@
+{__NOLAYOUT__}
+<div toplayer="1" class="prompt-pop pop-style3" style="z-index:{$zindex};width:800px;" id="<?php echo $funcid;?>" url="<?php echo U('Customer/index'); ?>">
+
+   <div class="title">
+       <div class="pop-name"><?php echo $search['title'];?>客户短信信息</div>
+       <a href="javascript:void(0);" onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" class="close iconfont">&#xe60d;</a>
+   </div>
+
+
+<div class="pop-scroll">
+   <div class="screening ">
+      <form enctype="multipart/form-data" action="<?php echo U('Customer/index?func=baseinfo_save'); ?>" id="<?php echo "$funcid"; ?>-Search" method="post">
+          <input type="hidden" name="<?php echo "$funcid"; ?>-last-url" id="<?php echo "$funcid"; ?>-last-url" value="<?php echo $__last_url; ?>" />
+          <input type="hidden" name="funcid" value="<?php echo "$funcid"; ?>" />
+          <input type="hidden" name="pfuncid" value="<?php echo "$pfuncid"; ?>" />
+          <input type="hidden" name="id" value="<?php echo $search["id"]; ?>" />
+          <input type="hidden" name="_lastchanged" value="<?php echo $search["lastchanged"]; ?>" />
+          <ul class="form form-mod-new form-column2">
+              <li class="per100">
+                  <div class="unit-left"><span class="tit">客户名称</span></div>
+                  <div class="unit-mid">
+                      <div class="textbox">
+                          <label class="pbtxt txt0" name="" value="" verify="" tips="" reglux="">{$search['code']} - {$search['name']}</label>
+                      </div>
+                  </div>
+              </li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 短信服务</span></div>
+                  <div class="unit-mid">
+                       <div class="dropdown" id="{$funcid}_sms_open">
+                           <select class="pbsele dropdown0" name="sms_open">
+                              <option value="" <?php if($search['sms_open'] == ''): ?> selected="selected" <?php endif;?> ></option>
+                             <?php
+                                $keyvalue = table_Customer_sms_open();
+                                if(is_array($keyvalue)){
+                                    $i = 0; $__LIST__ = $keyvalue;  ?>
+                                    <?php foreach($__LIST__ as $key=>$item): ++$i; ?>
+                                 <option value="<?php echo $item['id']; ?>" <?php if($item['id'] == $search['sms_open']): ?> selected="selected" <?php endif;?>><?php echo $item['name']; ?></option>
+                                    <?php endforeach; ?>
+                             <?php } ?>
+                           </select>
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 接收手机号</span></div>
+                  <div class="unit-mid">
+                      <div class="textbox">
+                          <input type="text" class="pbtxt txt0" name="sms_phone" value="<?php echo $search['sms_phone']; ?>"  >
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li></li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 接收者称呼</span></div>
+                  <div class="unit-mid">
+                      <div class="textbox">
+                          <input type="text" class="pbtxt txt0" name="sms_appellation"  value="<?php echo $search['sms_appellation']; ?>"  >
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+             <li class="border-line"></li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 货权转入通知</span></div>
+                  <div class="unit-mid">
+                       <div class="dropdown" id="{$funcid}_sms_transfer_in">
+                           <select class="pbsele dropdown0" name="sms_transfer_in">
+                              <option value="" <?php if($search['sms_transfer_in'] == ''): ?> selected="selected" <?php endif;?> ></option>
+                             <?php
+                                $keyvalue = table_Customer_sms_transfer_in();
+                                if(is_array($keyvalue)){
+                                    $i = 0; $__LIST__ = $keyvalue;  ?>
+                                    <?php foreach($__LIST__ as $key=>$item): ++$i; ?>
+                                 <option value="<?php echo $item['id']; ?>" <?php if($item['id'] == $search['sms_transfer_in']): ?> selected="selected" <?php endif;?>><?php echo $item['name']; ?></option>
+                                    <?php endforeach; ?>
+                             <?php } ?>
+                           </select>
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 货权转出通知</span></div>
+                  <div class="unit-mid">
+                      <div class="dropdown" id="{$funcid}_sms_transfer_out">
+                          <select class="pbsele dropdown0" name="sms_transfer_out">
+                              <option value="" <?php if($search['sms_transfer_out'] == ''): ?> selected="selected" <?php endif;?> ></option>
+                              <?php
+                                $keyvalue = table_Customer_sms_transfer_out();
+                                if(is_array($keyvalue)){
+                                    $i = 0; $__LIST__ = $keyvalue;  ?>
+                              <?php foreach($__LIST__ as $key=>$item): ++$i; ?>
+                              <option value="<?php echo $item['id']; ?>" <?php if($item['id'] == $search['sms_transfer_out']): ?> selected="selected" <?php endif;?>><?php echo $item['name']; ?></option>
+                              <?php endforeach; ?>
+                              <?php } ?>
+                          </select>
+                      </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+              </li>
+              <li></li>
+              <li>
+                  <div class="unit-left"><span class="tit"> 提货时通知</span></div>
+                  <div class="unit-mid">
+                       <div class="dropdown" id="{$funcid}_sms_delivery">
+                           <select class="pbsele dropdown0" name="sms_delivery">
+                              <option value="" <?php if($search['sms_delivery'] == ''): ?> selected="selected" <?php endif;?> ></option>
+                             <?php
+                                $keyvalue = table_Customer_sms_delivery();
+                                if(is_array($keyvalue)){
+                                    $i = 0; $__LIST__ = $keyvalue;  ?>
+                                    <?php foreach($__LIST__ as $key=>$item): ++$i; ?>
+                                 <option value="<?php echo $item['id']; ?>" <?php if($item['id'] == $search['sms_delivery']): ?> selected="selected" <?php endif;?>><?php echo $item['name']; ?></option>
+                                    <?php endforeach; ?>
+                             <?php } ?>
+                           </select>
+                       </div>
+                      <div class="prompt" style="display:none">
+                          <div class="error"><i class="iconfont">&#xe616;</i></div>
+                      </div>
+                  </div>
+             </li>
+
+          </ul>
+       </form>
+    </div>
+ </div>
+    <div class="pop-sub abe-txtc" >
+
+
+        <input type="button" value="提交" class="btn btn-blue mrg_10 " onclick="return _asr.submit('<?php echo "$funcid"; ?>', '<?php echo "$funcid"; ?>-Search', '<?php echo U("/Home/Customer/index?func=message_save") ; ?>',''); " />
+
+        <input type="button" value="取消" class="btn btn-org mrg_10 " onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" />
+    </div>
+
+
+
+
+</div>
+
+<script>
+        function <?php echo $funcid; ?>_chooseDate(o) {
+            if($('.date').length>0)
+                pickmeup('.date').destroy();
+            $('.date').removeClass('date')
+            $(o).addClass('date');
+            pickmeup('.date', {
+                format  : 'Y-m-d',
+                date : $(o).val(),
+                hide_on_select : true,
+                locale : 'zh'
+            }).show();
+        }
+
+        $('.calendar0,.calendar1').on('click',function(){
+            <?php echo $funcid; ?>_chooseDate(this)
+        });
+
+
+        /***************************************************************************************/
+        /* 前台页面初始化                                                                      */
+        /***************************************************************************************/
+        function <?php echo $funcid; ?>_init(_id){
+            return ;
+        }
+
+        /***************************************************************************************/
+        /* 前台页面清除                                                                      */
+        /***************************************************************************************/
+        function <?php echo $funcid; ?>_clearsearch(_frm){
+
+            _asr.setvaluebyname(_frm,"type", "" );
+            _asr.setvaluebyname(_frm,"category_code", "" );
+            _asr.setvaluebyname(_frm,"code", "" );
+            _asr.setvaluebyname(_frm,"name", "" );
+            _asr.setvaluebyname(_frm,"full_name", "" );
+            _asr.setvaluebyname(_frm,"prefix", "" );
+            _asr.setvaluebyname(_frm,"industry_code", "" );
+            _asr.setvaluebyname(_frm,"province", "" );
+            _asr.setvaluebyname(_frm,"address", "" );
+            _asr.setvaluebyname(_frm,"postcode", "" );
+            _asr.setvaluebyname(_frm,"phone", "" );
+            _asr.setvaluebyname(_frm,"mobile", "" );
+            _asr.setvaluebyname(_frm,"linkman", "" );
+            _asr.setvaluebyname(_frm,"invoice_company", "" );
+            _asr.setvaluebyname(_frm,"invoice_address", "" );
+            _asr.setvaluebyname(_frm,"invoice_phone", "" );
+            _asr.setvaluebyname(_frm,"invoice_bank", "" );
+            _asr.setvaluebyname(_frm,"invoice_taxno", "" );
+            _asr.setvaluebyname(_frm,"invoice_account", "" );
+            _asr.setvaluebyname(_frm,"CorpBusiCode", "" );
+            _asr.setvaluebyname(_frm,"CorpTaxCode", "" );
+            _asr.setvaluebyname(_frm,"LegalPerName", "" );
+            _asr.setvaluebyname(_frm,"LegalPerIdType", "" );
+            _asr.setvaluebyname(_frm,"LegalPerIdNo", "" );
+            _asr.setvaluebyname(_frm,"ContactName", "" );
+            _asr.setvaluebyname(_frm,"ContactIdType", "" );
+            _asr.setvaluebyname(_frm,"ContactIdNo", "" );
+            _asr.setvaluebyname(_frm,"ContactMobile", "" );
+            _asr.setvaluebyname(_frm,"OpenBank", "" );
+            _asr.setvaluebyname(_frm,"OpenAcctNo", "" );
+            _asr.setvaluebyname(_frm,"OpenAcctName", "" );
+            _asr.setvaluebyname(_frm,"chinapay_userid", "" );
+            _asr.setvaluebyname(_frm,"customer_level", "" );
+            _asr.setvaluebyname(_frm,"remarks", "" );
+
+
+          $("#{$funcid}").find(".selebtn").each(function(){
+              $(this).find("a:eq(0)").click();
+            });
+
+          $("#{$funcid} .city-tags-new .sele-remove").click();
+        }
+
+   function <?php echo $funcid;?>_callback(param){
+        _asr.closePopup('{$funcid}');
+   }
+
+
+
+    {:W('Summary/javascript',array('Customer'))}
+
+</script>

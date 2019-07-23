@@ -1,0 +1,120 @@
+{__NOLAYOUT__}
+<div toplayer="1" class="prompt-pop pop-style3" style="z-index:{$zindex};width:800px;" id="<?php echo $funcid;?>" url="<?php echo U('GoodsAlias/index'); ?>">
+
+   <div class="title">
+       <span class="pop-name">查看货品别名信息</span>
+       <a href="javascript:void(0);" onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" class="close iconfont">&#xe60d;</a>
+   </div>
+
+
+
+
+
+<div class="pop-scroll">
+   <div class="screening ">
+      <form enctype="multipart/form-data" action="<?php echo U('GoodsAlias/index?func=_save'); ?>" id="<?php echo "$funcid"; ?>-Search" method="post" verify="1">
+          <input type="hidden" name="<?php echo "$funcid"; ?>-last-url" id="<?php echo "$funcid"; ?>-last-url" value="<?php echo $__last_url; ?>" />
+          <input type="hidden" name="funcid" value="<?php echo "$funcid"; ?>" />
+          <input type="hidden" name="pfuncid" value="<?php echo "$pfuncid"; ?>" />
+          <input type="hidden" name="id" value="<?php echo $search["id"]; ?>" />
+          <input type="hidden" name="_lastchanged" value="<?php echo $search["lastchanged"]; ?>" />
+          <ul class="form form-mod-new form-column2">
+
+             <li>
+                  <div class="unit-left"><span class="tit"> 库链</span></div>
+                  <div class="unit-mid"><label class="pbtxt txt0"  ><?php echo get_table_Org_byID("$search[org_id]","name",""); ?></label></div>
+             </li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 类型</span></div>
+                  <div class="unit-mid"><label class="pbtxt txt0"  ><?php echo get_table_GoodsAlias_type("$search[type]","name",""); ?></label>
+                      <input type="hidden" name="goods_id" value="<?php echo $search['goods_id']; ?>"></div>
+             </li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 标准</span></div>
+                  <div class="unit-mid"><label class="pbtxt txt0"  ><?php echo $search["value"]; ?></label></div>
+             </li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 别名</span></div>
+                  <div class="unit-mid"><label class="pbtxt txt0"  ><?php echo $search["alias"]; ?></label></div>
+             </li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 创建时间</span></div>
+                  <div class="unit-mid"><label class="pbtxt txt1"  ><?php echo system_format("DT", $search["create_time"],1); ?></label><label class="pbtxt txt1"  ><?php echo $search["create_user"]; ?></label></div>
+             </li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 修改时间</span></div>
+                  <div class="unit-mid"><label class="pbtxt txt1"  ><?php echo system_format("DT", $search["modify_time"],1); ?></label><label class="pbtxt txt1"  ><?php echo $search["modify_user"]; ?></label></div>
+             </li>
+             <li>
+                  <div class="unit-left"><span class="tit"> 状态</span></div>
+                  <div class="unit-mid"><label class="pbtxt txt0"  ><?php echo get_table_GoodsAlias_status("$search[status]","name",""); ?></label></div>
+             </li>
+             <li>
+                  <div class="unit-left"></div>
+                  <div class="unit-mid"></div>
+             </li>
+
+          </ul>
+       </form>
+    </div>
+ </div>
+    <div class="pop-sub abe-txtc" >
+               <input type="button" value="取消" class="btn btn-org mrg_10 " onclick="$(this).parents('.prompt-pop').remove();_asr.closePopup('{$funcid}');" />
+    </div>
+
+
+
+
+</div>
+
+<script>
+        function <?php echo $funcid; ?>_chooseDate(o) {
+            if($('.date').length>0)
+                pickmeup('.date').destroy();
+            $('.date').removeClass('date')
+            $(o).addClass('date');
+            pickmeup('.date', {
+                format  : 'Y-m-d',
+                date : $(o).val(),
+                hide_on_select : true,
+                locale : 'zh'
+            }).show();
+        }
+
+        $('.calendar0,.calendar1').on('click',function(){
+            <?php echo $funcid; ?>_chooseDate(this)
+        });
+
+
+        /***************************************************************************************/
+        /* 前台页面初始化                                                                      */
+        /***************************************************************************************/
+        function <?php echo $funcid; ?>_init(_id){
+            return ;
+        }
+
+        /***************************************************************************************/
+        /* 前台页面清除                                                                      */
+        /***************************************************************************************/
+        function <?php echo $funcid; ?>_clearsearch(_frm){
+
+            _asr.setvaluebyname(_frm,"goods_id", "" );
+
+
+          $("#{$funcid}").find(".selebtn").each(function(){
+              $(this).find("a:eq(0)").click();
+            });
+
+          $("#{$funcid} .city-tags-new .sele-remove").click();
+        }
+
+   function <?php echo $funcid;?>_callback(param){
+        _asr.closePopup('{$funcid}');
+   }
+
+
+
+    {:W('Summary/javascript',array('GoodsAlias'))}
+
+</script>
+
